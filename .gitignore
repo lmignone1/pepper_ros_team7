@@ -11,4 +11,5 @@ __pycache__/
 *.py[cod]
 *.pyc
 
-workspace/rasa-project/duckling
+workspace/src/rasa_ros/rasa-project/duckling
+workspace/src/rasa_ros/rasa-project/.rasa

@@ -1,0 +1,233 @@
+version: "3.1"
+
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - ask_functions
+  - ask_count
+  - ask_location
+  - inform
+  - unknown
+
+
+entities:
+  - not
+  - more
+  - less
+  - upper_body
+  - lower_body
+  - colour
+  - mall
+  - people
+  - hat
+  - bag
+  - male
+  - female
+  - shop
+  - duration
+
+
+
+slots:
+
+  upperColour:
+    type: text
+    mappings:
+    - type: custom
+
+  lowerColour:
+    type: text
+    mappings:
+    - type: custom
+  
+  kindOfPeople:
+    type: categorical
+    values:
+      - M
+      - F
+      - A
+    mappings:
+    - type: custom
+  
+  hatSlot:
+    type: categorical
+    values:
+      - with
+      - without
+      - both
+    mappings:
+    - type: custom
+  
+  bagSlot:
+    type: categorical
+    values:
+      - with
+      - without
+      - both
+    mappings:
+    - type: custom
+
+  place:
+    type: categorical
+    values:
+      - mall
+      - walmart
+      - starbucks
+    mappings:
+    - type: custom
+
+  duration:
+    type: any
+    initial_value: None
+    mappings:
+    - type: custom
+  
+  not_upperSlot:
+    type: bool
+    initial_value: False
+    mappings:
+    - type: custom
+
+  not_lowerSlot:
+    type: bool
+    initial_value: False
+    mappings: 
+    - type: custom
+  
+  compareSlot:
+    type: categorical
+    values:
+      - more
+      - less
+      - equal
+    mappings:
+    - type: custom
+
+forms:
+  count_form:
+    required_slots:
+      - kindOfPeople
+      - upperColour
+      - lowerColour
+      - hatSlot
+      - bagSlot
+      - place
+      - not_lowerSlot
+      - not_upperSlot
+
+  location_form:
+    required_slots:
+      - kindOfPeople
+      - upperColour
+      - lowerColour
+      - hatSlot
+      - bagSlot
+      - not_lowerSlot
+      - not_upperSlot
+
+
+responses:
+  utter_greet:
+  - text: "Hi! I'm Pepper, the robotic guardian of the mall. Do you want to ask me anything?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_count_other_details:
+  - text: "Would you like to provide additional details to your counting task answering a few questions?"
+
+  utter_task_end:
+  - text: "It was a plaisure to help you"
+  
+  utter_location_other_details:
+  - text: "I'm here to help you finding who you are looking for, but before you need to give me some other details by answering a few questions\nupperColour:{upperColour}\nlowerColour:{lowerColour}\nkindOfPeople:{kindOfPeople}\nhat:{hatSlot}\nbag:{bagSlot}\nplace:{place}\nduration:{duration}\ncomparative:{compareSlot}\nnot_upper:{not_upperSlot}\nnot_lower:{not_lowerSlot}"
+
+  utter_count_answer:
+  - text: "\nupperColour:{upperColour}\nlowerColour:{lowerColour}\nkindOfPeople:{kindOfPeople}\nhat:{hatSlot}\nbag:{bagSlot}\nplace:{place}\nduration:{duration}\ncomparative:{compareSlot}\nnot_upper:{not_upperSlot}\nnot_lower:{not_lowerSlot}"
+
+  utter_location_answer:
+  - text: "\nupperColour:{upperColour}\nlowerColour:{lowerColour}\nkindOfPeople:{kindOfPeople}\nhat:{hatSlot}\nbag:{bagSlot}\nplace:{place}\nduration:{duration}\ncomparative:{compareSlot}\nnot_upper:{not_upperSlot}\nnot_lower:{not_lowerSlot}"
+  
+  utter_ask_count_form_kindOfPeople:
+  - text: "Are you interested in males, females or people in general?"
+
+  utter_ask_count_form_upperColour:
+  - text: "What colour should be the upper clothing of the people involved in the count?"
+
+  utter_ask_count_form_lowerColour:
+  - text: "What colour should be the lower clothing of the people involved in the count?"
+
+  utter_ask_count_form_hatSlot:
+  - text: "Are you interested in people with hat, without hat, or both?"
+
+  utter_ask_count_form_bagSlot:
+  - text: "Are you interested in people with bag, without bag, or both?"
+
+  utter_ask_count_form_place:
+  - text: "Do you want to consider the entire mall, walmart or starbucks?"
+
+  utter_ask_location_form_kindOfPeople:
+  - text: "Are you looking for somebody who is male or female?"
+
+  utter_ask_location_form_upperColour:
+  - text: "What is the main colour of the upper clothes?"
+
+  utter_ask_location_form_lowerColour:
+  - text: "What is the main colour of the lower clothes?"
+
+  utter_ask_location_form_hatSlot:
+  - text: "Are you looking for someone with a hat or without?" 
+
+  utter_ask_location_form_bagSlot:
+  - text: "Are you looking for someone with a bag or without?"
+
+  utter_functions:
+  - text: "I can give you information about this mall. In particular, I can count and locate people based on their physical attributes. Tell me your question!"
+
+  utter_default:
+  - text: "I'm sorry, I didn't understand you. Repeat, please?"
+
+  utter_repeat_count_request:
+  - text: "Sorry, my mistake. Could you please repeat your counting task request?"
+
+  utter_repeat_location_request:
+  - text: "Sorry, my mistake. Could you please repeat your localization task request?"
+
+  utter_repeat_again:
+  - text: "Okay, so... tell me your request, please"
+
+  utter_dont_mind:
+  - text: "Okay, don't mind"
+
+
+actions:
+- action_validate_slot_mappings
+- validate_count_form
+- validate_location_form
+- action_count_answer
+- action_location_answer
+- action_ask_confirmation_count
+- action_ask_confirmation_location
+- action_reset_slot
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+# Vuoi che ti restituisca direttamente il risultato del conteggio oppure vuoi che ti faccia delle domande per acquisire ulteriori dettagli sulle persone da contare?
+# D
+
+# Do you want me to g
+
+# Do you want the count result or do you want me to ask you some questions to get further details?
+
+# Do you want the count result or any questions for additional details?
+
+# dou you want to add further details by answering some questions ?

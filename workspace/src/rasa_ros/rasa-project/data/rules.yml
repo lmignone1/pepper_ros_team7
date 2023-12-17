@@ -1,0 +1,152 @@
+version: "3.1"
+
+rules:
+
+- rule: Say hello anytime the user says hello 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  
+- rule: Robot says what he is able to do after greeting
+  steps:
+  - action: utter_greet
+  - or:
+    - intent: affirm
+    - intent: unknown
+  - action: utter_functions
+
+- rule: Robot says goodbye after greeting
+  steps:
+  - action: utter_greet
+  - intent: deny
+  - action: utter_goodbye
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: ask confirmation after detecting ask_count, if confirmation is good, give answer, then ask for possible other details
+  steps:
+  - intent: ask_count
+  - action: action_ask_confirmation_count
+  - intent: affirm
+  - action: utter_count_answer
+  - action: action_count_answer
+  - action: utter_count_other_details
+
+- rule: anytime the users confirm the provided counting task, the bot gives the answer (without necessarily asking for other possible details)
+  steps:
+  - action: action_ask_confirmation_count
+  - intent: affirm
+  - action: utter_count_answer
+  - action: action_count_answer
+
+- rule: after no confirmation for counting task, ask to repeat the request
+  steps:
+  - action: action_ask_confirmation_count
+  - or:
+    - intent: deny
+    - intent: unknown
+    - intent: inform
+  - action: utter_repeat_count_request
+
+- rule: Activate Count Form
+  steps:
+  - action: utter_count_other_details
+  - or:
+    - intent: affirm
+    - intent: inform
+  - action: count_form
+  - active_loop: count_form
+
+- rule: end task count because it is not necessary to add details
+  steps: 
+  - action: utter_count_other_details
+  - or:
+    - intent: deny
+    - intent: unknown
+  - action: utter_task_end
+
+- rule: Submit Count Form
+  condition:
+  - active_loop: count_form
+  steps:
+  - action: count_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_ask_confirmation_count
+
+- rule: The robot says what he is able to do
+  steps:
+  - intent: ask_functions
+  - action: utter_functions
+
+- rule: Answer to ask_location
+  steps:
+  - intent: ask_location
+  - action: utter_location_other_details
+  - action: location_form
+  - active_loop: location_form
+
+- rule: Submit Location Form
+  condition:
+  - active_loop: location_form
+  steps:
+  - action: location_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_ask_confirmation_location
+
+- rule: after confirmation, answer to location task
+  steps:
+  - action: action_ask_confirmation_location
+  - intent: affirm
+  - action: utter_location_answer
+  - action: action_location_answer
+
+- rule: after no confirmation for location, ask to repeat the request
+  steps:
+  - action: action_ask_confirmation_location
+  - or:
+    - intent: deny
+    - intent: unknown
+    - intent: inform
+  - action: utter_repeat_location_request
+
+- rule: after asking for repeating the counting task, the bot receives an affirm, so the bot sollecits a request
+  steps:
+  - action: utter_repeat_count_request
+  - intent: affirm
+  - action: utter_repeat_again
+
+- rule: after asking for repeating the location task, the bot receives an affirm, so the bot sollecits a request
+  steps:
+  - action: utter_repeat_location_request
+  - intent: affirm
+  - action: utter_repeat_again
+
+- rule: after asking for repeating the counting task, the bot receives a deny
+  steps:
+  - action: utter_repeat_count_request
+  - intent: deny
+  - action: utter_dont_mind
+
+- rule: after asking for repeating the location task, the bot receives a deny
+  steps:
+  - action: utter_repeat_location_request
+  - intent: deny
+  - action: utter_dont_mind
+
+- rule: Ask user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
+
+
+
+
+
+
