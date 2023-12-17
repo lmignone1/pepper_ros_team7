@@ -253,9 +253,12 @@ class ValidateCustomSlotMappings(ValidationAction):
                 else:
                     return {"compareSlot": "equal"} # non ci sono less e more allora è un equal
                 
-                message = message.replace(duration_text, str(duration_value))   # sostituisco il testo con il valore numerico
+                message = message.replace(duration_text, " " +str(duration_value) +" ")   # sostituisco il testo con il valore numerico
                 message = message.split()
-                message_clean = message_clean.split()   # per lestrazione di more/less uso il messaggio ripulito per assicurarmi che l'eventuale presenza di punteggiatura adiacente a more/less non dia fastidio
+                print("message: ", message)
+                print("duration_value: ", str(duration_value))
+                print("duration text", duration_text)
+                message_clean = message_clean.split()   # per l'estrazione di more/less uso il messaggio ripulito per assicurarmi che l'eventuale presenza di punteggiatura adiacente a more/less non dia fastidio
                 diff = message.index(str(duration_value)) - message_clean.index(comparative)    # distanza tra tempo (value) e more/less
                 
                 return {"compareSlot": entity} if diff <= DISTANCE_TH1 and diff >= 0 else None
