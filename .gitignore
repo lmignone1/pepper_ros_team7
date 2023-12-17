@@ -1,0 +1,14 @@
+!workspace/src/
+
+workspace/build/
+workspace/devel/
+workspace/logs/
+
+workspace/.catkin_tools
+
+
+__pycache__/
+*.py[cod]
+*.pyc
+
+workspace/rasa-project/duckling
