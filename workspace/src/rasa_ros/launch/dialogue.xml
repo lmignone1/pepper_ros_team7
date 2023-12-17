@@ -1,5 +1,5 @@
 <launch>
-    <arg name="node_start_delay" default="50.0" />  
+    <arg name="node_start_delay" default="100.0" />  
     <node pkg="rasa_ros" name="rasa_action" type="rasa_action.sh"/>
     <node pkg="rasa_ros" name="rasa_server" type="rasa_server.sh"/> 
     <node pkg="rasa_ros" name="duckling" type="start_duckling.sh"/>
