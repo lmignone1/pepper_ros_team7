@@ -9,8 +9,8 @@ def handle_service(req):
     input_text = req.input_text   
 
     # Get answer        
-    get_answer_url = 'http://localhost:5002/webhooks/rest/webhook'
-    # get_answer_url = 'http://192.168.1.189:5002/webhooks/rest/webhook'
+    # get_answer_url = 'http://localhost:5002/webhooks/rest/webhook'
+    get_answer_url = 'http://192.168.1.189:5002/webhooks/rest/webhook'
     message = {
         "sender": 'bot',
         "message": input_text
