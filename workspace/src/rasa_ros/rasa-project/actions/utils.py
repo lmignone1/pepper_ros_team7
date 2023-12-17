@@ -47,7 +47,19 @@ def not_replacement(msg : list, entities : list):
 
 def minimum_distance(msg : list, entities : list, entity : str, mode = 'not_colour'):
     distances = list()
+
+    entity = entity.split()[-1]
+
     entity_index = msg.index(entity)
+
+    entities_last_word = []
+    for string in entities:
+        words = string.split()
+        if words:
+            last_word = words[-1]
+            entities_last_word.append(last_word)
+    
+    entities = entities_last_word
     
     if mode == 'colour':
         

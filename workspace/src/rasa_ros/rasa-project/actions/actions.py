@@ -50,7 +50,7 @@ class ValidateCustomSlotMappings(ValidationAction):
                 return {"upperColour": None}
         
             upper = upper_entities[-1]
-
+            
             print("latest_upper_body: ", upper)
             print("words: ", ', '.join(message_split))
            
