@@ -9,7 +9,7 @@ from rasa_sdk.forms import ValidationAction
 from rasa_sdk.types import DomainDict
 from .utils import * 
 from .readerJson import *
-import logging
+
 import inflect
 from rasa_sdk.events import SlotSet
 
@@ -55,7 +55,7 @@ class ValidateCustomSlotMappings(ValidationAction):
             print("words: ", ', '.join(message_split))
            
             res = minimum_distance(message_split, colours, upper, mode='colour')
-            print("res:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ", res)
+            
             if res is not None and res[0] <= DISTANCE_TH1:
                 if upper in DRESS:
                     print("I have found an upperColour and a lowerColour and it is ", res[1])
@@ -155,8 +155,6 @@ class ValidateCustomSlotMappings(ValidationAction):
 
         if(intent == "ask_count" or intent == "ask_location"):
             return helper_for_hat_bag(message_split, hat_entities, not_entities, "hatSlot")
-
-
 
 
     async def extract_bagSlot(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict) -> Dict[Text, Any]:
@@ -582,7 +580,7 @@ class ValidateFatherForm(FormValidationAction):
                 latest_females = list(tracker.get_latest_entity_values("female"))
 
                 if len(latest_people) > 0 and len(latest_males) == 0 and len(latest_females) == 0:
-                    print("Metto Asessuato")
+                    print("Metto Altro (genere non specificato)")
                     return {"kindOfPeople": "A"}
                 elif len(latest_males) > 0 and len(latest_females) == 0:
                     print("Metto Maschio")
@@ -591,7 +589,7 @@ class ValidateFatherForm(FormValidationAction):
                     print("Metto Femmina")
                     return {"kindOfPeople": "F"}
                 elif len(latest_males) > 0 and len(latest_females) > 0:
-                    print("Metto Asessuato")
+                    print("Metto Altro (genere non specificato)")
                     return {"kindOfPeople": "A"}
                 else:
                     return {"kindOfPeople": None}

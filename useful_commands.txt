@@ -1,3 +1,10 @@
 rasa run -m models --endpoints endpoints.yml --port 5002 --credentials credentials.yml --enable-api
 
 source devel/setup.bash
+
+
+
+
+in workspace fare
+source devel/setup.bash
+roslaunch rasa_ros dialogue.xml
