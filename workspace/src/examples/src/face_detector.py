@@ -52,14 +52,14 @@ def getFaceBox(net, frame, conf_threshold=0.8):
 def rcv_image(msg):
     bridge = CvBridge()
     try:
-        cv_image = bridge.imgmsg_to_cv2(msg, "bgr8")
+        cv_image = bridge.imgmsg_to_cv2(msg)
     except CvBridgeError as e:
         print(e) 
     frameFace, bboxes = getFaceBox(faceNet, cv_image)
 
 
 rospy.init_node('face_detector')
-si = rospy.Subscriber("in_rgb", Image, rcv_image)
+si = rospy.Subscriber("/in_rgb", Image, rcv_image)
 # si = rospy.Subscriber("image_raw", Image, rcv_image)
 try:
     rospy.spin()
