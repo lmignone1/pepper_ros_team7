@@ -555,7 +555,7 @@ nlu:
     - [NEIN](not)
     - [NO](not)
     - [Nah](not)
-    - [Neither](not)
+    - [neither](not)
     - Never
     - Nevermind
     - [No](not)
@@ -918,7 +918,7 @@ nlu:
     - What is the total number of [customers](people) with blue [upper clothes](upper_body) and pink [lower clothes](lower_body)
     - How many [men](male) are there in walmart with black [upper clothes](upper_body)?
     - What's the amount of [people](people) wearing blue [lower clothes](lower_body) and with a blue [jacket](upper_body)
-
+    - how many [people](people) who are [neither](not) wearing a [beanie](hat) [nor](not) carrying a [purse](bag) are in the [mall](mall).
 
 
 - intent: ask_location
@@ -1055,7 +1055,7 @@ nlu:
     - I lost my [grandma](female) she was wearing green [upper clothes](upper_body)
     - I can't find my [grandchild](people) anymore he has blue [lower clothes](lower_body) and black [upper clothes](upper_body)
     - Looking for my [aunt](female) she is dressed with a [cap](hat), a nice [bag](bag), white [upper clothes](upper clothes)
-
+    - where is my [son](male) who are [neither](not) wearing a [hat](hat) [nor](not) carrying a [schoolbag](bag) are in the [mall](mall).
 
 - intent: inform
   examples: |
