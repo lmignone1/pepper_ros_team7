@@ -202,7 +202,7 @@ class ValidateCustomSlotMappings(ValidationAction):
 
         if(intent == "ask_count" or intent == "ask_location"):
             if(len(shop_entities) == 1 and len(mall_entities) == 0):
-                return {"place": shop_entities[0]}
+                return {"place": shop_entities[0].lower()}
             elif(len(shop_entities) == 0 and len(mall_entities) == 1):
                 return {"place": "mall"}
             else:
@@ -703,7 +703,7 @@ class ValidateFatherForm(FormValidationAction):
                 latest_malls = list(tracker.get_latest_entity_values("mall"))
                 latest_shops = list(tracker.get_latest_entity_values("shop"))
                 if(len(latest_shops) == 1 and len(latest_malls) == 0):
-                    return {"place": latest_shops[0]}
+                    return {"place": latest_shops[0].lower()}
                 elif(len(latest_shops) == 0 and len(latest_malls) == 1):
                     return {"place": "mall"}
                 else:

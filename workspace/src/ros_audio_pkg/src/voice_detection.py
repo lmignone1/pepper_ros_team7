@@ -19,7 +19,7 @@ def callback(recognizer, audio):
 # Initialize a Recognizer
 r = sr.Recognizer()
 r.dynamic_energy_threshold = False
-r.energy_threshold = 10 #Modify here to set threshold. Reference: https://github.com/Uberi/speech_recognition/blob/1b737c5ceb3da6ad59ac573c1c3afe9da45c23bc/speech_recognition/__init__.py#L332
+r.energy_threshold = 200 #Modify here to set threshold. Reference: https://github.com/Uberi/speech_recognition/blob/1b737c5ceb3da6ad59ac573c1c3afe9da45c23bc/speech_recognition/__init__.py#L332
 
 for i, mic in enumerate(sr.Microphone.list_microphone_names()):
     if 'ReSpeaker 4 Mic Array' in mic:
