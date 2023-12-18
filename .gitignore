@@ -13,3 +13,5 @@ __pycache__/
 
 workspace/src/rasa_ros/rasa-project/duckling
 workspace/src/rasa_ros/rasa-project/.rasa
+workspace/src/rasa_ros/scripts/rasa_action_new.sh
+workspace/src/rasa_ros/scripts/rasa_server_new.sh
