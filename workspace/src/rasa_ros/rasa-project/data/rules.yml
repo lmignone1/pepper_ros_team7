@@ -49,7 +49,7 @@ rules:
     - intent: deny
     - intent: unknown
     - intent: inform
-  - action: utter_repeat_count_request
+  - action: utter_repeat_request
 
 - rule: Activate Count Form
   steps:
@@ -114,29 +114,29 @@ rules:
     - intent: deny
     - intent: unknown
     - intent: inform
-  - action: utter_repeat_location_request
+  - action: utter_repeat_request
 
 - rule: after asking for repeating the counting task, the bot receives an affirm, so the bot sollecits a request
   steps:
-  - action: utter_repeat_count_request
+  - action: utter_repeat_request
   - intent: affirm
   - action: utter_repeat_again
 
 - rule: after asking for repeating the location task, the bot receives an affirm, so the bot sollecits a request
   steps:
-  - action: utter_repeat_location_request
+  - action: utter_repeat_request
   - intent: affirm
   - action: utter_repeat_again
 
 - rule: after asking for repeating the counting task, the bot receives a deny
   steps:
-  - action: utter_repeat_count_request
+  - action: utter_repeat_request
   - intent: deny
   - action: utter_dont_mind
 
 - rule: after asking for repeating the location task, the bot receives a deny
   steps:
-  - action: utter_repeat_location_request
+  - action: utter_repeat_request
   - intent: deny
   - action: utter_dont_mind
 
