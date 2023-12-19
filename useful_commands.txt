@@ -8,3 +8,9 @@ source devel/setup.bash
 in workspace fare
 source devel/setup.bash
 roslaunch rasa_ros dialogue.xml
+
+PER LANCIARE PEPPER
+(non dimenticare source devel/setup.bash)
+roslaunch pepper_nodes pepper_bringup.launch nao_ip:=10.0.1.230
+
+rosservice call /tts "speech: ...."
