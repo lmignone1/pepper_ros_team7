@@ -48,9 +48,11 @@ def not_replacement(msg : list, entities : list):
 def minimum_distance(msg : list, entities : list, entity : str, mode = 'not_colour'):
     distances = list()
 
-    entity = entity.split()[-1]
+    entity = entity.split()[0]
+    print("entity", entity)
 
     entity_index = msg.index(entity)
+    
 
     # entities_last_word = []
     # for string in entities:
@@ -65,9 +67,14 @@ def minimum_distance(msg : list, entities : list, entity : str, mode = 'not_colo
         
         for col in entities:
             col_index = msg.index(col)
+            print("colour ",col)
+            print("col_index: ", col_index)
             d = entity_index - col_index
+            print("d ", d)
             distances.append((d, col)) if d >= 0 else None
+            print("distance", distances)
             msg[col_index] = ''
+        print("distances", distances)
 
         try:
             min_distance_index = argmin([tup[0] for tup in distances])

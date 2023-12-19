@@ -97,6 +97,7 @@ class ValidateCustomSlotMappings(ValidationAction):
             print("words: ", ', '.join(message_split))
 
             res = minimum_distance(message_split, colours, lower, mode='colour')
+            print("minimum distance", res)
          
             if res is not None and res[0] <= DISTANCE_TH1:
                 print("I have found a lowerColour and it is ", res[1])
