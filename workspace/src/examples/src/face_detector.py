@@ -8,6 +8,7 @@ from sensor_msgs.msg import Image
 from std_msgs.msg import Int16
 import ros_numpy 
 from cv_bridge import CvBridge, CvBridgeError
+from collections import deque
 
 class Detector():
 
@@ -17,8 +18,11 @@ class Detector():
         faceModel = path + "/opencv_face_detector_uint8.pb"
         
         self.faceNet = cv2.dnn.readNet(faceModel, faceProto)
-        self.pub = None
-    
+        self._pub = None
+        self._deque = deque(maxlen=20)
+        
+        for _ in range(20): 
+            self._deque.append(0) 
 
 
     def _getFaceBox(self, net, frame, conf_threshold=0.7):
@@ -53,8 +57,11 @@ class Detector():
             print("No face detected")
             cv2.imshow("Demo", frameOpencvDnn)
             cv2.waitKey(1)
-
-        return len(bboxes), bboxes
+            detected = 0
+        else:
+            detected = 1
+        
+        return detected, bboxes
 
 
     def _rcv_image(self, msg):
@@ -63,15 +70,24 @@ class Detector():
             cv_image = bridge.imgmsg_to_cv2(msg)
         except CvBridgeError as e:
             print(e) 
-        number_of_detections, _ = self._getFaceBox(self.faceNet, cv_image)
-        self.pub.publish(number_of_detections)
+        detected, _ = self._getFaceBox(self.faceNet, cv_image)
+        self._deque.append(detected)
 
     def start(self):
         rospy.init_node('face_detector')
         rospy.Subscriber("/in_rgb", Image, self._rcv_image)
         # rospy.Subscriber("image_raw", Image, rcv_image)
-        self.pub = rospy.Publisher('detection', Int16, queue_size=1)
-        rospy.spin()
+        self._pub = rospy.Publisher('detection', Int16, queue_size=1)
+        
+        while not rospy.is_shutdown():
+            res = sum(i for i in self._deque)
+
+            if res >= self._deque.maxlen/2:
+                self._pub.publish(1)
+            else:
+                self._pub.publish(0)
+            
+            rospy.sleep(1)
 
 
 try:
