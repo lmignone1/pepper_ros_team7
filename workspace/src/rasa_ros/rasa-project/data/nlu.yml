@@ -1056,6 +1056,8 @@ nlu:
     - I can't find my [grandchild](people) anymore he has blue [lower clothes](lower_body) and black [upper clothes](upper_body)
     - Looking for my [aunt](female) she is dressed with a [cap](hat), a nice [bag](bag), white [upper clothes](upper clothes)
     - where is my [son](male) who are [neither](not) wearing a [hat](hat) [nor](not) carrying a [schoolbag](bag) are in the [mall](mall).
+    - have you seen a [guy](male)
+    - have you seen ed?
 
 - intent: inform
   examples: |
