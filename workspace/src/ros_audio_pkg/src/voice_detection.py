@@ -24,9 +24,6 @@ r.energy_threshold = 250 #Modify here to set threshold. Reference: https://githu
 for i, mic in enumerate(sr.Microphone.list_microphone_names()):
     if 'ReSpeaker 4 Mic Array' in mic:
         device_index = i
-    
-    if 'HDA Intel PCH: ALC294 Analog (hw:0,0)' in mic:
-        device_index = i
 
 m = sr.Microphone(device_index=device_index,
                     sample_rate=16000,
