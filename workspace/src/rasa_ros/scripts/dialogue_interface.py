@@ -53,8 +53,8 @@ class Speaking():
             print('conversation: ', self.conversation)
 
             if self.conversation == True:
-                speech_req = self._make_request('Hello folks', Text2SpeechRequest())
-                self.tts_service(speech_req)
+                engagement = self._make_request('Hello folks', Text2SpeechRequest())
+                self.tts_service(engagement)
                 print('Saluto pr la prima volta')
 
                 i = 0
@@ -68,7 +68,7 @@ class Speaking():
                         break
                     
                     try:
-                        user_message = rospy.wait_for_message('voice_txt', String, timeout=TIMEOUT) # lunghezza parola + costante 
+                        user_txt = rospy.wait_for_message('voice_txt', String, timeout=TIMEOUT) # lunghezza parola + costante 
                     except rospy.ROSException:
                         print('RESTART:')
                         restart_req = self._make_request('/restart', DialogueRequest())
@@ -84,15 +84,13 @@ class Speaking():
                     #     print('RISP bot al restart', resp.answer)
                     #     break
 
-                    user_message = user_message.data.lower()
-
-                    if user_message == 'exit': 
+                    if user_txt.data == 'exit': 
                         break
                     
                     try:
                 
-                        print("[IN]:", user_message)
-                        user_req = self._make_request(user_message.data.lower(), DialogueRequest())
+                        print("[IN]:", user_txt)
+                        user_req = self._make_request(user_txt.data.lower(), DialogueRequest())
                         
                         bot_answer = self.dialogue_service(user_req)
                         
