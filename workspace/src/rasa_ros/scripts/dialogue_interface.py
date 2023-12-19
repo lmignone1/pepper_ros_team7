@@ -68,7 +68,7 @@ class Speaking():
                         break
                     
                     try:
-                        user_txt = rospy.wait_for_message('voice_txt', String, timeout=TIMEOUT) # lunghezza parola + costante 
+                        user_txt = rospy.wait_for_message('voice_txt', String, timeout=TIMEOUT) # lunghezza ultima frase fatta pronunciare a Pepper + costante 
                     except rospy.ROSException:
                         print('RESTART')
                         restart_req = self._make_request('/restart', DialogueRequest())

@@ -33,6 +33,7 @@ class Detector():
             self._deque.append(0) 
         
         self._bridge = CvBridge()
+        print("inizializzazione completata")
         
       
 
@@ -99,11 +100,11 @@ class Detector():
 
 
 if __name__ == '__main__':
-    FPS = 20    # 20 frames per second
-    INTERVAL_TIME = 0.5   # quindi ad ogni iterazione abbiamo una 'nuova coda' 
+    FPS = 20    # frame rate della camera
+    INTERVAL_TIME = 0.5   # il tempo che intercorre mediamente tra una pubblicazione e la successiva sul topic /detection
     MAXLEN = int(INTERVAL_TIME * FPS)          # trade-off between performance and responsiveness
     CONFIDENCE_TH = 0.7  
-    
+
     try:
         detector = Detector()
         detector.start()
