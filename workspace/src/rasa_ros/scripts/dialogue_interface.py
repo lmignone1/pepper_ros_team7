@@ -16,10 +16,10 @@ class Speaking():
         
         # inizializzazione dei servizi
         rospy.wait_for_service('dialogue_server')
-        self.dialogue_service = rospy.ServiceProxy('/dialogue_server', Dialogue)
+        self.dialogue_service = rospy.ServiceProxy('dialogue_server', Dialogue)
 
         rospy.wait_for_service('/tts')
-        self.tts_service = rospy.ServiceProxy('/tts', Text2Speech)
+        self.tts_service = rospy.ServiceProxy('tts', Text2Speech)
 
         # inizializzazione dei subscriber
         rospy.Subscriber('detection', Int16, self._rcv_detection)
@@ -55,25 +55,25 @@ class Speaking():
             if self.conversation == True:
                 engagement = self._make_request('Hello folks', Text2SpeechRequest())
                 self.tts_service(engagement)
-                print('Saluto pr la prima volta')
+                print('Io robot ingaggio la persona che ho davanti')
 
                 i = 0
                 while True:
                 
                     if self.conversation == False:
-                        print('RESTART:')
+                        print('RESTART')
                         restart_req = self._make_request('/restart', DialogueRequest())
                         resp = self.dialogue_service(restart_req)
-                        print('RISP bot al restart', resp.answer)
+                        print('RISPOSTA del bot al restart', resp.answer)
                         break
                     
                     try:
                         user_txt = rospy.wait_for_message('voice_txt', String, timeout=TIMEOUT) # lunghezza parola + costante 
                     except rospy.ROSException:
-                        print('RESTART:')
+                        print('RESTART')
                         restart_req = self._make_request('/restart', DialogueRequest())
                         resp = self.dialogue_service(restart_req)
-                        print('RISP bot al restart', resp.answer)
+                        print('RISPOSTA del bot al restart', resp.answer)
                         break
 
                     # if message is None:
