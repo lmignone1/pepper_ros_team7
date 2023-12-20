@@ -12,6 +12,7 @@ from .readerJson import *
 
 import inflect
 from rasa_sdk.events import SlotSet
+import logging
 
 
 SHOP_DICT = {'roi1' : 'walmart', 'roi2' : 'starbucks'}
@@ -32,16 +33,16 @@ class ValidateCustomSlotMappings(ValidationAction):
             return None
         
         loop = tracker.active_loop
-        print("##################################################")
-        print("tracker.active_loop['name']: ", loop)
-        print("##################################################")
+        logging.debug("##################################################")
+        logging.debug("tracker.active_loop['name']: %s", loop)
+        logging.debug("##################################################")
     
-        print("STO ESEGUENDO extract_upperColour NON PENSATO PER IL FORM")
+        logging.debug("STO ESEGUENDO extract_upperColour NON PENSATO PER IL FORM")
 
         intent = tracker.get_intent_of_latest_message()
         message_split = cleaner(tracker.latest_message["text"]).split()
         colours = list(tracker.get_latest_entity_values("colour"))
-        print("latest_colours: ", ', '.join(colours))
+        logging.debug("latest_colours: %s", ', '.join(colours))
         upper_entities = list(tracker.get_latest_entity_values("upper_body")) 
         
 
@@ -51,17 +52,17 @@ class ValidateCustomSlotMappings(ValidationAction):
         
             upper = upper_entities[-1]
             
-            print("latest_upper_body: ", upper)
-            print("words: ", ', '.join(message_split))
+            logging.debug("latest_upper_body: %s", upper)
+            logging.debug("words: ", ', '.join(message_split))
            
             res = minimum_distance(message_split, colours, upper, mode='colour')
             
             if res is not None and res[0] <= DISTANCE_TH1:
                 if upper in DRESS:
-                    print("I have found an upperColour and a lowerColour and it is ", res[1])
+                    logging.debug("I have found an upperColour and a lowerColour and it is %s", res[1])
                     return{"upperColour": res[1], "lowerColour": res[1]}
                 else:
-                    print("I have found an upperColour and it is ", res[1])
+                    logging.debug("I have found an upperColour and it is %s", res[1])
                     return {"upperColour": res[1]}
             else:
                 return {"upperColour": None}
@@ -78,12 +79,12 @@ class ValidateCustomSlotMappings(ValidationAction):
         if len(loop) != 0:
             return None
         
-        print("STO ESEGUENDO extract_lowerColour NON PENSATO PER IL FORM")
+        logging.debug("STO ESEGUENDO extract_lowerColour NON PENSATO PER IL FORM")
 
         intent = tracker.get_intent_of_latest_message()
         message_split = cleaner(tracker.latest_message["text"]).split()
         colours = list(tracker.get_latest_entity_values("colour"))
-        print("latest_colours: ", ', '.join(colours))
+        logging.debug("latest_colours: %s", ', '.join(colours))
         lower_enitities = list(tracker.get_latest_entity_values("lower_body"))
         
 
@@ -93,14 +94,14 @@ class ValidateCustomSlotMappings(ValidationAction):
             
             lower = lower_enitities[-1]
         
-            print("latest_lower_body: ", lower)
-            print("words: ", ', '.join(message_split))
+            logging.debug("latest_lower_body: %s", lower)
+            logging.debug("words: ", ', '.join(message_split))
 
             res = minimum_distance(message_split, colours, lower, mode='colour')
-            print("minimum distance", res)
+            logging.debug("minimum distance %s", res)
          
             if res is not None and res[0] <= DISTANCE_TH1:
-                print("I have found a lowerColour and it is ", res[1])
+                logging.debug("I have found a lowerColour and it is %s", res[1])
                 return {"lowerColour": res[1]}
             else:
                 return {"lowerColour": None}
@@ -118,14 +119,14 @@ class ValidateCustomSlotMappings(ValidationAction):
         if len(loop) != 0:
             return None
         
-        print("STO ESEGUENDO extract_kindOfPeeple NON PENSATO PER IL FORM")
+        logging.debug("STO ESEGUENDO extract_kindOfPeeple NON PENSATO PER IL FORM")
                
         intent = tracker.get_intent_of_latest_message()
         male_entities = list(tracker.get_latest_entity_values("male"))
         female_entities = list(tracker.get_latest_entity_values("female"))
         
-        print("latest_male_entities\t", male_entities)
-        print("latest_female_entities\t", female_entities)
+        logging.debug("latest_male_entities:\t %s", male_entities)
+        logging.debug("latest_female_entities:\t %s", female_entities)
         
         if(intent == "ask_count" or intent == "ask_location"):
             if (len(male_entities) > 0 and len(female_entities)== 0):
@@ -144,15 +145,15 @@ class ValidateCustomSlotMappings(ValidationAction):
         if len(loop) != 0:
             return None
        
-        print("STO ESEGUENDO extract_hatSlot NON PENSATO PER IL FORM")
+        logging.debug("STO ESEGUENDO extract_hatSlot NON PENSATO PER IL FORM")
 
         intent = tracker.get_intent_of_latest_message()
         message_split = cleaner(tracker.latest_message["text"]).split()
         hat_entities = list(tracker.get_latest_entity_values("hat"))
         not_entities = list(tracker.get_latest_entity_values("not"))
 
-        print('hat_entities:\t', hat_entities)
-        print('not_entities:\t', not_entities)
+        logging.debug('hat_entities:\t %s', hat_entities)
+        logging.debug('not_entities:\t %s', not_entities)
 
         if(intent == "ask_count" or intent == "ask_location"):
             return helper_for_hat_bag(message_split, hat_entities, not_entities, "hatSlot")
@@ -164,15 +165,15 @@ class ValidateCustomSlotMappings(ValidationAction):
         if len(loop) != 0:
             return None
         
-        print("STO ESEGUENDO extract_bagSlot NON PENSATO PER IL FORM")
+        logging.debug("STO ESEGUENDO extract_bagSlot NON PENSATO PER IL FORM")
 
         intent = tracker.get_intent_of_latest_message()
         message_split = cleaner(tracker.latest_message["text"]).split()
         bag_entities = list(tracker.get_latest_entity_values("bag"))
         not_entities = list(tracker.get_latest_entity_values("not"))
 
-        print('bag_entities:\t', bag_entities)
-        print('not_entities:\t', not_entities)
+        logging.debug('bag_entities:\t %s', bag_entities)
+        logging.debug('not_entities:\t %s', not_entities)
 
         if(intent == "ask_count" or intent == "ask_location"):
             return helper_for_hat_bag(message_split, bag_entities, not_entities, "bagSlot")
@@ -192,14 +193,14 @@ class ValidateCustomSlotMappings(ValidationAction):
         if len(loop) != 0:
             return None
         
-        print("STO ESEGUENDO extract_place NON PENSATO PER IL FORM")
+        logging.debug("STO ESEGUENDO extract_place NON PENSATO PER IL FORM")
 
         intent = tracker.get_intent_of_latest_message()
         mall_entities = list(set(tracker.get_latest_entity_values("mall")))
         shop_entities = list(set(tracker.get_latest_entity_values("shop")))
         
-        print('latest_mall_entities:\t', mall_entities)
-        print('latest_shop_entities:\t', shop_entities)
+        logging.debug('latest_mall_entities:\t %s', mall_entities)
+        logging.debug('latest_shop_entities:\t %s', shop_entities)
 
         if(intent == "ask_count" or intent == "ask_location"):
             if(len(shop_entities) == 1 and len(mall_entities) == 0):
@@ -218,7 +219,7 @@ class ValidateCustomSlotMappings(ValidationAction):
         if len(loop) != 0:
             return None
         
-        print("STO ESEGUENDO extract_compareSlot NON PENSATO PER IL FORM")
+        logging.debug("STO ESEGUENDO extract_compareSlot NON PENSATO PER IL FORM")
 
         intent = tracker.get_intent_of_latest_message()
         message = tracker.latest_message["text"]
@@ -234,9 +235,9 @@ class ValidateCustomSlotMappings(ValidationAction):
         except IndexError:
             duration_dict = duration_text = None
 
-        print('less_entities:\t', less_entities)
-        print('more_entities:\t', more_entities)
-        print('duration:\t', duration_text)
+        logging.debug('less_entities:\t %s', less_entities)
+        logging.debug('more_entities:\t %s', more_entities)
+        logging.debug('duration:\t %s', duration_text)
 
         if intent == 'ask_location':
             return {"compareSlot": None}
@@ -256,9 +257,9 @@ class ValidateCustomSlotMappings(ValidationAction):
                 
                 message = message.replace(duration_text, " " +str(duration_value) +" ")   # sostituisco il testo con il valore numerico
                 message = message.split()
-                print("message: ", message)
-                print("duration_value: ", str(duration_value))
-                print("duration text", duration_text)
+                logging.debug("message: %s", message)
+                logging.debug("duration_value: ", str(duration_value))
+                logging.debug("duration text %s", duration_text)
                 message_clean = message_clean.split()   # per l'estrazione di more/less uso il messaggio ripulito per assicurarmi che l'eventuale presenza di punteggiatura adiacente a more/less non dia fastidio
                 diff = message.index(str(duration_value)) - message_clean.index(comparative)    # distanza tra tempo (value) e more/less
                 
@@ -280,7 +281,7 @@ class ValidateCustomSlotMappings(ValidationAction):
         if len(loop) != 0:
             return None
         
-        print("STO ESEGUENDO extract_duration NON PENSATO PER IL FORM")
+        logging.debug("STO ESEGUENDO extract_duration NON PENSATO PER IL FORM")
         intent = tracker.get_intent_of_latest_message()
 
         if intent == 'ask_count':
@@ -305,15 +306,15 @@ class ValidateCustomSlotMappings(ValidationAction):
         if len(loop) != 0:
             return None
         
-        print("STO ESEGUENDO extract_not_upperSlot NON PENSATO PER IL FORM")
+        logging.debug("STO ESEGUENDO extract_not_upperSlot NON PENSATO PER IL FORM")
 
         intent = tracker.get_intent_of_latest_message()
         message_split = cleaner(tracker.latest_message["text"]).split()
         not_entities = list(tracker.get_latest_entity_values("not"))
         upper_entities = list(tracker.get_latest_entity_values("upper_body"))
 
-        print('not_entities:\t', not_entities)
-        print('upper_entities:\t', upper_entities)
+        logging.debug('not_entities:\t %s', not_entities)
+        logging.debug('upper_entities:\t %s', upper_entities)
 
         if(intent == "ask_count" or intent == "ask_location"):
             
@@ -332,7 +333,7 @@ class ValidateCustomSlotMappings(ValidationAction):
                 message_split = not_replacement(message_split, not_entities) 
                 min_distance = minimum_distance(message_split, not_entities, upper)
 
-                print('min_distance_not_upper:\t', min_distance)
+                logging.debug('min_distance_not_upper:\t %s', min_distance)
 
                 if min_distance is not None and min_distance <= DISTANCE_TH2:
                     if upper in DRESS:
@@ -352,15 +353,15 @@ class ValidateCustomSlotMappings(ValidationAction):
         if len(loop) != 0:
             return None
 
-        print("STO ESEGUENDO extract_not_lowerSlot NON PENSATO PER IL FORM")
+        logging.debug("STO ESEGUENDO extract_not_lowerSlot NON PENSATO PER IL FORM")
 
         intent = tracker.get_intent_of_latest_message()
         message_split = cleaner(tracker.latest_message["text"]).split()
         not_entities = list(tracker.get_latest_entity_values("not"))
         lower_entities = list(tracker.get_latest_entity_values("lower_body"))
 
-        print('not_entities:\t', not_entities)
-        print('lower_entities:\t', lower_entities)
+        logging.debug('not_entities:\t %s', not_entities)
+        logging.debug('lower_entities:\t %s', lower_entities)
 
         if (intent == "ask_count" or intent == "ask_location"):
             if not lower_entities:
@@ -374,7 +375,7 @@ class ValidateCustomSlotMappings(ValidationAction):
                 message_split = not_replacement(message_split, not_entities)
                 min_distance = minimum_distance(message_split, not_entities, lower_entities[-1])
                 
-                print('min_distance_not_lower:\t', min_distance)
+                logging.debug('min_distance_not_lower:\t %s', min_distance)
 
                 if min_distance is not None and min_distance <= DISTANCE_TH2:
                     return {"not_lowerSlot": True}
@@ -407,28 +408,28 @@ class ValidateFatherForm(FormValidationAction):
         
         # QUESTION: "What is the main colour of the upper clothes?"
 
-        print("STO ESEGUENDO extract_upperColour PENSATO PER IL FORM")
+        logging.debug("STO ESEGUENDO extract_upperColour PENSATO PER IL FORM")
 
-        print("UPPER_COLOR: ", tracker.get_slot("upperColour"))
-        print("LOWER_COLOR: ", tracker.get_slot("lowerColour"))
-        print("KIND_OF_POPLE: ", tracker.get_slot("kindOfPeople"))
-        print("HAT_SLOT: ", tracker.get_slot("hatSlot"))
-        print("BAG_SLOT: ", tracker.get_slot("bagSlot"))
-        print("PLACE: ", tracker.get_slot("place"))
-        print("NOT_UPPER_SLOT: ", tracker.get_slot("not_upperSlot"))
-        print("NOT_LOWER_SLOT: ", tracker.get_slot("not_lowerSlot"))
+        logging.debug("UPPER_COLOR: %s", tracker.get_slot("upperColour"))
+        logging.debug("LOWER_COLOR: %s", tracker.get_slot("lowerColour"))
+        logging.debug("KIND_OF_POPLE: %s", tracker.get_slot("kindOfPeople"))
+        logging.debug("HAT_SLOT: %s", tracker.get_slot("hatSlot"))
+        logging.debug("BAG_SLOT: %s", tracker.get_slot("bagSlot"))
+        logging.debug("PLACE: %s", tracker.get_slot("place"))
+        logging.debug("NOT_UPPER_SLOT: %s", tracker.get_slot("not_upperSlot"))
+        logging.debug("NOT_LOWER_SLOT: %s", tracker.get_slot("not_lowerSlot"))
 
         intent_of_last_user_message = tracker.get_intent_of_latest_message()
         latest_message = (tracker.latest_message["text"])
-        print(latest_message)
-        print("intent_of_last_user_message: ", intent_of_last_user_message)
+        logging.debug("%s",latest_message)
+        logging.debug("intent_of_last_user_message: %s", intent_of_last_user_message)
 
         latest_utter = latest_tracker_utter(tracker.events)
         
         if self._form_upperColour in latest_utter :
 
             if intent_of_last_user_message == "unknown":
-                print("Metto Free")
+                logging.debug("Metto Free")
                 return {"upperColour": "free"} # qualsiasi colore
             
             elif intent_of_last_user_message == "inform" or intent_of_last_user_message == self._attention_intent:
@@ -436,7 +437,7 @@ class ValidateFatherForm(FormValidationAction):
                 message_split = cleaner(tracker.latest_message["text"]).split()
                 message_plus = ["_", "_"]
                 message_split = message_plus + message_split + message_plus
-                print("message_split: ", message_split)
+                logging.debug("message_split: %s", message_split)
 
                 latest_colours = list(tracker.get_latest_entity_values("colour"))
 
@@ -457,11 +458,11 @@ class ValidateFatherForm(FormValidationAction):
                         good_candidates.append([col, col_ind])
 
                 if len(good_candidates) == 1:
-                    print("colore buono per UPPER: " +good_candidates[0][0])
+                    logging.debug("colore buono per UPPER: " +good_candidates[0][0])
                     lc_message_split = [word.lower() for word in message_split]
                     if lc_message_split[good_candidates[0][1]-1] == "but":
-                        print("good_candidates: ", good_candidates)
-                        print("good_candidates[0][1]-1: ", good_candidates[0][1]-1)
+                        logging.debug("good_candidates: %s", good_candidates)
+                        logging.debug("good_candidates[0][1]-1: ", good_candidates[0][1]-1)
                         return {"upperColour": good_candidates[0][0], "not_upperSlot": True}
 
                     not_entities = list(tracker.get_latest_entity_values("not"))
@@ -490,13 +491,13 @@ class ValidateFatherForm(FormValidationAction):
         
         # QUESTION: "What is the main colour of the lower clothes?"
 
-        print("STO ESEGUENDO extract_lowerColour PENSATO PER IL FORM")
+        logging.debug("STO ESEGUENDO extract_lowerColour PENSATO PER IL FORM")
 
 
         intent_of_last_user_message = tracker.get_intent_of_latest_message()
         latest_message = (tracker.latest_message["text"])
-        print(latest_message)
-        print("intent_of_last_user_message: ", intent_of_last_user_message)
+        logging.debug("%s", latest_message)
+        logging.debug("intent_of_last_user_message: %s", intent_of_last_user_message)
 
 
         latest_utter = latest_tracker_utter(tracker.events)
@@ -504,7 +505,7 @@ class ValidateFatherForm(FormValidationAction):
         if self._form_lowerColour in latest_utter :
 
             if intent_of_last_user_message == "unknown":
-                print("Metto Free")
+                logging.debug("Metto Free")
                 return {"lowerColour": "free"} # qualsiasi colore
             
             elif intent_of_last_user_message == "inform" or intent_of_last_user_message == self._attention_intent:
@@ -512,7 +513,7 @@ class ValidateFatherForm(FormValidationAction):
                 message_split = cleaner(tracker.latest_message["text"]).split()
                 message_plus = ["_", "_"]
                 message_split = message_plus + message_split + message_plus
-                print("message_split: ", message_split)
+                logging.debug("message_split: %s", message_split)
 
                 latest_colours = list(tracker.get_latest_entity_values("colour"))
 
@@ -533,11 +534,11 @@ class ValidateFatherForm(FormValidationAction):
                          good_candidates.append([col, col_ind])
 
                 if len(good_candidates) == 1:
-                    print("colore buono per LOWER: " +good_candidates[0][0])
+                    logging.debug("colore buono per LOWER: " +good_candidates[0][0])
                     lc_message_split = [word.lower() for word in message_split]
                     if lc_message_split[good_candidates[0][1]-1] == "but":
-                        print("good_candidates: ", good_candidates)
-                        print("good_candidates[0][1]-1: ", good_candidates[0][1]-1)
+                        logging.debug("good_candidates: %s", good_candidates)
+                        logging.debug("good_candidates[0][1]-1: ", good_candidates[0][1]-1)
                         return {"lowerColour": good_candidates[0][0], "not_lowerSlot": True}
 
                     not_entities = list(tracker.get_latest_entity_values("not"))
@@ -565,18 +566,18 @@ class ValidateFatherForm(FormValidationAction):
         
         # "Are you looking for somebody who is male or female?"
 
-        print("STO ESEGUENDO extract_kindOfPeeple PENSATO PER IL FORM")
+        logging.debug("STO ESEGUENDO extract_kindOfPeeple PENSATO PER IL FORM")
 
         intent_of_last_user_message = tracker.get_intent_of_latest_message()
         latest_message = (tracker.latest_message["text"])
-        print(latest_message)
-        print("intent_of_last_user_message: ", intent_of_last_user_message)
+        logging.debug("%s", latest_message)
+        logging.debug("intent_of_last_user_message: %s", intent_of_last_user_message)
 
         latest_utter = latest_tracker_utter(tracker.events)
         
         if self._form_kindOfPeople in latest_utter :
             if intent_of_last_user_message == "unknown":
-                print("Metto Asessuato")
+                logging.debug("Metto Asessuato")
                 return {"kindOfPeople": "A"}
             elif intent_of_last_user_message == "inform" or intent_of_last_user_message == self._attention_intent:
                 latest_people = list(tracker.get_latest_entity_values("people"))
@@ -584,16 +585,16 @@ class ValidateFatherForm(FormValidationAction):
                 latest_females = list(tracker.get_latest_entity_values("female"))
 
                 if len(latest_people) > 0 and len(latest_males) == 0 and len(latest_females) == 0:
-                    print("Metto Altro (genere non specificato)")
+                    logging.debug("Metto Altro (genere non specificato)")
                     return {"kindOfPeople": "A"}
                 elif len(latest_males) > 0 and len(latest_females) == 0:
-                    print("Metto Maschio")
+                    logging.debug("Metto Maschio")
                     return {"kindOfPeople": "M"}
                 elif len(latest_females) > 0 and len(latest_males) == 0:
-                    print("Metto Femmina")
+                    logging.debug("Metto Femmina")
                     return {"kindOfPeople": "F"}
                 elif len(latest_males) > 0 and len(latest_females) > 0:
-                    print("Metto Altro (genere non specificato)")
+                    logging.debug("Metto Altro (genere non specificato)")
                     return {"kindOfPeople": "A"}
                 else:
                     return {"kindOfPeople": None}
@@ -610,7 +611,7 @@ class ValidateFatherForm(FormValidationAction):
         
         # QUESTION: Are you looking for someone with a hat or without?"
 
-        print("STO ESEGUENDO extract_hatSlot PENSATO PER IL FORM")
+        logging.debug("STO ESEGUENDO extract_hatSlot PENSATO PER IL FORM")
 
         intent_of_last_user_message = tracker.get_intent_of_latest_message()
 
@@ -649,7 +650,7 @@ class ValidateFatherForm(FormValidationAction):
         
         # QUESTION: "Are you looking for someone with a bag or without?"
 
-        print("STO ESEGUENDO extract_bagSlot PENSATO PER IL FORM")
+        logging.debug("STO ESEGUENDO extract_bagSlot PENSATO PER IL FORM")
 
         intent_of_last_user_message = tracker.get_intent_of_latest_message()
 
@@ -688,7 +689,7 @@ class ValidateFatherForm(FormValidationAction):
         
         # "Do you want to consider the entire mall, walmart or starbucks?"
 
-        print("STO ESEGUENDO extract_place PENSATO PER IL FORM")
+        logging.debug("STO ESEGUENDO extract_place PENSATO PER IL FORM")
 
         intent_of_last_user_message = tracker.get_intent_of_latest_message()
 
@@ -852,7 +853,7 @@ class ActionConfirmationCount(Action):
                 utterance += str(duration_minutes) +" minutes."
         
         utterance += " Is it right?"
-        print(utterance)
+        logging.debug(utterance)
         dispatcher.utter_message(utterance)
         return []
     
@@ -920,7 +921,7 @@ class ActionConfirmationLocation(Action):
                 utterance += "without " +lowerColour +" lower clothes."
     
         utterance += " Is it right?"
-        print(utterance)
+        logging.debug(utterance)
         dispatcher.utter_message(utterance)
         return []
         
