@@ -93,8 +93,6 @@ class Detector():
 
             if res >= self._deque.maxlen/2:
                 self._pub.publish(1)
-            else:
-                self._pub.publish(0)
             
             rospy.sleep(INTERVAL_TIME)
 
