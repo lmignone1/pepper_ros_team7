@@ -1,10 +1,15 @@
 from flask import Flask, render_template
+import os
 
 app = Flask(__name__)
 
 @app.route('/index1')
 def index():
-    return render_template('index1.html')
+    path = os.path.join(os.path.dirname(__file__), 'data.txt')
+    with open(path, 'r') as f:
+        data = f.read()
+        data = data.split()
+    return render_template('index1.html', data = data)
 
 @app.route('/index3')
 def index3():
