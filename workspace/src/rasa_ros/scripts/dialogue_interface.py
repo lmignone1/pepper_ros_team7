@@ -3,7 +3,7 @@
 import rospy
 from rasa_ros.srv import Dialogue, DialogueResponse, DialogueRequest
 from std_msgs.msg import Int16MultiArray, String, Int16
-
+from ros_audio_pkg.srv import TurnOn, TurnOnResponse, TurnOff, TurnOffResponse
 from pepper_nodes.srv import Text2Speech, Text2SpeechRequest, Text2SpeechResponse
 
 
@@ -21,9 +21,14 @@ class Speaking():
         rospy.wait_for_service('/tts')
         self.tts_service = rospy.ServiceProxy('tts', Text2Speech)
 
+        rospy.wait_for_service('turn_on_mic')
+        self._turn_on_mic = rospy.ServiceProxy('turn_on_mic', TurnOn)
+
+        rospy.wait_for_service('turn_off_mic')
+        self._turn_off_mic = rospy.ServiceProxy('turn_off_mic', TurnOff)
 
         # inizializzazione dei publisher
-        self._mic = rospy.Publisher('mic_command', Int16, queue_size=1)
+        # self._mic = rospy.Publisher('mic_command', Int16, queue_size=1)
         # inizializzazione dei subscriber
         # rospy.Subscriber('detection', Int16, self._rcv_detection)
 
@@ -62,7 +67,7 @@ class Speaking():
             self.tts_service(engagement)
             print('Io robot ingaggio la persona che ho davanti')
             
-            time_last_utterance = len(engagement_utterance.split()) * 0.6 # rappresenta un approssimazione del tempo impiegato da pepper per pronunciare l ultima frase fornita
+            time_last_utterance = len(engagement_utterance.split()) * 0.25 # rappresenta un approssimazione del tempo impiegato da pepper per pronunciare l ultima frase fornita
             
             
 
@@ -71,19 +76,19 @@ class Speaking():
                 
                 
                 try:
-                    self._mic.publish(1)
+                    self._turn_on_mic()
                     user_txt = rospy.wait_for_message('voice_txt', String, timeout=TIMEOUT_VOICE) # lunghezza ultima frase fatta pronunciare a Pepper + costante 
-                    self._mic.publish(0)
+                    self._turn_off_mic()
                 except rospy.ROSException:
                     print('RESTART')
                     restart_req = self._make_request('/restart', DialogueRequest())
                     resp = self.dialogue_service(restart_req)
                     print('RISPOSTA del bot al restart', resp.answer)
-                    self._mic.publish(0)
+                    self._turn_off_mic()
                     break
                 
                 try:
-            
+                    start = rospy.Time.now()
                     print("[IN]:", user_txt)
                     user_req = self._make_request(user_txt.data.lower(), DialogueRequest())
                     
@@ -92,7 +97,7 @@ class Speaking():
                     print("[OUT]:", bot_answer.answer)
 
                     bot_answer = self._make_request(bot_answer.answer, Text2SpeechRequest())
-                    time_last_utterance = len(bot_answer.speech.split()) * 0.6 # pepper impiega 100 parole/minuto (100 : 60s = #parole : Xs)
+                    time_last_utterance = len(bot_answer.speech.split()) * 0.25 # pepper impiega 100 parole/minuto (100 : 60s = #parole : Xs)
                     self.tts_service(bot_answer)
 
                     print('fine ciclo')
@@ -107,12 +112,21 @@ class Speaking():
                     restart_req = self._make_request('/restart', DialogueRequest())
                     resp = self.dialogue_service(restart_req)
                     print('RISPOSTA del bot al restart', resp.answer)
-                    self._mic.publish(0)
+                    self._turn_off_mic()
                     break
-                
+                end = rospy.Time.now()
                 i += 1
                 print('fine iterazione ', i)
-                rospy.sleep(time_last_utterance)
+                print('STO ASPETTANDO time_last_utterance: ', str(time_last_utterance))
+                print('TEMPO SPESO SERVIZI: ', str((end - start).to_sec()))
+                # print('NOSTRO TEMPO DI ATTESA 2: ', str(time_last_utterance - (end - start).to_sec()))
+                if (end - start).to_sec() >= time_last_utterance:
+                   # print('NOSTRO TEMPO DI ATTESA 2: ', str((end - start).to_sec()))
+                    # rospy.sleep((end - start).to_sec())
+                    pass
+                else:
+                    print('NOSTRO TEMPO DI ATTESA 1: ', str(time_last_utterance - (end - start).to_sec()))
+                    rospy.sleep(time_last_utterance - (end - start).to_sec())
 
             print('sono fuori dal ciclo piu interno')
 

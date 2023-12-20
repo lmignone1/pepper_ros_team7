@@ -2,6 +2,7 @@
 import rospy
 from std_msgs.msg import Int16MultiArray, Int16
 import numpy as np
+from ros_audio_pkg.srv import TurnOn, TurnOnResponse, TurnOff, TurnOffResponse
 
 import time
 import speech_recognition as sr
@@ -16,7 +17,7 @@ class Voice():
         self._pub = rospy.Publisher('mic_data', Int16MultiArray, queue_size=10)
         
         # inzializzazione subscriber
-        rospy.Subscriber('mic_command', Int16, self._command_mic_callback)
+        # rospy.Subscriber('mic_command', Int16, self._command_mic_callback)
         
         self.r = sr.Recognizer()
         self.r.dynamic_energy_threshold = dynamic_energy_threshold
@@ -24,18 +25,7 @@ class Voice():
 
         self.m = None
         self.stop_listening = None
-
-
-    # start listening in the background
-    # `stop_listening` is now a function that, when called, stops background listening
-    def _command_mic_callback(self, command):
-        if command.data == 1:
-            print('Start listening')
-            self.stop_listening = self.r.listen_in_background(self.m, self._callback)
-        else:
-            print('Stop listening')
-            self.stop_listening(wait_for_stop=False)
-            self.stop_listening = None
+        self._state = False
 
     
     # this is called from the background thread
@@ -52,7 +42,7 @@ class Voice():
             if name in mic:
                 device_index = i
         
-        device_index = 13
+        # device_index = 13
 
         if device_index is None:
             raise Exception('No microphone found')
@@ -63,10 +53,30 @@ class Voice():
         
         return m
 
+    def _turn_on(self, _):
+        if self._state == True:
+            return TurnOnResponse('Already listening')
+        self._state = True
+        print('Start listening')
+        self.stop_listening = self.r.listen_in_background(self.m, self._callback)
+        return TurnOnResponse('ACK')
+        
+    def _turn_off(self, _):
+        if self._state == False:
+            return TurnOffResponse('Alredy stopped')
+        self._state = False
+        print('Stop listening')
+        self.stop_listening()
+        return TurnOffResponse('ACK')
+
     def start(self):
         self.m = self._create_mic()
         self._calibration()
 
+        rospy.Service('turn_on_mic', TurnOn, self._turn_on)
+        rospy.Service('turn_off_mic', TurnOff, self._turn_off)
+        self.stop_listening = self.r.listen_in_background(self.m, self._callback)
+        self.stop_listening()
         rospy.spin()
 
     def _calibration(self):
