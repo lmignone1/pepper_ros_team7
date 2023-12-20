@@ -53,7 +53,7 @@ class ValidateCustomSlotMappings(ValidationAction):
             upper = upper_entities[-1]
             
             logging.debug("latest_upper_body: %s", upper)
-            logging.debug("words: ", ', '.join(message_split))
+            logging.debug("words: %s", ', '.join(message_split))
            
             res = minimum_distance(message_split, colours, upper, mode='colour')
             
@@ -95,7 +95,7 @@ class ValidateCustomSlotMappings(ValidationAction):
             lower = lower_enitities[-1]
         
             logging.debug("latest_lower_body: %s", lower)
-            logging.debug("words: ", ', '.join(message_split))
+            logging.debug("words: %s", ', '.join(message_split))
 
             res = minimum_distance(message_split, colours, lower, mode='colour')
             logging.debug("minimum distance %s", res)
@@ -258,7 +258,7 @@ class ValidateCustomSlotMappings(ValidationAction):
                 message = message.replace(duration_text, " " +str(duration_value) +" ")   # sostituisco il testo con il valore numerico
                 message = message.split()
                 logging.debug("message: %s", message)
-                logging.debug("duration_value: ", str(duration_value))
+                logging.debug("duration_value: %s", duration_value)
                 logging.debug("duration text %s", duration_text)
                 message_clean = message_clean.split()   # per l'estrazione di more/less uso il messaggio ripulito per assicurarmi che l'eventuale presenza di punteggiatura adiacente a more/less non dia fastidio
                 diff = message.index(str(duration_value)) - message_clean.index(comparative)    # distanza tra tempo (value) e more/less
