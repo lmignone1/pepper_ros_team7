@@ -21,6 +21,9 @@ class Speaking():
         rospy.wait_for_service('/tts')
         self.tts_service = rospy.ServiceProxy('tts', Text2Speech)
 
+
+        # inizializzazione dei publisher
+        self._mic = rospy.Publisher('mic_command', Int16, queue_size=1)
         # inizializzazione dei subscriber
         # rospy.Subscriber('detection', Int16, self._rcv_detection)
 
@@ -61,26 +64,23 @@ class Speaking():
             
             time_last_utterance = len(engagement_utterance.split()) * 0.6 # rappresenta un approssimazione del tempo impiegato da pepper per pronunciare l ultima frase fornita
             
+            
+
             i = 0
             while True:
-            
+                
                 
                 try:
-                    user_txt = rospy.wait_for_message('voice_txt', String, timeout=TIMEOUT_VOICE + time_last_utterance) # lunghezza ultima frase fatta pronunciare a Pepper + costante 
+                    self._mic.publish(1)
+                    user_txt = rospy.wait_for_message('voice_txt', String, timeout=TIMEOUT_VOICE) # lunghezza ultima frase fatta pronunciare a Pepper + costante 
+                    self._mic.publish(0)
                 except rospy.ROSException:
                     print('RESTART')
                     restart_req = self._make_request('/restart', DialogueRequest())
                     resp = self.dialogue_service(restart_req)
                     print('RISPOSTA del bot al restart', resp.answer)
+                    self._mic.publish(0)
                     break
-
-                # if message is None:
-                #     print('RESTART:')
-                #     restart_req = DialogueRequest()
-                #     restart_req.input_text = '/restart'
-                #     resp = self.dialogue_service(restart_req)
-                #     print('RISP bot al restart', resp.answer)
-                #     break
                 
                 try:
             
@@ -107,14 +107,15 @@ class Speaking():
                     restart_req = self._make_request('/restart', DialogueRequest())
                     resp = self.dialogue_service(restart_req)
                     print('RISPOSTA del bot al restart', resp.answer)
+                    self._mic.publish(0)
                     break
                 
                 i += 1
                 print('fine iterazione ', i)
-                    
-                print('sono fuori dall iterazione')
+                rospy.sleep(time_last_utterance)
 
-            rospy.sleep(1)
+            print('sono fuori dal ciclo piu interno')
+
 
 
 if __name__ == '__main__':

@@ -40,7 +40,6 @@ class Voice():
     
     # this is called from the background thread
     def _callback(self, recognizer, audio):
-        print('################# callback ####################à')
         data = np.frombuffer(audio.get_raw_data(), dtype=np.int16)
         data_to_send = Int16MultiArray()
         data_to_send.data = data
