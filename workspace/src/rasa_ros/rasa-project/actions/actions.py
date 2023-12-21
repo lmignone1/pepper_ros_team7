@@ -395,7 +395,7 @@ class ValidateFatherForm(FormValidationAction):
     _form_kindOfPeople = ""
     _form_hatSlot = ""
     _form_bagSlot = ""
-    _attention_intent = ""
+    _attention_intents = ""
 
 
     def name(self) -> Text:
@@ -432,7 +432,7 @@ class ValidateFatherForm(FormValidationAction):
                 logging.debug("Metto Free")
                 return {"upperColour": "free"} # qualsiasi colore
             
-            elif intent_of_last_user_message == "inform" or intent_of_last_user_message == self._attention_intent:
+            elif intent_of_last_user_message == "inform" or intent_of_last_user_message in self._attention_intents:
 
                 message_split = cleaner(tracker.latest_message["text"]).split()
                 message_plus = ["_", "_"]
@@ -508,7 +508,7 @@ class ValidateFatherForm(FormValidationAction):
                 logging.debug("Metto Free")
                 return {"lowerColour": "free"} # qualsiasi colore
             
-            elif intent_of_last_user_message == "inform" or intent_of_last_user_message == self._attention_intent:
+            elif intent_of_last_user_message == "inform" or intent_of_last_user_message in self._attention_intents:
 
                 message_split = cleaner(tracker.latest_message["text"]).split()
                 message_plus = ["_", "_"]
@@ -579,7 +579,7 @@ class ValidateFatherForm(FormValidationAction):
             if intent_of_last_user_message == "unknown":
                 logging.debug("Metto Asessuato")
                 return {"kindOfPeople": "A"}
-            elif intent_of_last_user_message == "inform" or intent_of_last_user_message == self._attention_intent:
+            elif intent_of_last_user_message == "inform" or intent_of_last_user_message in self._attention_intents:
                 latest_people = list(tracker.get_latest_entity_values("people"))
                 latest_males = list(tracker.get_latest_entity_values("male"))
                 latest_females = list(tracker.get_latest_entity_values("female"))
@@ -622,7 +622,7 @@ class ValidateFatherForm(FormValidationAction):
             if intent_of_last_user_message == "unknown":
                 return {"hatSlot": "both"}
             
-            elif intent_of_last_user_message == "inform" or intent_of_last_user_message == self._attention_intent:
+            elif intent_of_last_user_message == "inform" or intent_of_last_user_message in self._attention_intents:
                 # se rileviamo cappello e un not vicino --> allora mettiamo without
                 # se rileviamo cappello e nessun not in vicinanza --> allora mettiamo with
                 # in tutti gli altri casi --> lasciamo None
@@ -661,7 +661,7 @@ class ValidateFatherForm(FormValidationAction):
             if intent_of_last_user_message == "unknown":
                 return {"bagSlot": "both"}
             
-            elif intent_of_last_user_message == "inform" or intent_of_last_user_message == self._attention_intent:
+            elif intent_of_last_user_message == "inform" or intent_of_last_user_message in self._attention_intents:
 
                 # se rileviamo borsa e un not vicino --> allora mettiamo without
                 # se rileviamo borsa e nessun not in vicinanza --> allora mettiamo with
@@ -699,7 +699,7 @@ class ValidateFatherForm(FormValidationAction):
             if intent_of_last_user_message == "unknown":
                 return {"place": "mall"}
             
-            elif intent_of_last_user_message == "inform" or intent_of_last_user_message == self._attention_intent:        
+            elif intent_of_last_user_message == "inform" or intent_of_last_user_message in self._attention_intents:        
 
                 # latest_message = cleaner(tracker.latest_message["text"])  non viene usato quindi commentato
                 latest_malls = list(tracker.get_latest_entity_values("mall"))
@@ -727,7 +727,7 @@ class ValidateLocationForm(ValidateFatherForm):
     _form_hatSlot = "with a hat or without"
     _form_bagSlot = "with a bag or without"
     _form_place = "---"
-    _attention_intent = "ask_location"
+    _attention_intents = ["ask_location"]
 
     def name(self) -> Text:
         return "validate_location_form"
@@ -738,7 +738,7 @@ class ValidateLocationForm(ValidateFatherForm):
 
 # -----------------------------------------------------------------------------------------------------------------------------------------
 
-
+# i metodi di ValidateCountForm funzionano solo quando siamo all'interno del form count. Quindi l aggiunta di ask_location in self._attention_intents non crea problemi per il location form
 
 class ValidateCountForm(ValidateFatherForm):
     
@@ -748,7 +748,7 @@ class ValidateCountForm(ValidateFatherForm):
     _form_hatSlot = "with hat, without hat, or both"
     _form_bagSlot = "with bag, without bag, or both"
     _form_place = "entire mall, walmart or starbucks"
-    _attention_intent = "ask_count"
+    _attention_intents = ["ask_count", "ask_location"]          # abbiamo aggiunto ask location perchè possibile che l'utente nel count form si riferisca ad un count intent usando 'i m looking for' (ask_location)
 
     def name(self) -> Text:
         return "validate_count_form"
