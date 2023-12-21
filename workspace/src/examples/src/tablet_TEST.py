@@ -28,7 +28,7 @@ class Handler:
         rospy.loginfo(resp.ack)
     
     def start(self):
-        url = "http://" + self._ip + ":5000/index"
+        url = "http://" + self._ip + ":5000/static/index"
         self.load_url(url)
         rospy.spin()
     
@@ -38,7 +38,7 @@ class Handler:
             url = "http://" + self._ip + ":5000/engagement"
         else:
             print('Passaggio alla schermata di index')
-            url = "http://" + self._ip + ":5000/index"
+            url = "http://" + self._ip + ":5000/static/index"
 
         self.load_url(url)
 

@@ -3,21 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ENGAGEMENT</title>
+    <title>Hello Folks!</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffd700; /* Set the background color to yellow */
         }
 
-        h1 {
-            font-size: 3em;
-            color: #3498db;
+        .cartoon-text {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 2em; /* Initial font size */
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            animation: growText 2s infinite alternate; /* CSS animation with 2 seconds duration */
+        }
+
+        @keyframes growText {
+            to {
+                font-size: 8em; /* Smaller maximum font size */
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Schermata Engagement</h1>
+    <div class="cartoon-text">
+        Hello folks!
+    </div>
 </body>
 </html>
+
+
+
+
+

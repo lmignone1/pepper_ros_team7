@@ -85,7 +85,7 @@ class Voice():
         
         print("Calibrating...")
         with self.m as source:
-            self.r.adjust_for_ambient_noise(source,duration=3)
+            self.r.adjust_for_ambient_noise(source,duration=10)
         print("Calibration finished")
 
 
