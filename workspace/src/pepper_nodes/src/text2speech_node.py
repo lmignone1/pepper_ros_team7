@@ -3,6 +3,7 @@ from utils import Session
 from pepper_nodes.srv import Text2Speech
 from optparse import OptionParser
 import rospy
+from std_msgs.msg import Int16
 
 '''
 This class implements a ROS node able to call the Text to speech service of the robot
@@ -17,6 +18,7 @@ class Text2SpeechNode:
         self.port = port
         self.session = Session(ip, port)
         self.tts = self.session.get_service("ALTextToSpeech")
+        self._pub = None
      
     '''
     Rececives a Text2Speech message and call the ALTextToSpeech service.
@@ -25,6 +27,9 @@ class Text2SpeechNode:
     def say(self, msg):
         try:
             self.tts.say(msg.speech)
+            if msg.speech == 'Hello folks':
+                print('Sto pubblicando su show engagement')
+                self._pub.publish(1)
         except:
             self.session.reconnect()
             self.tts = self.session.get_service("ALTextToSpeech")
@@ -37,7 +42,7 @@ class Text2SpeechNode:
     def start(self):
         rospy.init_node("text2speech_node")
         rospy.Service('tts', Text2Speech, self.say)
-
+        self._pub = rospy.Publisher('tablet_template', Int16, queue_size=1)
         rospy.spin()
 
 if __name__ == "__main__":

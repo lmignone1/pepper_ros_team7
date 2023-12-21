@@ -3,11 +3,13 @@ from rasa_ros.srv import Dialogue, DialogueResponse
 
 import rospy
 import requests
+from std_msgs.msg import Int16
 
 
 def handle_service(req):
     input_text = req.input_text   
-
+    if input_text == '/restart':
+        pub.publish(0)
     # Get answer        
     get_answer_url = 'http://localhost:5002/webhooks/rest/webhook'
     # get_answer_url = 'http://192.168.1.189:5002/webhooks/rest/webhook'
@@ -27,8 +29,7 @@ def handle_service(req):
 def main():
 
     # Server Initialization
-    rospy.init_node('dialogue_service')
-
+    
     s = rospy.Service('dialogue_server',
                         Dialogue, handle_service)
 
@@ -37,6 +38,8 @@ def main():
 
 
 if __name__ == '__main__':
+    rospy.init_node('dialogue_service')
+    pub = rospy.Publisher('tablet_template', Int16, queue_size=1)
     try: 
         main()
     except rospy.ROSInterruptException as e:

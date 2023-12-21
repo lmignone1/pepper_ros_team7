@@ -9,7 +9,7 @@ import speech_recognition as sr
 
 class Voice():
 
-    def __init__(self, dynamic_energy_threshold=False, energy_threshold=10):
+    def __init__(self, dynamic_energy_threshold=False, energy_threshold=10, pause_threshold=1.0):
         # inizializzazione nodo ROS
         rospy.init_node('voice_detection_node', anonymous=False)
         
@@ -22,7 +22,7 @@ class Voice():
         self.r = sr.Recognizer()
         self.r.dynamic_energy_threshold = dynamic_energy_threshold
         self.r.energy_threshold = energy_threshold  #Modify here to set threshold. Reference: https://github.com/Uberi/speech_recognition/blob/1b737c5ceb3da6ad59ac573c1c3afe9da45c23bc/speech_recognition/__init__.py#L332
-
+        self.r.pause_threshold = pause_threshold
         self.m = None
         self.stop_listening = None
         self._state = False
@@ -63,7 +63,7 @@ class Voice():
         
     def _turn_off(self, _):
         if self._state == False:
-            return TurnOffResponse('Alredy stopped')
+            return TurnOffResponse('Already stopped')
         self._state = False
         print('Stop listening')
         self.stop_listening()

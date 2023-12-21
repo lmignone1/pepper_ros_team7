@@ -133,7 +133,7 @@ class Speaking():
 
 
 if __name__ == '__main__':
-    TIMEOUT_VOICE = 15
+    TIMEOUT_VOICE = 30
     TIMEOUT_DETECTOR = 5
 
     try: 
