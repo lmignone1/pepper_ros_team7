@@ -44,13 +44,10 @@ class Handler:
 
     def _show_dialogue(self, msg):
         print('Passaggio alla schermata di dialogo')
-        url = "http://" + self._ip + ":5000/dialogue"
-        with open(PATH, 'w') as f:
-            f.write(msg.data)
+        url = "http://" + self._ip + ":5000/dialogue?text=" + msg.data
         self.load_url(url)
 
 if __name__ == "__main__":
-    PATH = os.path.join(os.path.dirname(__file__), 'flask', 'payload.txt')
 
     handler = Handler()
     handler.start()

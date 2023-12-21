@@ -1,14 +1,12 @@
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, request
 import os
 
-PATH = os.path.join(os.path.dirname(__file__), 'payload.txt')
 
 app = Flask(__name__)
 
 @app.route('/dialogue',  methods=['GET'])
 def dialogue():
-    with open(PATH, 'r') as f:
-        text = f.read()
+    text = request.args.get('text')
     return render_template('dialogue.html', data = text)
 
 @app.route('/static/index', methods=['GET'])
