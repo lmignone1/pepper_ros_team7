@@ -286,6 +286,40 @@ nlu:
     - excuse me but I must go
     - forgive me I go
 
+- intent: thanks
+  examples: |
+    - um thank you 
+    - okay cool uh thank you
+    - okay thank you
+    - and thats all thank 
+    - thank you 
+    - thanks
+    - thank
+    - okay thank you
+    - uh thank you
+    - thank you goodbye
+    - ok thank you
+    - thanks goodbye
+    - ah thank you
+    - thank you
+    - thank you good bye
+    - breath thank you very much goodbye
+    - thank you very much
+    - thank you very much goodbye
+    - very useful. thank you so much!
+    - Thanks
+    - thanks a lot
+    - thank you so much
+    - appreciate it
+    - many thanks
+    - big thanks
+    - thanks a bunch
+    - huge thanks
+    - massive thanks
+    - thanks a lot
+    - thanks lots
+    - thanks a million times
+
 - intent: affirm
   examples: |
     - yes

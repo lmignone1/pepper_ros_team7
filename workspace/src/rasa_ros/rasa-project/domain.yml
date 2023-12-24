@@ -11,11 +11,12 @@ intents:
   - ask_location
   - inform
   - unknown
+  - thanks
 
 
 entities:
   - not
-  - more
+  - more                                                                                                                                                   
   - less
   - upper_body
   - lower_body
@@ -188,16 +189,13 @@ responses:
   - text: "I can give you information about this mall. In particular, I can count and locate people based on their physical attributes. Tell me your question!"
 
   utter_default:
-  - text: "I'm sorry, I didn't understand you. Repeat, please?"
+  - text: "I'm sorry, I didn't understand you. Repeat, please"
 
   utter_repeat_request:
   - text: "Sorry, my mistake. Could you please repeat what you want me to do?"
   
-  #utter_repeat_count_request:
-  #- text: "Sorry, my mistake. Could you please repeat your counting task request?"
-
-  #utter_repeat_location_request:
-  #- text: "Sorry, my mistake. Could you please repeat your localization task request?"
+  utter_you_are_welcome:
+  - text: "You are welcome. If you have any other request, just ask me"
 
   utter_repeat_again:
   - text: "Okay, so... tell me your request, please"

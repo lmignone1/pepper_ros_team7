@@ -42,6 +42,35 @@ rules:
   - action: utter_count_answer
   - action: action_count_answer
 
+- rule: saying "you're welcome" if receiving a thanks intent or an affirm intent after a count answer
+  steps:
+  - action: action_count_answer 
+  - or:
+    - intent: thanks
+    - intent: affirm
+  - action: utter_you_are_welcome
+
+- rule: saying "you're welcome" if receiving a thanks intent or an affirm intent after a location answer
+  steps:
+  - action: action_location_answer 
+  - or:
+    - intent: thanks
+    - intent: affirm
+  - action: utter_you_are_welcome
+
+- rule: asking to repeat the request if the answer to count task is not satisfying
+  steps:
+  - action: action_count_answer
+  - intent: deny
+  - action: utter_repeat_request
+
+- rule: asking to repeat the request if the answer to location task is not satisfying
+  steps:
+  - action: action_location_answer
+  - intent: deny
+  - action: utter_repeat_request
+
+
 - rule: after no confirmation for counting task, ask to repeat the request
   steps:
   - action: action_ask_confirmation_count
@@ -116,27 +145,27 @@ rules:
     - intent: inform
   - action: utter_repeat_request
 
-- rule: after asking for repeating the counting task, the bot receives an affirm, so the bot sollecits a request
+- rule: after asking for repeating the task, the bot receives an affirm, so the bot sollecits a request
   steps:
   - action: utter_repeat_request
   - intent: affirm
   - action: utter_repeat_again
 
-- rule: after asking for repeating the location task, the bot receives an affirm, so the bot sollecits a request
+- rule: after saying "you are welcome" the bot receives an affirm, so the bot sollecits a new request
   steps:
-  - action: utter_repeat_request
+  - action: utter_you_are_welcome
   - intent: affirm
   - action: utter_repeat_again
 
-- rule: after asking for repeating the counting task, the bot receives a deny
+- rule: after asking for repeating the task, the bot receives a deny
   steps:
   - action: utter_repeat_request
   - intent: deny
   - action: utter_dont_mind
 
-- rule: after asking for repeating the location task, the bot receives a deny
+- rule: after saying "you are welcome", the bot receives a deny
   steps:
-  - action: utter_repeat_request
+  - action: utter_you_are_welcome
   - intent: deny
   - action: utter_dont_mind
 
