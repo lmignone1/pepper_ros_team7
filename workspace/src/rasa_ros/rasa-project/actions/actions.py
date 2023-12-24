@@ -1,10 +1,8 @@
-from typing import Coroutine, Dict, List, Text, Any
+from typing import Dict, List, Text, Any
 
 from rasa_sdk import Tracker, Action, FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import ValidationAction
-
-# from rasa_sdk.interfaces import Tracker
 
 from rasa_sdk.types import DomainDict
 from .utils import * 
@@ -15,7 +13,7 @@ from rasa_sdk.events import SlotSet
 import logging
 
 
-SHOP_DICT = {'roi1' : 'walmart', 'roi2' : 'starbucks'}
+# SHOP_DICT = {'roi1' : 'walmart', 'roi2' : 'starbucks'}
 
 
 #################### OUT FORM ####################
@@ -59,11 +57,11 @@ class ValidateCustomSlotMappings(ValidationAction):
             
             if res is not None and res[0] <= DISTANCE_TH1:
                 if upper in DRESS:
-                    logging.debug("I have found an upperColour and a lowerColour and it is %s", res[1])
-                    return{"upperColour": res[1], "lowerColour": res[1]}
+                    logging.debug("I have found an upperColour and a lowerColour and it is %s", res[1].lower())
+                    return{"upperColour": res[1].lower(), "lowerColour": res[1].lower()}
                 else:
-                    logging.debug("I have found an upperColour and it is %s", res[1])
-                    return {"upperColour": res[1]}
+                    logging.debug("I have found an upperColour and it is %s", res[1].lower())
+                    return {"upperColour": res[1].lower()}
             else:
                 return {"upperColour": None}
     
@@ -101,8 +99,8 @@ class ValidateCustomSlotMappings(ValidationAction):
             logging.debug("minimum distance %s", res)
          
             if res is not None and res[0] <= DISTANCE_TH1:
-                logging.debug("I have found a lowerColour and it is %s", res[1])
-                return {"lowerColour": res[1]}
+                logging.debug("I have found a lowerColour and it is %s", res[1].lower())
+                return {"lowerColour": res[1].lower()}
             else:
                 return {"lowerColour": None}
         
@@ -463,7 +461,7 @@ class ValidateFatherForm(FormValidationAction):
                     if lc_message_split[good_candidates[0][1]-1] == "but":
                         logging.debug("good_candidates: %s", good_candidates)
                         logging.debug("good_candidates[0][1]-1: ", good_candidates[0][1]-1)
-                        return {"upperColour": good_candidates[0][0], "not_upperSlot": True}
+                        return {"upperColour": good_candidates[0][0].lower(), "not_upperSlot": True}
 
                     not_entities = list(tracker.get_latest_entity_values("not"))
                     message_split = not_replacement(message_split, not_entities)
@@ -471,9 +469,9 @@ class ValidateFatherForm(FormValidationAction):
                     
 
                     if min_distance is not None and min_distance <= DISTANCE_TH1:
-                        return {"upperColour": good_candidates[0][0], "not_upperSlot": True}
+                        return {"upperColour": good_candidates[0][0].lower(), "not_upperSlot": True}
                     else:
-                        return {"upperColour": good_candidates[0][0], "not_upperSlot": False}
+                        return {"upperColour": good_candidates[0][0].lower(), "not_upperSlot": False}
 
                 return {"upperColour": None}       
             
@@ -539,7 +537,7 @@ class ValidateFatherForm(FormValidationAction):
                     if lc_message_split[good_candidates[0][1]-1] == "but":
                         logging.debug("good_candidates: %s", good_candidates)
                         logging.debug("good_candidates[0][1]-1: ", good_candidates[0][1]-1)
-                        return {"lowerColour": good_candidates[0][0], "not_lowerSlot": True}
+                        return {"lowerColour": good_candidates[0][0].lower(), "not_lowerSlot": True}
 
                     not_entities = list(tracker.get_latest_entity_values("not"))
                     message_split = not_replacement(message_split, not_entities)
@@ -547,9 +545,9 @@ class ValidateFatherForm(FormValidationAction):
                     
 
                     if min_distance is not None and min_distance <= DISTANCE_TH1:
-                        return {"lowerColour": good_candidates[0][0], "not_lowerSlot": True}
+                        return {"lowerColour": good_candidates[0][0].lower(), "not_lowerSlot": True}
                     else:
-                        return {"lowerColour": good_candidates[0][0], "not_lowerSlot": False}
+                        return {"lowerColour": good_candidates[0][0].lower(), "not_lowerSlot": False}
 
                 return {"lowerColour": None}
 
@@ -973,24 +971,26 @@ class ActionLocation(Action):
                 
                 person = people[0]
 
+                utterance = print_person(person, utterance)
+
                 # if person['roi1_passages'] == 1:
-                #     # parola = "time"
+                #     word = "time"
                 # else:
-                #     # parola = "times"
+                #     word = "times"
                 
                 # if person['roi2_passages'] == 1:
-                #     # parola2 = "time"
+                #     word2 = "time"
                 # else:
-                #     # parola2 = "times"
+                #     word2 = "times"
 
-                if person['roi1_persistence_time'] > 0 and person['roi2_persistence_time'] > 0:
-                    utterance += f"has passed through {SHOP_DICT['roi1']} {person['roi1_passages']} times and has spent a total of {person['roi1_persistence_time']} seconds there, "
-                    utterance += f"and has passed through {SHOP_DICT['roi2']} {person['roi2_passages']} times and has spent a total of {person['roi2_persistence_time']} seconds there."
-                else:
-                    if person['roi1_persistence_time'] > 0:
-                        utterance += f"has passed through {SHOP_DICT['roi1']} {person['roi1_passages']} times and has spent a total of {person['roi1_persistence_time']} seconds there."
-                    elif person['roi2_persistence_time'] > 0:
-                        utterance += f"has passed through {SHOP_DICT['roi2']} {person['roi2_passages']} times and has spent a total of {person['roi2_persistence_time']} seconds there."
+                # if person['roi1_persistence_time'] > 0 and person['roi2_persistence_time'] > 0:
+                #     utterance += f"has passed through {SHOP_DICT['roi1']} {person['roi1_passages']} " +word + f" and has spent a total of {person['roi1_persistence_time']} seconds there, "
+                #     utterance += f"and has passed through {SHOP_DICT['roi2']} {person['roi2_passages']} " +word2 + f" and has spent a total of {person['roi2_persistence_time']} seconds there."
+                # else:
+                #     if person['roi1_persistence_time'] > 0:
+                #         utterance += f"has passed through {SHOP_DICT['roi1']} {person['roi1_passages']} " +word + f" and has spent a total of {person['roi1_persistence_time']} seconds there."
+                #     elif person['roi2_persistence_time'] > 0:
+                #         utterance += f"has passed through {SHOP_DICT['roi2']} {person['roi2_passages']} " +word2 + f" and has spent a total of {person['roi2_persistence_time']} seconds there."
 
             else:
                 
@@ -999,25 +999,27 @@ class ActionLocation(Action):
                 p = inflect.engine()
                 for i, person in enumerate(people):
                     utterance += f"The {p.number_to_words(p.ordinal(i+1))} person "
+
+                    utterance = print_person(person, utterance)
                     
                     # if person['roi1_passages'] == 1:
-                    #     # parola = "time"
+                    #     word = "time"
                     # else:
-                    #     # parola = "times"
+                    #     word = "times"
                     
                     # if person['roi2_passages'] == 1:
-                    #     # parola2 = "time"
+                    #     word2 = "time"
                     # else:
-                    #     # parola2 = "times"
+                    #     word2 = "times"
                     
-                    if person['roi1_persistence_time'] > 0 and person['roi2_persistence_time'] > 0:
-                        utterance += f"has passed through {SHOP_DICT['roi1']} {person['roi1_passages']} times and has spent a total of {person['roi1_persistence_time']} seconds there, "
-                        utterance += f"and has passed through {SHOP_DICT['roi2']} {person['roi2_passages']} times and has spent a total of {person['roi2_persistence_time']} seconds there."
-                    else:
-                        if person['roi1_persistence_time'] > 0:
-                            utterance += f"has passed through {SHOP_DICT['roi1']} {person['roi1_passages']} times and has spent a total of {person['roi1_persistence_time']} seconds there."
-                        elif person['roi2_persistence_time'] > 0:
-                            utterance += f"has passed through {SHOP_DICT['roi2']} {person['roi2_passages']} times and has spent a total of {person['roi2_persistence_time']} seconds there."
+                    # if person['roi1_persistence_time'] > 0 and person['roi2_persistence_time'] > 0:
+                    #     utterance += f"has passed through {SHOP_DICT['roi1']} {person['roi1_passages']} " +word + f" and has spent a total of {person['roi1_persistence_time']} seconds there, "
+                    #     utterance += f"and has passed through {SHOP_DICT['roi2']} {person['roi2_passages']} " +word2 + f" and has spent a total of {person['roi2_persistence_time']} seconds there."
+                    # else:
+                    #     if person['roi1_persistence_time'] > 0:
+                    #         utterance += f"has passed through {SHOP_DICT['roi1']} {person['roi1_passages']} " +word + f" and has spent a total of {person['roi1_persistence_time']} seconds there."
+                    #     elif person['roi2_persistence_time'] > 0:
+                    #         utterance += f"has passed through {SHOP_DICT['roi2']} {person['roi2_passages']} " +word2 + f" and has spent a total of {person['roi2_persistence_time']} seconds there."
 
                     utterance += "\n"
             

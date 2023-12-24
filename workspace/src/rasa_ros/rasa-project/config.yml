@@ -34,7 +34,7 @@ pipeline:
   - name: RegexEntityExtractor
     case_sensitive: False
     use_lookup_tables: True                                                                                                                                                                                                                                                                                                                                 
-  - name: EntitySynonymMapper
+  # - name: EntitySynonymMapper
   - name: ResponseSelector
     epochs: 100
 

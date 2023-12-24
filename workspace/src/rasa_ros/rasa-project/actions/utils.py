@@ -5,6 +5,7 @@ NOT_REMOVE_PUNCTUATION = ("""'""", '-')
 DISTANCE_TH1 = 2
 DISTANCE_TH2 = 4
 DRESS = ('suit', 'dresses','dress','tracksuit','tailleur','smoking','work overalls', 'uniform', 'tuxedo')
+SHOP_DICT = {'roi1' : 'walmart', 'roi2' : 'starbucks'}
 
 def cleaner(stringa : str):
     punct = [char for char in string.punctuation]
@@ -118,6 +119,29 @@ def latest_tracker_utter(events):
         if event.get("event") == "bot":
             return event.get("text")
         
+
+def print_person(person, utterance):
+    if person['roi1_passages'] == 1:
+        word = "time"
+    else:
+        word = "times"
+
+    if person['roi2_passages'] == 1:
+        word2 = "time"
+    else:
+        word2 = "times"
+
+    if person['roi1_persistence_time'] > 0 and person['roi2_persistence_time'] > 0:
+        utterance += f"has passed through {SHOP_DICT['roi1']} {person['roi1_passages']} " +word + f" and has spent a total of {person['roi1_persistence_time']} seconds there, "
+        utterance += f"and has passed through {SHOP_DICT['roi2']} {person['roi2_passages']} " +word2 + f" and has spent a total of {person['roi2_persistence_time']} seconds there."
+    else:
+        if person['roi1_persistence_time'] > 0:
+            utterance += f"has passed through {SHOP_DICT['roi1']} {person['roi1_passages']} " +word + f" and has spent a total of {person['roi1_persistence_time']} seconds there."
+        elif person['roi2_persistence_time'] > 0:
+            utterance += f"has passed through {SHOP_DICT['roi2']} {person['roi2_passages']} " +word2 + f" and has spent a total of {person['roi2_persistence_time']} seconds there."
+    
+    return utterance
+            
 # def helper_for_not_colour(message_split : list, entities : list, not_entities : list, slot : str):
 #     if not entities:
 #         return {slot : None}   # caso: no entities
