@@ -973,6 +973,16 @@ class ActionLocation(Action):
                 
                 person = people[0]
 
+                # if person['roi1_passages'] == 1:
+                #     # parola = "time"
+                # else:
+                #     # parola = "times"
+                
+                # if person['roi2_passages'] == 1:
+                #     # parola2 = "time"
+                # else:
+                #     # parola2 = "times"
+
                 if person['roi1_persistence_time'] > 0 and person['roi2_persistence_time'] > 0:
                     utterance += f"has passed through {SHOP_DICT['roi1']} {person['roi1_passages']} times and has spent a total of {person['roi1_persistence_time']} seconds there, "
                     utterance += f"and has passed through {SHOP_DICT['roi2']} {person['roi2_passages']} times and has spent a total of {person['roi2_persistence_time']} seconds there."
@@ -990,6 +1000,15 @@ class ActionLocation(Action):
                 for i, person in enumerate(people):
                     utterance += f"The {p.number_to_words(p.ordinal(i+1))} person "
                     
+                    # if person['roi1_passages'] == 1:
+                    #     # parola = "time"
+                    # else:
+                    #     # parola = "times"
+                    
+                    # if person['roi2_passages'] == 1:
+                    #     # parola2 = "time"
+                    # else:
+                    #     # parola2 = "times"
                     
                     if person['roi1_persistence_time'] > 0 and person['roi2_persistence_time'] > 0:
                         utterance += f"has passed through {SHOP_DICT['roi1']} {person['roi1_passages']} times and has spent a total of {person['roi1_persistence_time']} seconds there, "
