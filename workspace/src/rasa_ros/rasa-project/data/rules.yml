@@ -31,7 +31,6 @@ rules:
   - intent: ask_count
   - action: action_ask_confirmation_count
   - intent: affirm
-  - action: utter_count_answer
   - action: action_count_answer
   - action: utter_count_other_details
 
@@ -39,7 +38,6 @@ rules:
   steps:
   - action: action_ask_confirmation_count
   - intent: affirm
-  - action: utter_count_answer
   - action: action_count_answer
 
 - rule: after no confirmation for counting task, ask to repeat the request
@@ -104,7 +102,6 @@ rules:
   steps:
   - action: action_ask_confirmation_location
   - intent: affirm
-  - action: utter_location_answer
   - action: action_location_answer
 
 - rule: after no confirmation for location, ask to repeat the request

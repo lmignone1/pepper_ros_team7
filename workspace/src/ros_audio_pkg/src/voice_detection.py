@@ -16,13 +16,10 @@ class Voice():
         # inizializzazione publisher
         self._pub = rospy.Publisher('mic_data', Int16MultiArray, queue_size=10)
         
-        # inzializzazione subscriber
-        # rospy.Subscriber('mic_command', Int16, self._command_mic_callback)
-        
         self.r = sr.Recognizer()
         self.r.dynamic_energy_threshold = dynamic_energy_threshold
         self.r.energy_threshold = energy_threshold  #Modify here to set threshold. Reference: https://github.com/Uberi/speech_recognition/blob/1b737c5ceb3da6ad59ac573c1c3afe9da45c23bc/speech_recognition/__init__.py#L332
-        self.r.pause_threshold = pause_threshold
+        self.r.pause_threshold = pause_threshold    # seconds of non-speaking audio before a phrase is considered complete
         self.m = None
         self.stop_listening = None
         self._state = False

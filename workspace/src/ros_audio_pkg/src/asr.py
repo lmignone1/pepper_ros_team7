@@ -31,7 +31,6 @@ def callback(audio):
 
 def listener():
     rospy.Subscriber("mic_data", Int16MultiArray, callback)
-
     rospy.spin()
 
 if __name__ == '__main__':

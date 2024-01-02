@@ -12,7 +12,6 @@ def handle_service(req):
         pub.publish(0)
     # Get answer        
     get_answer_url = 'http://localhost:5002/webhooks/rest/webhook'
-    # get_answer_url = 'http://192.168.1.189:5002/webhooks/rest/webhook'
     message = {
         "sender": 'bot',
         "message": input_text
