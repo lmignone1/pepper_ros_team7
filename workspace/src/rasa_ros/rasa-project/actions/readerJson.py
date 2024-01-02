@@ -10,8 +10,7 @@ COLOURS = ['black', 'blue', 'brown', 'gray', 'green', 'orange', 'pink', 'purple'
 class ReaderJson():
 
     def __init__(self):
-        abs_path = os.path.realpath(__file__)
-        path = os.path.join(os.path.dirname(abs_path), "../", FILE_NAME)
+        path = os.path.join(os.path.dirname(__file__), "../", FILE_NAME)
 
         try:
             with open(path, "r") as f:
