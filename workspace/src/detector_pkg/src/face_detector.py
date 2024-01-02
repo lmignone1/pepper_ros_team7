@@ -20,7 +20,7 @@ class Detector():
         self._pub = rospy.Publisher('detection', Int16, queue_size=1)
         
         # creazione path per rete neurale
-        path = os.path.dirname(os.path.realpath(__file__))
+        path = os.path.dirname(__file__)
         faceProtoPath = path + "/opencv_face_detector.pbtxt"
         faceModelPath = path + "/opencv_face_detector_uint8.pb"
         

@@ -13,7 +13,7 @@ class Handler:
     def __init__(self):
         rospy.wait_for_service("load_url")
         self.tablet_service = rospy.ServiceProxy("load_url", LoadUrl)
-        rospy.init_node('table_node_example')
+        rospy.init_node('tablet_node')
         rospy.Subscriber('tablet_template', Int16, self._show_url)
         rospy.Subscriber('voice_txt', String,  self._show_dialogue)
         self._ip = socket.gethostbyname(socket.gethostname())
@@ -52,7 +52,3 @@ if __name__ == "__main__":
     handler = Handler()
     handler.start()
 
-    # url = "http://" + ip + ":5000"
-    # url = url + "/index1"
-    # # url = r"https://www.diem.unisa.it/"
-    # handler.load_url(url)
