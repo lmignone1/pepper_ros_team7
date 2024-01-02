@@ -13,14 +13,9 @@ from rasa_sdk.events import SlotSet
 import logging
 
 
-# SHOP_DICT = {'roi1' : 'walmart', 'roi2' : 'starbucks'}
-
-
 #################### OUT FORM ####################
 
 class ValidateCustomSlotMappings(ValidationAction):
-
-    # PER I COLORI È IMPORTANTE TROVARE UN MODO ALTERNATIVO PER ASSOCAIRE I COLORI 
 
     async def extract_upperColour(
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict

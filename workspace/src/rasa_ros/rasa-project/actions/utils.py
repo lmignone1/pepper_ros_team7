@@ -1,6 +1,7 @@
 import string
 from numpy import argmin
 
+
 NOT_REMOVE_PUNCTUATION = ("""'""", '-')
 DISTANCE_TH1 = 2
 DISTANCE_TH2 = 4
@@ -52,17 +53,9 @@ def minimum_distance(msg : list, entities : list, entity : str, mode = 'not_colo
     entity = entity.split()[0]
     print("entity", entity)
 
-    entity_index = msg.index(entity)
-    
-
-    # entities_last_word = []
-    # for string in entities:
-    #     words = string.split()
-    #     if words:
-    #         last_word = words[-1]
-    #         entities_last_word.append(last_word)
-    
-    # entities = entities_last_word
+    for i, en in enumerate(msg):    # se ci sono 2 enitita uguali (ad esempio compare 2 volte t-shirt), in questo modo viene preso sempre l ultima entita
+        if en == entity:
+            entity_index = i
     
     if mode == 'colour':
         
@@ -142,31 +135,3 @@ def print_person(person, utterance):
     
     return utterance
             
-# def helper_for_not_colour(message_split : list, entities : list, not_entities : list, slot : str):
-#     if not entities:
-#         return {slot : None}   # caso: no entities
-    
-#     entity = entities[-1]
-
-#     if not not_entities:
-#         if slot == 'not_upperSlot':
-#             if entity in DRESS:
-#                 return {slot : "false", slot : "false"}
-#             else:
-#                 return {slot : "false"} 
-#         else:
-#             return {slot : "false"}
-    
-#     message_split = not_replacement(message_split, not_entities) 
-#     min_distance = minimum_distance(message_split, not_entities, entity)
-
-#     if min_distance is not None and min_distance <= DISTANCE_TH_NOT:
-#         if slot == 'not_upperSlot':
-#             if entity in DRESS:
-#                 return {slot : "true", slot : "true"}
-#             else:
-#                 return {slot : "true"} 
-#         else:
-#             return {slot : "true"}
-    
-#     return {slot : "false"}
