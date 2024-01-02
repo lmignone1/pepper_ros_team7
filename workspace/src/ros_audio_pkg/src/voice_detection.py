@@ -9,7 +9,7 @@ import speech_recognition as sr
 
 class Voice():
 
-    def __init__(self, dynamic_energy_threshold=False, energy_threshold=10, pause_threshold=1.0):
+    def __init__(self, dynamic_energy_threshold=False, energy_threshold=150, pause_threshold=1.0):
         # inizializzazione nodo ROS
         rospy.init_node('voice_detection_node', anonymous=False)
         
@@ -83,7 +83,8 @@ class Voice():
         print("Calibrating...")
         with self.m as source:
             self.r.adjust_for_ambient_noise(source,duration=10)
-        print("Calibration finished")
+            
+        print("Calibration finished, calibration value is: ", self.r.energy_threshold)
 
 
 if __name__ == '__main__':
