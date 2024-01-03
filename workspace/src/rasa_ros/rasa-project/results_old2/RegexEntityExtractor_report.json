@@ -1,23 +1,9 @@
 {
-  "not": {
+  "upper_body": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
-    "support": 456,
-    "confused_with": {}
-  },
-  "people": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 172,
-    "confused_with": {}
-  },
-  "hat": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 99,
+    "support": 202,
     "confused_with": {}
   },
   "shop": {
@@ -27,32 +13,32 @@
     "support": 1,
     "confused_with": {}
   },
+  "less": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 28,
+    "confused_with": {}
+  },
+  "male": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 120,
+    "confused_with": {}
+  },
   "bag": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
-    "support": 88,
+    "support": 89,
     "confused_with": {}
   },
-  "female": {
+  "people": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
-    "support": 130,
-    "confused_with": {}
-  },
-  "upper_body": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 211,
-    "confused_with": {}
-  },
-  "more": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 29,
+    "support": 156,
     "confused_with": {}
   },
   "colour": {
@@ -62,58 +48,65 @@
     "support": 1,
     "confused_with": {}
   },
+  "hat": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 96,
+    "confused_with": {}
+  },
   "lower_body": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
-    "support": 165,
+    "support": 164,
     "confused_with": {}
   },
-  "male": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 129,
-    "confused_with": {}
-  },
-  "less": {
+  "more": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
     "support": 30,
     "confused_with": {}
   },
+  "not": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 419,
+    "confused_with": {}
+  },
+  "female": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 119,
+    "confused_with": {}
+  },
   "mall": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
-    "support": 141,
-    "confused_with": {}
-  },
-  "dude": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 1,
+    "support": 138,
     "confused_with": {}
   },
   "micro avg": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
-    "support": 1653
+    "support": 1563
   },
   "macro avg": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
-    "support": 1653
+    "support": 1563
   },
   "weighted avg": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
-    "support": 1653
+    "support": 1563
   },
-  "accuracy": 0.7751699934196096
+  "accuracy": 0.7738014087707339
 }

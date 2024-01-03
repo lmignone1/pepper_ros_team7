@@ -17,9 +17,9 @@ nlu:
     - moin
     - hey there
     - let's go
-    - hey dude
+    - hey [dude](male)
     - goodmorning
-    - goodevening
+    - good evening
     - good afternoon
     - Bom dia
     - Bonjour
@@ -45,7 +45,7 @@ nlu:
     - Hi
     - Hi pepper
     - Hi pepper!
-    - Hi man
+    - Hi [man](male)
     - Hi pepper..
     - Hi there
     - Hi!
@@ -120,6 +120,8 @@ nlu:
     - hi [folks](people)
     - hi [friend](people)
     - hi [friends](people)
+    - hey [friend](people)
+    - heyla [friends](people)
     - hi hi
     - hi i'm Alessia
     - hi im Alessia Saggese
@@ -138,7 +140,6 @@ nlu:
     - hlo
     - hola
     - howdy
-    - i am Roberta
     - jojojo
     - jop
     - konichiwa
@@ -160,11 +161,8 @@ nlu:
     - good afternoon
     - hey!
     - see you again
-    - look who's back
     - here you are
-    - nice
     - dearest hello
-    - welcome
     - heila pepe
     - heilà pepe
     - hei pepe
@@ -173,14 +171,14 @@ nlu:
     - hey
     - hey hey
     - hey you
+    - ciao
     
 
 - intent: goodbye
   examples: |
-    - cu
     - good by
     - cee you later
-    - good night
+    - good night 
     - bye
     - goodbye
     - have a nice day
@@ -189,9 +187,12 @@ nlu:
     - see you later
     - Bye
     - Bye bye
+    - bye [mister](male)
+    - bye [Mister](male)
     - adios
     - adios?
     - bye
+    - bye [dude](dude)
     - bye .
     - bye robot
     - bye bye robot
@@ -201,8 +202,6 @@ nlu:
     - bye!
     - byee
     - catch you later
-    - ciao
-    - cya
     - farewell
     - good bye
     - good bye pepper!
@@ -211,22 +210,17 @@ nlu:
     - goodbye.
     - goodnight
     - gotta go
-    - k byyye 
     - ok Bye
     - ok bye
     - ok, bye
     - ok.bye
     - see u later
-    - see ya
     - see you
     - see you . bye
-    - take care
     - then bye
-    - tlak to you later
-    - toodle-oo
+    - talk to you later
     - Exit
     - Close this talk
-    - byr
     - till next time
     - see you soon
     - see you later
@@ -235,15 +229,12 @@ nlu:
     - greetings
     - see you tomorrow
     - see you when
-    - talk to you
     - i'm going
     - i'm leaving
     - see you never
     - we meet again dear!
     - I have to go
-    - see you. Hello
     - Be careful
-    - then hello
     - All right, bye
     - I'm gonna go bye
     - Close this speech
@@ -256,14 +247,11 @@ nlu:
     - until tomorrow
     - have a good day
     - Have a good day dear
-    - A good evening
     - A good day to you
     - see you soon
     - See you soon
     - we see after friend
     - we feel
-    - I'll be right back
-    - Wait for me
     - See you next time
     - see you tomorrow
     - See you later
@@ -271,7 +259,6 @@ nlu:
     - I greet you
     - I leave you
     - I'll leave you for now, bye
-    - let's end here
     - time to go
     - I must run away
     - it's late I'm leaving
@@ -294,6 +281,7 @@ nlu:
     - and thats all thank 
     - thank you 
     - thanks
+    - thanks [dude](male)
     - thank
     - okay thank you
     - uh thank you
@@ -311,7 +299,6 @@ nlu:
     - thanks a lot
     - thank you so much
     - appreciate it
-    - many thanks
     - big thanks
     - thanks a bunch
     - huge thanks
@@ -346,6 +333,7 @@ nlu:
     - I'm sure I will!
     - I'm using it
     - Nice
+    - jo
     - OK
     - Ofcourse
     - Oh yes
@@ -405,7 +393,6 @@ nlu:
     - hell yeah
     - hell yes
     - hm, i'd like that
-    - how nice!
     - i accept
     - i agree
     - i am!
@@ -417,9 +404,6 @@ nlu:
     - ja cool
     - ja thats great
     - jezz
-    - jo
-    - k
-    - kk
     - lets do it
     - lets do this
     - [not](not) bad
@@ -433,7 +417,7 @@ nlu:
     - ok
     - ok cool
     - ok fine
-    - ok friend
+    - ok [friend](people)
     - ok good
     - ok great
     - ok i accept
@@ -464,7 +448,7 @@ nlu:
     - thats fine
     - thats good
     - thats great
-    - top
+    - [top](upper_body)
     - uh-huh
     - very much
     - well yes
@@ -476,8 +460,6 @@ nlu:
     - ya please
     - ya thats cool
     - yaah
-    - yap
-    - yaps
     - yas
     - yay
     - ye
@@ -536,7 +518,6 @@ nlu:
     - yesyestyes
     - yesyesyes
     - yez
-    - yop
     - you asked me a yes or [no](not) question, which i answered with yes
     - you got me, I accept, if you want me to
     - yres
@@ -547,7 +528,6 @@ nlu:
     - ok..
     - considering
     - sounds good!
-    - really
     - yes yes
     - You are right
     - right
@@ -566,18 +546,17 @@ nlu:
     - All right, all right
     - OK.
     - consider it
-    - Plus a less
-    - Roughly
     - sounds good!
     - Truly
-    - Really?
+    
     
 - intent: deny
   examples: |
+    - i decline
     - [no](not)
-    - [n](not)
     - never
     - [nooo](not)
+    - it is going badly
     - [noo](not)
     - I [don't](not) think so
     - [don't](not) like that
@@ -587,16 +566,20 @@ nlu:
     - that's wrong
     - you are wrong
     - [NEIN](not)
+    - very bad
     - [NO](not)
     - [Nah](not)
     - [neither](not)
     - Never
     - Nevermind
+    - I reject
+    - it's wrong
     - [No](not)
     - [No](not) thank you
     - [No](not), [not](not) really.
     - [No](not), thank you
     - [No](not).
+    - I reject
     - [Nopes](not)
     - [Not](not) really
     - absolutely [not](not)
@@ -613,19 +596,19 @@ nlu:
     - i'm afraid [not](not)
     - i'm [not](not) sure
     - it is going badly
+    - deny
+    - it is wrong
     - it sucks
     - it sux
-    - [n](not)
-    - [na](not)
     - [nah](not)
     - [nah](not) I'm good
     - [nah](not) [not](not) for me
     - [nah](not), first time
     - [nah](not), i'm good
-    - [nehi](not)
     - [nein](not)
     - [neither](not)
     - never
+    - [noo](not)
     - never mind
     - [no](not)
     - [no](not) 
@@ -640,31 +623,35 @@ nlu:
     - [no](not) i [won't](not)
     - [no](not) ma'am
     - [no](not) sir
+    - decline
     - [no](not) sorry
     - [no](not) thank s
     - [no](not) thank you
+    - deny
     - [no](not) thanks
     - [no](not) way
     - [no](not) you did it wrong
     - [no](not)!!!!
     - [no](not), i hate it
-    - [no](not), my frst time
+    - i decline
+    - very bad
+    - it is going badly
+    - [no](not), my first time
     - [no](not), thank you
     - [no](not), thanks
     - [no](not), thankyou
     - [no](not). u r idiot
-    - [non](not)
     - [noooooooooo](not)
     - [noooooooooooooooooooooooooooooooooooooooo](not)
-    - [nop](not)
     - [nope](not)
+    - decline
     - [nope](not)!
+    - [noo](not)
     - [nope](not). i am good
     - [not](not) going well at all
     - [not](not) really
     - [not](not) right now
     - [not](not) yet
-    - [nö](not)
     - sorry [not](not) right now
     - thanks but [no](not) thanks
     - this sucks
@@ -673,16 +660,21 @@ nlu:
     - I [don't](not) agree      
     - I do [not](not) agree
     - Absolutely [not](not)
-    - [nono](not)
+    - [no](not) [no](not)
+    - deny
     - I reject
     - negative
     - I disagree
     - [don't](not) feel like it
     - [don't](not) like it
+    - i decline
     - you are absolutely wrong
     - you are hugely wrong
     - I [don't](not) agree
     - mmm [no](not)
+    - deny
+    - decline
+    - it is going badly
    
     
 - intent: ask_functions
@@ -719,7 +711,7 @@ nlu:
     - help please
     - help pls
     - help?
-    - hep me
+    - help me
     - hi. Sara what do you do?
     - hm that [doesnt](not) quite help me is there anything else you can do?
     - how can i use you
@@ -730,7 +722,6 @@ nlu:
     - how u can help me
     - how you help me
     - i asked you if you can do anything else
-    - i [don't](not) know what i want
     - i need help
     - more info
     - now what?
@@ -832,7 +823,7 @@ nlu:
     - How numerous are the [shoppers](people) in the [shopping plaza](mall)?
     - What's the total number of [clients](people) inside the [commercial center](mall)?
     - How many [citizens](people) are there in the [shopping gallery](mall) now?
-    - How many [boys](male) are there in the [shopping galleria](mall)?
+    - How many [menfolks](male) are there in the [shopping galleria](mall)?
     - What's the amount of [girls](female) who have been in the [mall](mall) for [more](more) than 20 minutes?
     - What is the current count of [customers](people) in the [mall](mall)?
     - How many [consumers](people) can be found in the [retail center](mall) at present?
@@ -851,38 +842,41 @@ nlu:
     - What was the number of [men](male) who have been in the [mall](mall) for a time [inferior](less) to 27 minutes?
     - How many are the [patrons](people) in the [mall](mall)?
     - The number of [users](people) in the [commercial plaza](mall)?
-    - Share with me the quantity of [vendee](people) in the [retail space](mall) wearing a orange [pullover](upper_body)
+    - Share with me the quantity of [vendee](people) in the [retail](mall) wearing a orange [pullover](upper_body)
     - Tell me how many [end users](people) are wearing a [cap](hat) and have spent a time in walmart that [exceeds](more) 25 minutes
     - How many [lasses](female) are wearing a purple [parka](upper_body)?
     - What is the number of [guys](people) with green [shorts](lower_body) who are spending [minus](less) than 15 minutes in the [mall](mall)?
     - Disclose to me the total of [maidens](female) in the [shopping center](mall) with black [chinos](lower_body)
     - Please, inform me about the total number of [misses](female) with a white [cardigan](upper_body) and a [bermuda](lower_body)
     - What is the amount of [public](people) in the [mall](mall) with a red [jacket](upper_body)?
+    - How many [lasses](female) are wearing a green [parka](upper_body)?
     - The amount of [madames](female) with a pink [blouse](upper_body) and a black [skirt](lower_body) in the [mall](mall)?
     - The total of [daughters](female) in the [mall](mall) with a purple [coat](upper_body) and orange [sweatpants](lower_body)?
-    - How many are all the [gentlemen](male) with a blue [T-shirt](upper_body) and white [cargo pants](lower_body) in the [mall](mall)?
-    - The amount of [sons](male) with a [schoolbag](bag)?
+    - How many are all the [gentlemen](male) with a blue [T-shirt](upper_body) and white cargo [pants](lower_body) in the [mall](mall)?
+    - The amount of [menfolks](male) with a [schoolbag](bag)?
     - The number of [dudes](male) with blue [jeans](lower_body) who have been in the [shopping center](mall) for a time [inferior](less) to 30 minutes
     - Give me the amount of [damoiselles](female) with a [sun hat](hat) and a [purse](bag)
     - I wanna know the number of [adults](people) who have an [handbag](bag)
+    - The total of [guys](people) in the [retail](mall) with a red [coat](upper_body) and orange [pants](lower_body)?
     - The number of [sirs](male) with a [cap](hat) and a [suitcase](bag)?
     - The amount of [acquirer](people) with purple [trousers](lower_body) that are in the [commercial plaza](mall) for a time [exceeding](more) 2 hours?
     - The amount of [boys](male) with brown [shorts](lower_body) passing a time frame [larger](more) than 13 minutes inside walmart 
-    - How many [people](people) wearing a red [coat](upper_body)?
+    - How many [public](people) wearing a red [coat](upper_body)?
+    - How many [lasses](female) are wearing a red [parka](upper_body)?
     - How many [folks](people) that wear red [leggins](lower_body) are in the [mall](mall)?
     - The number of [males](male) who wear a red [tank top](upper_body) and red [track pants](lower_body) in the [shopping center](mall)?
-    - how many [women](female) at the bar over 55 minutes who [doesn't](not) wear a red [skirt](lower_body) and a pink [shirt](upper_body)?
+    - how many [lasses](female) at the bar over 55 minutes who [doesn't](not) wear a red [skirt](lower_body) and a pink [shirt](upper_body)?
     - how many [kids](people) [don't](not) wear yellow [jeans](lower_body) and white [coat](upper_body)?
     - how many [boys](male)  do [not](not) wear a green [skirt](lower_body) and gray [cap](hat)?
     - What is the number of [people](people) which [don't](not) wear red [rucksack](bag) and black [leggins](lower_body)?
     - Are there [people](people) that [aren't](not) wearing a white [cap](hat) and [don't](not) have black [shorts](lower_body)?
-    - Count the number of [men](male) with gray [jumper](upper_body) and [not](not) green [pants](lower_body) that have spent a time [superior](more) to 20 minutes in the [mall](mall)
+    - Count the number of [sirs](male) with gray [jumper](upper_body) and [not](not) green [pants](lower_body) that have spent a time [superior](more) to 20 minutes in the [mall](mall)
     - Can you count the [ladies](female) that [aren't](not) wearing a gray [jacket](upper_body) and brown [trousers](lower_body)?
     - The number of [woman](female) with green [hat](hat) but [not](not) yellow [skirt](lower_body)
     - The quantity of [customers](people) who have green [cap](hat) and  [doesn't](not) have the yellow [jumper](upper_body)
     - The Total of [individuals](people) which [haven't](not) yellow [jeans](lower_body) and white [coat](upper_body)?
     - Tell me the number of [people](people) are [missing](not) a [coat](upper_body).
-    - How many [people](people) can you see who are [destitute](not) of a [hat](hat)?
+    - How many [public](people) can you see who are [destitute](not) of a [hat](hat)?
     - The amount of [buyers](people) who [don't](not) wear a black [sweater](upper_body)
     - Can you tell me the number of [consumers](people) who are [missing](not) a [backpack](bag)?
     - I’m curious about how many [people](people) are wearing [pants](lower_body) that [aren’t](not) black.
@@ -890,53 +884,59 @@ nlu:
     - I’m interested in the amount of [people](people) who are [neither](not) wearing a [beanie](hat) [nor](not) carrying a [purse](bag).
     - I want to know how many [guys](people) are dressed in something [other than](not) black [pants](lower_body).
     - The amount of [buyers](people) wearing anything [other than](not) an orange [shirt](upper_body).
-    - are there [shoppers](people) who are [free from](not) any kind of blue [jacket](upper_body)?
+    - are there [shoppers](people) who are [without](not) any kind of blue [jacket](upper_body)?
     - are there any [gentlemen](male) [unwearing](not) a green [raincoat](upper_body).
-    - The total of [customers](people) [devoid](not) of [bonnet](hat) staying in the [mall](mall) for [more](more) than 3 minutes.
-    - Tell me how many [clients](people) are [missing](not) yellow [vest](upper_body).
+    - The total of [customers](people) [without](not) a [bonnet](hat) staying in the [mall](mall) for [more](more) than 3 minutes.
+    - Tell me how many [public](people) are [missing](not) yellow [vest](upper_body).
     - Can you tell me the number of [people](people) who are [neither](not) wearing a [cap](hat) [nor](not) carrying a [suitecase](bag).
     - Is the [shopping mall](mall) crowded?
-    - give me if possible the number of [clients](people) that are in the [mall]](mall) and have yellow [cargo pant](lower_body)
-    - let's explore the amount of [kids](people) that have brown [sweatpants](lower_body) and a [berret](hat) 
+    - The total of [daughters](female) with orange [sweatpants](lower_body)?
+    - give me if possible the number of [clients](people) that are in the [mall](mall) and have yellow cargo [pant](lower_body)
+    - let's explore the amount of [kids](people) that have brown [bottom](lower_body) and a [berret](hat) 
     - check at [mall](mall) this afternoon the presence of [beret](hat)
     - Are there a lot of [men](male) in the [mall](mall) with a white [jumper](upper_body)?
     - Are you able to tell me how many [clients](people) are in the [mall](mall)
     - Please check how many [people](people) in a blue [vest](upper_body) are in the [mall](mall).
-    - I need to know how many [dudes](male) were in the [market](mall).
+    - Tell me the number of [buyers](people) who wear anything [other than](not) a black [uniform](upper_body).
+    - I need to know how many [menfolks](male) were in the [market](mall).
     - I want to know how many [dudes](male) have passed [less](less) than 20 minutes in walmart
+    - Are there [people](people) that [aren't](not) wearing a white [berret](hat) and [don't](not) have black [shorts](lower_body)?
     - What's the amount of [girls](female) with yellow [jacket](upper_body) who have been in sturbacks for [less](less) than 20 minutes?
     - Visualize the number of [customers](people) at [shopping center](mall) who have spent here a period [lesser](less) than 30 minutes
     - How many [clients](people) with red [cargos](lower_body) and a blue [polo shirt](upper_body)?
-    - Inform me about the total of [customers] with black [wide-leg pants](lower_body) and a [beret](hat)
+    - Inform me about the total of [customers](people) with black [wide-leg pants](lower_body) and a [beret](hat)
     - Wanna know how many [females](female) with a [hat](hat) and a [tote](bag) are in the [mall](mall)
     - It would be nice if you told me how many [men](male) wearing a black [suit](upper_body) are here
     - You should tell me the total of [women](female) with a green [waistcoat](upper_body)
-    - The quantity of [boys](male) that are wearing a blue [vest](upper_body) and occupying the [shopping hub](mall) for a time [larger](more) than 8 minutes?
+    - The quantity of [sirs](male) that are wearing a blue [vest](upper_body) and occupying the [shopping hub](mall) for a time [larger](more) than 8 minutes?
     - The quantity with pink [sequin skirt](lower_body) and [sleeveless shirt](upper_body)
-    - How many [folks](people) are wearing red [jackets](upper_body) and blue [jeans](lower_body) in the [mall](mall)?
+    - How many [folks](people) are wearing red [jackets](upper_body) and blue [jeans](lower_body) in the [market](mall)?
+    - What is the amount of [public](people) wearing anything [other than](not) a green [coat](upper_body).
     - Can you count the number of [individuals](people) in pink [sweaters](upper_body) and brown [pants](lower_body) who have been in the mall [minus](less) than 35 seconds?
-    - Are there [shoppers](people) in pink [dresses](upper_body) inside the [shopping center](mall) that have spent [more](more) than 23 minutes here?
+    - Are there [shoppers](people) in pink [dresses](upper_body) inside the [shopping center](mall) that have spent [below](less) than 23 minutes here?
     - How many [shoppers](people) are in orange [dresses](upper_body) and brown [leggings](lower_body) in walmart?
     - Count the number of [individuals](people) wearing brown [hoodies](upper_body) and blue [chinos](lower_body) who have spent [below](less) tha 5 minutes in starbucks
     - Are there any [kids](people) in red [shirts](upper_body) and green [shorts](lower_body) spending [minus](less) than 7 minutes in the [retail hub](mall)?
     - How many [women](female) are in blue [tops](upper_body) and white [jeans](lower_body) in the starbucks
     - Count the number of [individuals](people) wearing orange [chinos](lower_body) and gray [hoodies](upper_body) who have passed [greater](more) than 40 seconds in walmart
     - let's explore how many [customers](people) are dressing with gray [chinos](lower_body)
+    - The quantity of [shoppers](people) wearing anything [other than](not) a yellow [skirt](lower_body).
     - I'm curious about the headcount of [mall](mall) [attendees](people) that wear orange [polo shirt](upper_body) paired to a formal [pants](lower_body) which colour is pink 
-    - Inform me about the total of [customers] [without](not) black [wide-leg pants](lower_body) and a [beret](hat). they have spent forty minutes in the starbucks
+    - Inform me about the total of [customers](people) [without](not) black [wide-leg pants](lower_body) and a [beret](hat). they have spent forty minutes in the starbucks
     - You should tell me how many [kids](people) [without](not) a [schoolbag](bag) you are able to identify in walmart.  
     - Wanna know how many [females](female) with a [hat](hat) and a [tote](bag) have invested in the [mall](mall) [over](more) five minutes
     - i'd like to know if there are [women](female) at [retail](mall) that [exceeding](more) twenty minutes
     - I'm curious about the headcount of [individuals](people) that wear brown [pullover](upper_body) paired to a purple [bottom](lower_body) inside the [commercial center](mall)
     - check at [plaza area](mall) the presence of [shoopers](people) who [aren't](not) dressing a gray [top](upper_body) and do [not](not) have an [hat](hat)
     - Let me to know how many [boys](male) have [not](not) a purple [short pant](lower_body) and have [surpassed](more) sixty minutes in starbucks
-    - give me if possible the number of [individuals](people) that are at starbucks and have an [hobo bag](bag)
+    - give me if possible the number of [individuals](people) that are at starbucks and have an hobo [bag](bag)
     - can you say to me if there is [someone](people) that goes for a gray [slacks](lower_body) in starbucks 
     - is the walmart full of [clients](people)
     - is the [mall](mall) thronged
     - I need to know the number of [people](people) who wear a brown [sombrero](hat) and have spent their time in the [mall](mall) [smaller](less) than 2 seconds.
     - It would be nice if you told me how many [men](male) wearing a black [suit](upper_body) have been for a time [bigger](more) than sixty seconds in walmart
     - Count the [people](people) present
+    - The total of [girls](female) who are wearing a purple [skirt](lower_body)
     - check for the number of [blokes](people) who have been in walmart for a time [greater](more) than 12 minutes.
     - You should count for me the [individuals](people) that are passing a time [beyond](more) 7 minutes in Starbucks
     - Please, get a headcount of the [clients](people)
@@ -944,8 +944,12 @@ nlu:
     - I want the total number of [ladies](female) there
     - I'm interested in the whole shoppers present in the [shopping center](mall)
     - How many [gentlemen](people) are there?
-    - Are there a lot of [people](people) here?
-    - Give me the number of [males](male) who are in starbucks for a time [superior](more) to 10 minutes
+    - You should tell me the total of [women](female) with a purple [waistcoat](upper_body)
+    - Are there a lot of [fellows](people) here?
+    - You should tell me the total of [women](female) with a blue [waistcoat](upper_body)
+    - check at [plaza area](mall) the presence of [shoopers](people) who [aren't](not) dressing a gray [top](upper_body) and do [not](not) have an [hat](hat)
+    - Give me the number of [sirs](male) who are in starbucks for a time [superior](more) to 10 minutes
+    - Are there [people](people) that [aren't](not) wearing a white [cap](hat) and have black [pants](lower_body)?
     - You need the count the [females](female) for me?
     - in this moment, can you tell me the number of [males](male) passing [over](more) than a quarter of an hour inside the [retail mall](mall)?
     - How many [girls](female) have been in the [mall](mall) for [over](more) 5 minutes?
@@ -956,40 +960,44 @@ nlu:
     - Count just the [ladies](female) passing [above](more) 19 minutes in walmart, please
     - focus on counting [women](female)
     - how many [females](female) have been in walmart for [more](more) than a quarter of an hour
-    - how many [boys](male) have spent [less](less) than a quarter of an hour in the [mall](mall)
-    - how many [people](people) have been in the [mall](mall) for [more](more) than half an hour
-    - how many [people](people) have been in the starbucks [over](more) a quarter of an hour
+    - how many [boys](male) have spent [less](less) than a quarter of an hour in the [market](mall)
+    - how many [public](people) have been in the [market](mall) for [more](more) than half an hour
+    - how many [fellows](people) have been in the starbucks [over](more) a quarter of an hour
+    - check at [plaza area](mall) the presence of [shoopers](people) who [aren't](not) dressing a gray [top](upper_body) and do [not](not) have an [hat](hat)
     - What is the total number of [customers](people) with blue [upper clothes](upper_body) and pink [lower clothes](lower_body)
     - How many [men](male) are there in walmart with black [upper clothes](upper_body)?
     - What's the amount of [people](people) wearing blue [lower clothes](lower_body) and with a blue [jacket](upper_body)
-    - how many [people](people) who are [neither](not) wearing a [beanie](hat) [nor](not) carrying a [purse](bag) are in the [mall](mall).
-    - what is the number of [customers] who have spent a period of time [longer](more) than 30 minutes in walmart
-    - how many [girls](female) have spent a period of time [larger](more) than 300 seconds in starbucks?
-    - what is the amount of [people](people) who have been in the [mall](mall) for [more](more) than one hour and a half
+    - how many [fellows](people) who are [neither](not) wearing a [beanie](hat) [nor](not) carrying a [purse](bag) are in the [mall](mall).
+    - what is the number of [customers](people) who have spent a period of time [longer](more) than 30 minutes in walmart
+    - how many [granny](female) have spent a period of time [larger](more) than 300 seconds in starbucks?
+    - what is the amount of [people](people) who have been in the [market](mall) for [more](more) than one hour and a half
     - Count the number of [shoppers](people) who dressed a purple [cardigan](upper_body) and spent a period of time [shorter](less) than 3 minutes inside the [mall](mall)
     - let's explore the amount of [shoppers](people) who dress purple [chinos](lower_body) and have occupied the [shopping hub](mall) for a time [smaller](less) than 4 minutes
     - Can you count the number of [individuals](people) in black [dresses](upper_body) and red [shoes](lower_body) who have passed [minus](less) than 13 minutes in the [mall](mall)?
     - Tell me if there is a large number of [people](people) with a purple [pullover](upper_body) that passed a time frame [inferior](less) to 6 minutes in walmart.
     - Can you count the [women](female) in the [store](mall) that have been here [lower](less) than 10 minutes?
-    - Total of [people](people) with an orange [tuxedo](upper_body) and yellow [cropped jeans](lower_body) spending [minus](less) than 40 seconds in the [retail park](mall)
-
+    - Total of [fellows](people) with an orange [tuxedo](upper_body) and yellow [cropped jeans](lower_body) spending [minus](less) than 40 seconds in the [retail park](mall)
+    - let's explore the amount of [shoppers](people) who dress purple [chinos](lower_body) and have occupied the [shopping hub](mall) for a time [below](less) than 4 minutes
+    - You should tell me the total of [women](female) with a red [waistcoat](upper_body)
+    
+    
 - intent: ask_location
   examples: |
     - Where are [people](people)?
     - I'm looking for my [daddy](male), he has a black [shirt](upper_body) and a [backpack](bag), have you seen him?
     - Can you help me find my [child](people) with gray [jacket](upper_body) and a [hat](hat)?
-    - Can you tell me where I can find my [son](male)? He is wearing red [sweater](upper_body) and black [trousers](lower_body)
-    - I [can't](not) find my [son](male) anymore, he has a green [T-shirt](upper_body) and white [shorts](lower_body), can you see him?
+    - Can you tell me where I can find my [son](male)? He is wearing red [sweater](upper_body) and black [bottom](lower_body)
+    - I [can't](not) find my [son](male) anymore, he has a green [tailleur](upper_body) and white [shorts](lower_body), can you see him?
     - Are you able to search for my [child](people)? He has a yellow [sweater](upper_body) and brings a [cap](hat) with him.
     - Can you tell me the last place you saw my [daughter](female)? She is carrying a [purse](bag) and is wearing an orange [jacket](upper_body).
     - Can you tell me where my [husband](male) is? He has a yellow [sweatshirt](upper_body) with him.
     - I lost my [son](male), he is wearing a wool [hat](hat) and has a [schoolbag](bag), can you help me look for him?
-    - Where is my [son](male)? He [hasn't](not) a [bag](bag) but has a black [t-shirt](upper_body) with blue [trousers](lower_body).
+    - Where is my [daddy](male)? He [hasn't](not) a [bag](bag) but has a black [t-shirt](upper_body) with blue [trousers](lower_body).
     - Where is the [woman](female) [without](not) blue [T-shirt](upper_body) and green [skirt](lower_body)?
     - I'd like to know where is the [woman](female) with red [T-shirt](upper_body) but [without](not) a [leggins](lower_body)?
     - Where are the [children](people) [without](not) gray [rucksack](bag) but with black [hat](hat)?
-    - Where is my [daughter](female) who has orange [schoolbag](bag) and [without](not) white [cap](hat)?
-    - Have you seen where is my [son](male) with pink [bag](bag) but [doesn't](not) have a black [hat](hat)?
+    - Where is my [damsle](female) who has orange [schoolbag](bag) and [without](not) white [cap](hat)?
+    - Have you seen where is my [daddy](male) with pink [bag](bag) but [doesn't](not) have a black [hat](hat)?
     - I [can't](not) find the [grandparents](people) with red [hat](hat). They have a [schoolbag](bag). Can you find them for me?
     - Do You know where I can find the [woman](female) with brown [schoolbag](bag) and [without](not) a [cap](hat)?
     - I wish to know where are my [children](people) They are [not](not) wearing a gray [rucksack](bag) but they wear a black [shirt](upper_body)?
@@ -1009,9 +1017,9 @@ nlu:
     - Do You know where I can find my [wife](female)? She has gray [rucksack](bag) and she is [not](not) wearing yellow [pants](lower_body)
     - You know where I can find my [son](male) with a blue [bag](bag) and he is [unwearing](not) pink [pants](lower_body)?
     - I'm looking for a [person](people) with a black [coat](upper_body) but [without](not) [bag](bag). Can you tell me the place where is that [person](people)?
-    - Where are my [parents](people) whose [cap](hat) are black and whose [pants] are [not](not) orange?
+    - Where are my [parents](people) whose [cap](hat) are black and whose [pants](lower_body) are [not](not) orange?
     - I lost my [daughter](female), she's a [girl](female) in a pink [shirt](upper_body) but is [unprovided](not) of a [bag](bag). Do you see her?
-    - I'm looking for my [cousin](male), a moment ago he was next to me and he had gray [trousers](lower_body) but he [didn't](not) have his [bag](bag) with him.
+    - I'm looking for my [cousin](male), a moment ago he was next to me and he had gray [bottom](lower_body) but he [didn't](not) have his [bag](bag) with him.
     - I want to know where my [wife](female) is, she's a [lady](female) in a purple [skirt](lower_body) but [without](not) [handbag](bag).
     - Can you tell me the last place you saw my [sister](female)? She wears a green [jacket](upper_body) but [not](not) blue [jeans](lower_body).
     - I [don't](not) see my [niece](female) anymore, she's in a white [skirt](lower_body) but [unprovided](not) of [jacket](upper_body). Have you seen her?
@@ -1022,17 +1030,17 @@ nlu:
     - I [can't](not) see where my [mum](female) went, she has a purple [crop top](upper_body) and a [bourse](bag) with her, where can I find her?
     - I'm searching for a [miss](female) with a white [beret](hat) and brown [slacks](lower_body), do you see her? 
     - I lost sight of my [daughter](female), she's a [girl](female) in a pink [top](upper_body) and a black [skirt](lower_body), can you tell me where she is now?
-    - You should tell me if you can see my [son](male), he's a [boy](male) with a black [backpack](bag) and a gray [polo](upper_body).
+    - You should tell me if you can see my [daddy](male), he's a [boy](male) with a black [backpack](bag) and a gray [polo](upper_body).
     - I want to know if you are able to see my [daughter](female) in a purple [dress](upper_body) into the [shopping center](mall).
     - I would like information on where my [son](male) with a green [jumper](upper_body) is located in the shop.    
     - Where are [persons](people) that donnes a black [blazer](upper_body) paired with green [trousers](lower_body)?
     - Tell me where are [individuals](people) that choose to wear a classic white [jeans](lower_body) and a blue [shirt](upper_body) in the [mall](mall) now?
     - can you say to me in what area of the [mall](mall) there is [someone](people) that goes for a gray [sweatpants](lower_body) this morning?
     - Where are the [children](people) with yellow [t-shirt](upper_body) and yellow [trousers](lower_body)?
-    - Where is the [woman](female) with brown [shirt](upper_body) and pink [trousers](lower_body)?
+    - Where is the [woman](female) with brown [shirt](upper_body) and pink [bottom](lower_body)?
     - Have you seen where are the [women](female) with black [coat](upper_body) and pink [skirt](lower_body)?
     - Where is the [brother](male) with red [jumper](upper_body) and yellow [trousers](lower_body)?
-    - Where I can find my [sister](female) with gray [jumper](upper_body) and black [pants](lower_body)?
+    - Where I can find my [sister](female) with gray [tailleur](upper_body) and black [pants](lower_body)?
     - Tell me the location of my [brother](male) with purple [coat](upper_body) and green [trousers](lower_body)
     - Where is my [daughter](female) with red [jacket](upper_body) and pink [sweatpants](lower_body)?
     - Can you help me to find the [woman](female) with brown [tracksuit](upper_body)
@@ -1042,53 +1050,58 @@ nlu:
     - Where is my [child](people), he was wearing a gray [smoking](upper_body)
     - help me. find my [grandfather](male) who is wearing a orange [work overalls]](upper_body) and a yellow [hat](hat)?
     - Have you seen where are the [customers](people) that are using a green [uniform](upper_body)
-    - Do you see [people](people) [unwearing](not) green [bag](bag) and pink [hat](hat)?
+    - Do you see [public](people) [unwearing](not) green [bag](bag) and pink [hat](hat)?
     - let's explore in which area i can find my [mum](female). I lost her she's dressing a [tracksuit](upper_body)
     - see if you find in a specifi area [someone](people) [hasn't](not) a [beanie](hat) 
     - Can you see anyone wearing a red [coat](upper_body) in the [shopping precint](mall)?
+    - I would have information on where my [husband](male) with a gray [shirt](upper_body) is located in the shop.
     - Find for me my [girlfriend](female) who has on a green [windbreaker](upper_body) and blue [tights](lower_body)
     - Tell me in which place can you see my [fiancee](people) who has on blue [capri pants](lower_body) and a green [poncho](upper_body)
-    - Do you see where are [fellas](male) who [haven't](not) on a green [blazer](upper_body) and black [palazzo pants](lower_body)?
+    - Do you see where are [fellas](male) who [haven't](not) on a green [blazer](upper_body) and black [pants](lower_body)?
     - Give me the position of my [fiance](people) he has a black [turtleneck]](upper_body) and a green [bermuda shorts](lower_body)
-    - I want to find my [mother](female) she is wearing a green [camisole](upper_body) and white [flare jeans](lower_body)
-    - Where is my [father](male) with a white [denim jacket](upper_body) and a white [yoga pants](lower_body)
-    - The location of [clients](people) with on yellow [slacks](lower_body) and [not](not) [trench coat](upper_body)
-    - Help me to search my [stepsister](female) in a yellow [bomber jacket](upper_body) and a gray [mini skirt](lower_body)?
-    - I'm searching [girls](female) who wear an orange [maxi skirt](lower_body) and a yellow [raincoat](upper_body)
+    - I want to find my [mother](female) she is wearing a green [jacket](upper_body) and white [flare jeans](lower_body)
+    - Where is my [father](male) with a white denim [jacket](upper_body) and a white yoga [pants](lower_body)
+    - The location of [clients](people) with on yellow [slacks](lower_body) and [not](not) trench [coat](upper_body)
+    - Help me to search my [stepsister](female) in a yellow bomber [jacket](upper_body) and a gray mini [skirt](lower_body)?
+    - Find for me my [sister](female) she has a pink [windbreaker](upper_body) and black [tights](lower_body)
+    - I'm searching [granny](female) who wear an orange [maxi skirt](lower_body) and a yellow [raincoat](upper_body)
     - Give me information about the place where are [dudes](male) wearing a white [smoking](upper_body)?
     - Have you seen [damsles](female) who are [unwearing](not) a yellow [sports jersey](upper_body) and a purple [pencil skirt](lower_body)?
     - I lost my [stepmother](female) with an orange [bell skirt](lower_body) and a purple [flannel shirt](upper_body)
+    - I would to know where my [dad](male) with a red [sweater](upper_body) is located in the shop.
     - Can you say where is my [stepdad](male) with an orange [tuxedo](upper_body) and yellow [cropped jeans](lower_body). I lost him.
-    - I want to know where I can find [customers](people) who do [not](not) have an orange [poncho](upper_body) and purple [hiking shorts](lower_body)
-    - Tell me in which area of the [mall](mall) can I find [women](female) wearing pink [paperbag waist pants](lower_body) and brown [flannel overshirt](upper_body)
+    - I want to know where I can find [customers](people) who do [not](not) have an orange [poncho](upper_body) and purple [shorts](lower_body)
+    - Tell me in which area of the [mall](mall) can I find [women](female) wearing pink [pants](lower_body) and brown [flannel overshirt](upper_body)
     - Can you find my [father](male) wearing a red [tailored blazer](upper_body) and gray [pants](lower_body). I [can't](not) see him. 
     - Please. help me to find [shoppers](people) who are in purple [dresses](upper_body) and brown [leggings](lower_body) presently in the [commercial plaza](mall)?
-    - I [don't](not) locate  my [granny](female) who dresses green [shirt](upper_body) and blue [shorts](lower_body) currently in the [retail park](mall)?
+    - I [don't](not) locate  my [granny](female) who is wearing green [shirt](upper_body) and blue [shorts](lower_body) currently in the [retail park](mall)?
     - How many [people](people) are currently wearing blue [jeans](lower_body) and white [T-shirts](upper_body) in the [mall](mall)?
     - I'm looking for [individuals](people) in black [dresses](upper_body) and red [shoes](lower_body) right now in the [mall](mall)?      
     - You should inform me about the location of [shoppers](people) in brown [jackets](upper_body) and gray [trousers](lower_body) at this moment 
     - I'd like to know where are [people](people) [unwearing](not) a [cap](hat) and [without](not) [rucksack](bag)    
     - I [don't](not) think I can see my [son](male), he [hasn't](not) a white [jumper](upper_body) and blue [jeans](lower_body)?       
-    - I need to know the position in the store of my [child](people) he dresses a yellow [pullover](upper_body) but he [hasn't](not) gray [sneakers](lower_body) at this moment
-    - Help me look for my [grandad](male) [without](not) black [hoodies](upper_body) and green [cargo pants](lower_body)                     
+    - I need to know the position in the store of my [child](people) he is wearing a yellow [pullover](upper_body) but he [hasn't](not) gray [sneakers](lower_body) at this moment
+    - Help me look for my [grandad](male) [without](not) black [hoodies](upper_body) and green cargo [pants](lower_body)                     
     - Sorry, I lost my [husband](male) whose [camise](upper_body) (isn't)(not) gray?
     - I prefer to know where are my [children](people) they have blue [schoolbag](bag) but are [not](not) wearing a [cap](hat).
     - can you say me where i can find the [lassies](female) with [miniskirt](lower_body)?
+    - Find my [brother](male) who has a gray [windbreaker](upper_body) and red [tights](lower_body)
     - I [can't](not) see my [mama](female), she's wearing blue [hat](hat) and yellow [jacket](upper_body)?
     - Can you tell me where i can see my [uncle](male) who has a [pack](bag) and blue [leggins](lower_body)?
     - Tell me where are the [boys](male) who have [neither](not) a (bag)(bag) [nor](not) a (hat)(hat) in the [shopping center](mall).
-    - Where is my [bro](male) who has a red [shirt](upper_body) and [hasn't](not) blue [trousers](lower_body)?
-    - Do you see my [mother](female) with black [pantallons](lower_body)?
+    - Where is my [bro](male) who has a red [shirt](upper_body) and [hasn't](not) blue [bottom](lower_body)?
+    - Do you see my [damsle](female) with black [pantallons](lower_body)?
     - Do you see my [father](male) with purple [shorts](lower_body) and gray [camise](upper_body)?
-    - Help me find my [brother](male), i [can t](not) see him
+    - Help me find my [brother](male), i [can't](not) see him
     - I want to know the whereabouts of my [mother](female)
-    - give me information about the place where i can find my [wife](female)
+    - give me information about the place where i can find my [wife](female), she is wearing a blue [uniform](upper_body)
     - I'm interested in the location of my [husband](male) in the [mall](mall)
     - Tell me where is my [son](male)
-    - I need to look for my [daughter](female), I [don't](not) see her anymore
+    - search for me my [grandmother](female) who has on a yellow [windbreaker](upper_body)
+    - I need to look for my [damsle](female), I [don't](not) see her anymore
     - can you see where my [dad](male) went
     - Do you see where my [girlfriend](female) is?
-    - Look for my [sister](female) inside the [mall](mall)
+    - Look for my [sister](female) inside the [mall](mall), she is wearing a green [uniform](upper_body)
     - Have you seen my [aunt](female)?
     - Find for me my [mother](female).
     - i want to search my [daughter](female), I lost her.
@@ -1102,7 +1115,7 @@ nlu:
     - You should only find [people](people) in black [pants](lower_body)
     - I'm looking for [people](people) who have a [bag](bag)
     - You should find [people](people) who are wearing black [trousers](lower_body) and yellow [sweater](upper_body)
-    - Find who has white [shirt](upper_body) and [hasn t](not) black [pants](lower_body)
+    - Find who has white [shirt](upper_body) and [hasn't](not) black [pants](lower_body)
     - I’m searching [males](male)
     - I lost my [grandma](female) she was wearing green [upper clothes](upper_body)
     - I can't find my [grandchild](people) anymore he has blue [lower clothes](lower_body) and black [upper clothes](upper_body)
@@ -1139,6 +1152,7 @@ nlu:
     - I think [females](female)
     - i think [female](female)
     - give me [boys](male)
+    - [unless](not) orange
     - give me [girl](female)
     - I would have information about [males](male)
     - I would have information about [females](female)
@@ -1155,8 +1169,9 @@ nlu:
     - Consider [males](male)
     - [boys](male)
     - [woman](female)
+    - just [ladies](female)
     - [damsle](female)
-    - [gentle](male)
+    - [gentleman](male)
     - only [girl](female)
     - Simply [women](female)
     - Exclusively [boys](male)
@@ -1180,6 +1195,7 @@ nlu:
     - [man](male)
     - [women](female)
     - [woman](female)
+    - just [misses](female)
     - blue
     - gray
     - brown
@@ -1210,7 +1226,7 @@ nlu:
     - yellow
     - blue
     - the colour of the [upper clothes](upper_body) is purple
-    - i want to know about green [coat](upper_body)
+    - i want to know about green [sleveless](upper_body)
     - i think that i'm interested in black
     - [upper clothes](upper_body) blue
     - upper blue
@@ -1254,7 +1270,7 @@ nlu:
     - It has to be green
     - Tell me only about yellow [upper clothes](upper_body)
     - Just focus on purple
-    - look at who's wearing pink [shirt](upper_body)
+    - look at who's wearing pink [sleveless](upper_body)
     - It is supposed to be green
     - the colour would be orange
     - Maybe white
@@ -1264,7 +1280,7 @@ nlu:
     - The colour you should search is pink.
     - I'm sure it has to be purple
     - Blue, absolutely
-    - Without doubt red
+    - [Without](not) doubt red
     - obviously brown
     - I need you to look for yellow
     - I think it shoud be pink
@@ -1282,7 +1298,7 @@ nlu:
     - probably Brown
     - presumably yellow
     - most likely purple
-    - I'm only focused on people who are wearing white [coat](upper_body)
+    - I'm only focused on [people](people) who are wearing white [coat](upper_body)
     - Just tell me about the [female](female) who wear a brown [skirt](lower_body)
     - I want to know who wears black [pants](lower_body).
     - I'm interested in green
@@ -1297,18 +1313,21 @@ nlu:
     - yellow
     - ORANGE
     - I want information related to yellow
-    - I’m interested in finding out about those who wear gray.
+    - I’m interested in finding about those who wear gray.
     - Tell me who is donning gray [shorts](lower_body)
-    - I only want to know about [people] dressed in blue
+    - I only want to know about [people](people) dressed in blue
     - Tell me who's wearing a green [leggings](lower_body).
     - I want to know only about red
     - Only white
     - Only blue
     - Only black
+    - [unless](not) purple
     - I'm interested in knowing about the colour yellow.
     - I'm only thinking about those who're dressed in red
     - I want [man](male) in BLACK
     - In particular green
+    - I want only [man](male) who wears BLACK
+    - find only [man](male) in gray
     - The colour of the [skirt](lower_body) is blue
     - The colour of the [lower clothes](lower_body) is purple
     - Just brown
@@ -1337,9 +1356,12 @@ nlu:
     - It ought to be brown
     - the colour needs to be yellow
     - It must be black
+    - black, [without](not) any doubt
     - Find white
+    - orange, [without](not) any doubt
     - Consider black [lower clothes](lower_body)
     - The colour I want to look for shoud be red
+    - yellow, [without](not) a doubt
     - I think the colour should be white
     - red, [without](not) a doubt
     - all the [mall](mall)
@@ -1375,6 +1397,7 @@ nlu:
     - the whole [mall](mall)
     - the enitire [mall](mall)
     - the walmart
+    - [unless](not) yellow
     - the starbucks
     - the walmart and starbucks
     - Just walmart
@@ -1387,6 +1410,7 @@ nlu:
     - with
     - [without](not)
     - I prefer with
+    - [leave out](not) yellow
     - I think with
     - I'm interested in [people](people) with
     - Tell me about [people](people) who have a [hat](hat)
@@ -1403,7 +1427,7 @@ nlu:
     - just with [bonnet](hat)
     - only with [hat](hat)
     - simply [people](people) with [hat](hat)
-    - Surely with [hat]
+    - Surely with [hat](hat)
     - i prefer [hat](hat)
     - [people](people) with [beret](hat)
     - [hat](hat)
@@ -1433,13 +1457,14 @@ nlu:
     - just with [schoolbag](bag)
     - only with [backpack](bag)
     - i prefer [schoolbag](bag)
-    - people with [backpack](bag)
+    - [people](people) with [backpack](bag)
     - [bag](bag)
     - [no](not) [bag](bag)
     - ok, [rucksack](bag)
     - only [schoolbag](bag)
     - just [bag](bag)
     - [schoolbag](bag)!
+    - [leave out](not) blue
     - i want [backpack](bag)
     - [not](not) [suitecase](bag)
     - [rucksack](bag), Please.
@@ -1448,49 +1473,66 @@ nlu:
     - I'm interested in [men](male) with [pack](bag).
     - Pepper, with [backpack](bag)
     - i want know [women](female) is wearing a [purse](bag)
+    - [unless](not) blue
     - i want to know about [children](people) with [schoolbag](bag)
     - Focus on [people](people) who carry a [bag](bag) with them
     - I think with [pack](bag)
     - Just consider [ladies](female) [without](not) a [purse](bag)
-    - Only [clients] who [haven't](not) a [bag](bag)
-    - looking for red [t-shirt](upper_body) and green [shorts](lower_body)
+    - Only [clients] who [haven't](not) a [trucksack](bag)
+    - looking for red [sleveless](upper_body) and green [shorts](lower_body)
     - tell me about [males](male) with gray [polo](upper_body) and brown [pants](lower_body)
     - I want pink [shirt](upper_body) and black [skirt](lower_body)
     - blue [jeans](lower_body) and red [coat](upper_body)
     - Give me who has orange [pantaloons](lower_body) and purple [raincoat](upper_body)
     - black [shirt](upper_body) and a yellow [trousers](lower_body)
-    - I want [women](female) in red [jacket](upper_body) and black [leggins](lower_body)
-    - Tell me who wears a green [jumper](upper_body) and has a [bag](bag)
+    - I want [women](female) in red [sleveless](upper_body) and black [leggins](lower_body)
+    - Tell me who wears a green [jumper](upper_body) and has a [trucksack](bag)
     - Consider [clients](people) who have white [blazer](upper_body) but [not](not) a [cap](hat)
-    - Give me who is wearing green [camisole](upper_body) but [not](not) a [beret](hat)
+    - Give me who is wearing green [jacket](upper_body) but [not](not) a [beret](hat)
     - I'm interested in gray [blouse](upper_body) and pink [skirt](lower_body)
     - Focus on orange [overcoat](upper_body) and black [hat](hat)
     - Check for gray [jacket](upper_body) and pink [pack](bag)
     - interested in brown [sleveless](upper_body) but [not](not) in [bonnet](hat)
     - tell me about purple [skirt](lower_body) and red [coat](upper_body)
-    - I [don t](not) know, i prefer red
+    - I [don't](not) know, i prefer red
     - i [haven't](not) any idea, but i like green
-    - mhhhh i [dont](not) remember, i think with a [cap](hat)
+    - mhhhh i [don't](not) remember, i think with a [cap](hat)
     - Actually i [couldn't](not) tell you, in my mind he has a black [trucksack](bag)  
     - i have [no](not) clue, but i say you red
     - [cap](hat) in general
     - I m [not](not) very sure, I'd like purple
     - It's the same, but search who has a [schoolbag](bag)
-    - I [haven t](not) a particular preference, look for blue
+    - I [haven't](not) a particular preference, look for blue
     - All [except](not) red
+    - All [except](not) white
+    - [leave out](not) green
+    - All [except](not) Brown
+    - Consider all colours [except](not) purple
+    - All colours [except](not) black
     - I would all colour with the [exception](not) of yellow
-    - I want all colour [barring](not) purple
-    - [remove](not) blue
-    - Consider all possibilities [save for](not) the white.
+    - I want all colour but [not](not) purple
+    - All colours but [remove](not) blue
+    - [remove](not) red
+    - Consider all colours but [remove](not) pink
+    - Consider all colours [save for](not) the white.
+    - Consider all alternatives [save for](not) the red.
+    - Consider all possibilities [save for](not) the green.
     - i favors every color tone [aside](not) pink
     - [excluding](not) green
+    - [excluding](not) gray
+    - consider all possibilities [excluding](not) orange
+    - all colours [excluding](not) purple
+    - consider all colours [excluding](not) brown
+    - i like all colour tones [aside](not) yellow
+    - i prefer every color tone [aside](not) orange
     - [leave out](not) black
     - [unless](not) gray
-    - [take out](not) orange, please.
     - [don't](not) consider red
     - all but blue
     - everythings but [not](not) blue
     - i want all colour, [apart from](not) green
+    - i want all colour, [apart from](not) yellow
+    - i want all colour, [apart from](not) purple
     - with is good.
     - [without](not) is perfect.
     - ok with
@@ -1559,6 +1601,8 @@ nlu:
     - It [doesn't](not) matter at the moment
     - Either works
     - Either is fine
+    - Either alternatives
+    - Consider either possibilities
     - all the colours are good
     - all colors 
     - all the colors are good 
@@ -1577,12 +1621,12 @@ nlu:
     - I [don't](not) remember the color
     - It's an irrelevant detail for me
     - Sorry, but at the moment i [don't](not) know.
-    - Sorry, in this moment i do [not]in (not) remember
+    - Sorry, in this moment i do [not](not) remember
     - Sorry, i [can't](not) say you the color.
     - Excuse me i [don't](not) remember
     - Excuse me but at the moment i [don't](not) know.
     - I have [no](not) idea.
-    - I'm [not](not) thinking about a particoular color.
+    - I'm [not](not) thinking about a particular color.
     - both are the same
     - [no](not) preference for the place
     - i'm [not](not) thinking about a particular place
@@ -1609,10 +1653,10 @@ nlu:
     - Check for both
     - Focus on both
     - Both of them
-    - i prefer with [racksuck](bag) and [without](not) [racksuck](bag)
+    - i prefer with [rucksack](bag) and [without](not) [rucksack](bag)
     - with and [without](not)
     - i'm interested in [people](people) who have a [backpack](bag) and [don't](not) have [backpack](bag)
-    - i want to know in [children](people) whitch have a [pack](bag) and [don't](not) have [pack](bag)
+    - i want to know in [children](people) which have a [pack](bag) and [don't](not) have [pack](bag)
     - both things
     - Tell me about both possibilities
     - I [can't](not) answer you at the moment.
@@ -1626,7 +1670,7 @@ nlu:
     - i do [not](not) care!!!
     - [none](not) of them
     - i'm [not](not) interested
-    - i [don t](not) know
+    - i [don't](not) know
     - [dont](not) know
     - any
     - anything
