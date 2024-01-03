@@ -1,121 +1,121 @@
 {
   "greet": {
-    "precision": 0.9032258064516129,
-    "recall": 0.9032258064516129,
-    "f1-score": 0.9032258064516129,
+    "precision": 0.9054054054054054,
+    "recall": 0.864516129032258,
+    "f1-score": 0.8844884488448843,
     "support": 155,
     "confused_with": {
-      "affirm": 7,
-      "goodbye": 3
+      "affirm": 5,
+      "unknown": 4
     }
   },
   "unknown": {
-    "precision": 0.8253968253968254,
-    "recall": 0.8125,
-    "f1-score": 0.8188976377952756,
+    "precision": 0.808,
+    "recall": 0.7890625,
+    "f1-score": 0.7984189723320159,
     "support": 128,
     "confused_with": {
-      "deny": 8,
-      "affirm": 5
+      "inform": 11,
+      "deny": 8
+    }
+  },
+  "ask_functions": {
+    "precision": 0.9423076923076923,
+    "recall": 0.9514563106796117,
+    "f1-score": 0.9468599033816425,
+    "support": 103,
+    "confused_with": {
+      "unknown": 1,
+      "thanks": 1
     }
   },
   "thanks": {
-    "precision": 0.9615384615384616,
-    "recall": 0.8928571428571429,
-    "f1-score": 0.9259259259259259,
+    "precision": 0.92,
+    "recall": 0.8214285714285714,
+    "f1-score": 0.8679245283018867,
     "support": 28,
     "confused_with": {
       "affirm": 2,
       "goodbye": 1
     }
   },
-  "ask_count": {
-    "precision": 0.930635838150289,
-    "recall": 0.9526627218934911,
-    "f1-score": 0.9415204678362573,
-    "support": 169,
+  "goodbye": {
+    "precision": 0.9102564102564102,
+    "recall": 0.797752808988764,
+    "f1-score": 0.8502994011976048,
+    "support": 89,
     "confused_with": {
-      "ask_location": 5,
-      "inform": 2
-    }
-  },
-  "affirm": {
-    "precision": 0.8594377510040161,
-    "recall": 0.9106382978723404,
-    "f1-score": 0.884297520661157,
-    "support": 235,
-    "confused_with": {
-      "greet": 6,
-      "goodbye": 4
-    }
-  },
-  "ask_functions": {
-    "precision": 0.95,
-    "recall": 0.9223300970873787,
-    "f1-score": 0.9359605911330049,
-    "support": 103,
-    "confused_with": {
-      "goodbye": 3,
-      "ask_count": 2
+      "greet": 11,
+      "inform": 4
     }
   },
   "deny": {
-    "precision": 0.8369565217391305,
-    "recall": 0.7938144329896907,
-    "f1-score": 0.8148148148148148,
+    "precision": 0.8350515463917526,
+    "recall": 0.8350515463917526,
+    "f1-score": 0.8350515463917526,
     "support": 97,
     "confused_with": {
-      "affirm": 11,
-      "unknown": 8
-    }
-  },
-  "goodbye": {
-    "precision": 0.8488372093023255,
-    "recall": 0.8202247191011236,
-    "f1-score": 0.8342857142857142,
-    "support": 89,
-    "confused_with": {
-      "greet": 8,
-      "affirm": 3
-    }
-  },
-  "inform": {
-    "precision": 0.958005249343832,
-    "recall": 0.9358974358974359,
-    "f1-score": 0.946822308690013,
-    "support": 390,
-    "confused_with": {
-      "ask_location": 8,
-      "unknown": 7
+      "unknown": 8,
+      "affirm": 7
     }
   },
   "ask_location": {
-    "precision": 0.8835616438356164,
-    "recall": 0.9214285714285714,
-    "f1-score": 0.902097902097902,
-    "support": 140,
+    "precision": 0.9115646258503401,
+    "recall": 0.9305555555555556,
+    "f1-score": 0.9209621993127148,
+    "support": 144,
     "confused_with": {
       "ask_count": 6,
       "inform": 4
     }
   },
-  "accuracy": 0.9015645371577575,
+  "inform": {
+    "precision": 0.9246231155778895,
+    "recall": 0.9435897435897436,
+    "f1-score": 0.934010152284264,
+    "support": 390,
+    "confused_with": {
+      "unknown": 8,
+      "ask_location": 7
+    }
+  },
+  "affirm": {
+    "precision": 0.921161825726141,
+    "recall": 0.9446808510638298,
+    "f1-score": 0.9327731092436974,
+    "support": 235,
+    "confused_with": {
+      "inform": 3,
+      "unknown": 2
+    }
+  },
+  "ask_count": {
+    "precision": 0.9142857142857143,
+    "recall": 0.9467455621301775,
+    "f1-score": 0.9302325581395349,
+    "support": 169,
+    "confused_with": {
+      "inform": 5,
+      "ask_location": 3
+    }
+  },
+  "accuracy": 0.9050715214564369,
   "macro avg": {
-    "precision": 0.8957595306762111,
-    "recall": 0.8865579225578788,
-    "f1-score": 0.8907848689691678,
-    "support": 1534
+    "precision": 0.8992656335801346,
+    "recall": 0.8824839578860265,
+    "f1-score": 0.8901020819429999,
+    "support": 1538
   },
   "weighted avg": {
-    "precision": 0.9020346612287461,
-    "recall": 0.9015645371577575,
-    "f1-score": 0.9015114166632314,
-    "support": 1534
+    "precision": 0.9047126050819931,
+    "recall": 0.9050715214564369,
+    "f1-score": 0.9044811057649857,
+    "support": 1538
   },
   "micro avg": {
-    "precision": 0.9015645371577575,
-    "recall": 0.9015645371577575,
-    "f1-score": 0.9015645371577575,
-    "support": 1534
+    "precision": 0.9050715214564369,
+    "recall": 0.9050715214564369,
+    "f1-score": 0.9050715214564369,
+    "support": 1538
   }
 }

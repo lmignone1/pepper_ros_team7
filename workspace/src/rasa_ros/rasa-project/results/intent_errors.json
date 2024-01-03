@@ -1,26 +1,50 @@
 [
   {
-    "text": "helo",
+    "text": "wee",
     "intent": "greet",
     "intent_prediction": {
       "name": "inform",
-      "confidence": 0.994528591632843
+      "confidence": 0.759580135345459
     }
   },
   {
-    "text": "salut",
+    "text": "let's go",
     "intent": "greet",
     "intent_prediction": {
       "name": "goodbye",
-      "confidence": 0.9474153518676758
+      "confidence": 0.8389409780502319
     }
   },
   {
-    "text": "sup",
+    "text": "goodmorning",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.6828452348709106
+    }
+  },
+  {
+    "text": "Bom dia",
     "intent": "greet",
     "intent_prediction": {
       "name": "affirm",
-      "confidence": 0.9112535119056702
+      "confidence": 0.9998949766159058
+    }
+  },
+  {
+    "text": "greet",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9145727157592773
+    }
+  },
+  {
+    "text": "hi.........................................................",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.6595050096511841
     }
   },
   {
@@ -28,31 +52,31 @@
     "intent": "greet",
     "intent_prediction": {
       "name": "goodbye",
-      "confidence": 0.9966895580291748
+      "confidence": 0.9998273849487305
     }
   },
   {
-    "text": "goodnight",
-    "intent": "goodbye",
+    "text": "ciao",
+    "intent": "greet",
     "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.9914186000823975
+      "name": "deny",
+      "confidence": 0.4759739637374878
     }
   },
   {
-    "text": "gotta go",
+    "text": "farewell",
     "intent": "goodbye",
     "intent_prediction": {
       "name": "greet",
-      "confidence": 0.9769607186317444
+      "confidence": 0.6325399875640869
     }
   },
   {
-    "text": "we meet again dear!",
+    "text": "let's finish the conversation",
     "intent": "goodbye",
     "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.549812912940979
+      "name": "ask_location",
+      "confidence": 0.5149227976799011
     }
   },
   {
@@ -64,27 +88,27 @@
     }
   },
   {
+    "text": "amayzing",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "ask_count",
+      "confidence": 0.5582888126373291
+    }
+  },
+  {
     "text": "go",
     "intent": "affirm",
     "intent_prediction": {
       "name": "goodbye",
-      "confidence": 0.5571287274360657
+      "confidence": 0.9521141052246094
     }
   },
   {
-    "text": "go ahead",
+    "text": "jezz",
     "intent": "affirm",
     "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.9401840567588806
-    }
-  },
-  {
-    "text": "not bad",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.999998927116394
+      "name": "inform",
+      "confidence": 0.9999681711196899
     }
   },
   {
@@ -92,775 +116,7 @@
     "intent": "affirm",
     "intent_prediction": {
       "name": "greet",
-      "confidence": 0.9999508857727051
-    }
-  },
-  {
-    "text": "ook",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.9733040928840637
-    }
-  },
-  {
-    "text": "uh-huh",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.5494489669799805
-    }
-  },
-  {
-    "text": "ys",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.5324801206588745
-    }
-  },
-  {
-    "text": "i decline",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9999618530273438
-    }
-  },
-  {
-    "text": "it is going badly",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9436787962913513
-    }
-  },
-  {
-    "text": "I don't think so",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "unknown",
-      "confidence": 0.9563260674476624
-    }
-  },
-  {
-    "text": "I reject",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.999996542930603
-    }
-  },
-  {
-    "text": "decline",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9999939203262329
-    }
-  },
-  {
-    "text": "deny",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9849278926849365
-    }
-  },
-  {
-    "text": "i don't think so",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "unknown",
-      "confidence": 0.9563260674476624
-    }
-  },
-  {
-    "text": "i don't want to",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "unknown",
-      "confidence": 0.8385786414146423
-    }
-  },
-  {
-    "text": "it is wrong",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9759953618049622
-    }
-  },
-  {
-    "text": "not yet",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.6584910154342651
-    }
-  },
-  {
-    "text": "are there any other options?",
-    "intent": "ask_functions",
-    "intent_prediction": {
-      "name": "ask_count",
-      "confidence": 0.9998059868812561
-    }
-  },
-  {
-    "text": "talk to me",
-    "intent": "ask_functions",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.9911082983016968
-    }
-  },
-  {
-    "text": "talk to me!",
-    "intent": "ask_functions",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.9843769073486328
-    }
-  },
-  {
-    "text": "can you say to me in what area of the mall there is someone that goes for a gray sweatpants this morning?",
-    "intent": "ask_location",
-    "intent_prediction": {
-      "name": "ask_count",
-      "confidence": 1.0
-    }
-  },
-  {
-    "text": "The location of clients with on yellow slacks and not trench coat",
-    "intent": "ask_location",
-    "intent_prediction": {
-      "name": "ask_count",
-      "confidence": 0.9980954527854919
-    }
-  },
-  {
-    "text": "I'm searching granny who wear an orange maxi skirt and a yellow raincoat",
-    "intent": "ask_location",
-    "intent_prediction": {
-      "name": "ask_count",
-      "confidence": 0.5775254368782043
-    }
-  },
-  {
-    "text": "include both men and women in the count",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "ask_count",
-      "confidence": 0.9743680357933044
-    }
-  },
-  {
-    "text": "i'd like to know girl and boy",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "unknown",
-      "confidence": 0.4151288866996765
-    }
-  },
-  {
-    "text": "The colour you should search is pink.",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "ask_location",
-      "confidence": 0.9999871253967285
-    }
-  },
-  {
-    "text": "Tell me who wears a green jumper and has a trucksack",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "ask_location",
-      "confidence": 0.9894706010818481
-    }
-  },
-  {
-    "text": "Consider clients who have white blazer but not a cap",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "ask_count",
-      "confidence": 0.9960789084434509
-    }
-  },
-  {
-    "text": "mhhhh i don't remember, i think with a cap",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "unknown",
-      "confidence": 0.9998416900634766
-    }
-  },
-  {
-    "text": "Actually i couldn't tell you, in my mind he has a black trucksack",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "ask_location",
-      "confidence": 1.0
-    }
-  },
-  {
-    "text": "It's the same, but search who has a schoolbag",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "ask_location",
-      "confidence": 0.9999991655349731
-    }
-  },
-  {
-    "text": "ok with",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.8555248975753784
-    }
-  },
-  {
-    "text": "everybody",
-    "intent": "unknown",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.4882602393627167
-    }
-  },
-  {
-    "text": "Provide the total headcount, regardless of gender",
-    "intent": "unknown",
-    "intent_prediction": {
-      "name": "ask_count",
-      "confidence": 1.0
-    }
-  },
-  {
-    "text": "nothing",
-    "intent": "unknown",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.9549274444580078
-    }
-  },
-  {
-    "text": "Either is fine",
-    "intent": "unknown",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.953166663646698
-    }
-  },
-  {
-    "text": "I have no idea.",
-    "intent": "unknown",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.6259848475456238
-    }
-  },
-  {
-    "text": "i want to know in men which have a schoolbag and don't have schoolbag",
-    "intent": "unknown",
-    "intent_prediction": {
-      "name": "ask_location",
-      "confidence": 0.9999865293502808
-    }
-  },
-  {
-    "text": "i want to know in children which have a pack and don't have pack",
-    "intent": "unknown",
-    "intent_prediction": {
-      "name": "ask_location",
-      "confidence": 0.5638700127601624
-    }
-  },
-  {
-    "text": "anything",
-    "intent": "unknown",
-    "intent_prediction": {
-      "name": "ask_functions",
-      "confidence": 0.633354902267456
-    }
-  },
-  {
-    "text": "wee",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "inform",
-      "confidence": 0.999997615814209
-    }
-  },
-  {
-    "text": "good afternoon",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.9311089515686035
-    }
-  },
-  {
-    "text": "Bom dia",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9472993016242981
-    }
-  },
-  {
-    "text": "yoo",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.9233401417732239
-    }
-  },
-  {
-    "text": "regards",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "unknown",
-      "confidence": 0.9917030930519104
-    }
-  },
-  {
-    "text": "good by",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "unknown",
-      "confidence": 0.6141545176506042
-    }
-  },
-  {
-    "text": "adios",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.9997569918632507
-    }
-  },
-  {
-    "text": "adios?",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.9989491105079651
-    }
-  },
-  {
-    "text": "i'm going",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9202585816383362
-    }
-  },
-  {
-    "text": "we feel",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.7297129034996033
-    }
-  },
-  {
-    "text": "I'm going",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9202585816383362
-    }
-  },
-  {
-    "text": "okay cool uh thank you",
-    "intent": "thanks",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9999312162399292
-    }
-  },
-  {
-    "text": "thank you good bye",
-    "intent": "thanks",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.925065815448761
-    }
-  },
-  {
-    "text": "I changed my mind. I want to accept it",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "ask_location",
-      "confidence": 0.938332200050354
-    }
-  },
-  {
-    "text": "I get it",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.943703830242157
-    }
-  },
-  {
-    "text": "lets do this",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "ask_functions",
-      "confidence": 0.9875319600105286
-    }
-  },
-  {
-    "text": "si",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.9447785019874573
-    }
-  },
-  {
-    "text": "top",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "inform",
-      "confidence": 0.9997344613075256
-    }
-  },
-  {
-    "text": "very much",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "thanks",
-      "confidence": 0.8219853639602661
-    }
-  },
-  {
-    "text": "you got me, I accept, if you want me to",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.78666752576828
-    }
-  },
-  {
-    "text": "no doubt",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.9997531771659851
-    }
-  },
-  {
-    "text": "noo",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "unknown",
-      "confidence": 0.5427867770195007
-    }
-  },
-  {
-    "text": "i'm not sure",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "unknown",
-      "confidence": 0.8614003658294678
-    }
-  },
-  {
-    "text": "it sucks",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 1.0
-    }
-  },
-  {
-    "text": "it sux",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.31825146079063416
-    }
-  },
-  {
-    "text": "never mind",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "unknown",
-      "confidence": 0.9969139099121094
-    }
-  },
-  {
-    "text": "this sucks",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9852413535118103
-    }
-  },
-  {
-    "text": "negative",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "unknown",
-      "confidence": 0.941682755947113
-    }
-  },
-  {
-    "text": "I disagree",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9999964237213135
-    }
-  },
-  {
-    "text": "more info",
-    "intent": "ask_functions",
-    "intent_prediction": {
-      "name": "inform",
-      "confidence": 0.9978284239768982
-    }
-  },
-  {
-    "text": "options",
-    "intent": "ask_functions",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9737343788146973
-    }
-  },
-  {
-    "text": "The quantity with pink sequin skirt and sleeveless shirt",
-    "intent": "ask_count",
-    "intent_prediction": {
-      "name": "ask_location",
-      "confidence": 0.9996360540390015
-    }
-  },
-  {
-    "text": "can you say to me if there is someone that goes for a gray slacks in starbucks",
-    "intent": "ask_count",
-    "intent_prediction": {
-      "name": "ask_location",
-      "confidence": 1.0
-    }
-  },
-  {
-    "text": "Can you see anyone wearing a red coat in the shopping precint?",
-    "intent": "ask_location",
-    "intent_prediction": {
-      "name": "ask_count",
-      "confidence": 0.9783505201339722
-    }
-  },
-  {
-    "text": "I’m interested in people in general",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "unknown",
-      "confidence": 0.972077488899231
-    }
-  },
-  {
-    "text": "I'm looking for white upper cloth",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "ask_location",
-      "confidence": 0.9996757507324219
-    }
-  },
-  {
-    "text": "I need you to look for yellow",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "ask_location",
-      "confidence": 0.9645030498504639
-    }
-  },
-  {
-    "text": "the shopping center",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "ask_count",
-      "confidence": 0.9999879598617554
-    }
-  },
-  {
-    "text": "Just look who don't have a beret",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "unknown",
-      "confidence": 0.9957852959632874
-    }
-  },
-  {
-    "text": "al",
-    "intent": "unknown",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.6276295781135559
-    }
-  },
-  {
-    "text": "Al",
-    "intent": "unknown",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.6276295781135559
-    }
-  },
-  {
-    "text": "no preferencess",
-    "intent": "unknown",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.9876619577407837
-    }
-  },
-  {
-    "text": "I dont want to tell",
-    "intent": "unknown",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.8250471949577332
-    }
-  },
-  {
-    "text": "dont know",
-    "intent": "unknown",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.7379207015037537
-    }
-  },
-  {
-    "text": "moin",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9669445753097534
-    }
-  },
-  {
-    "text": "let's go",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9384196400642395
-    }
-  },
-  {
-    "text": "good moring",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9883759021759033
-    }
-  },
-  {
-    "text": "wasssup!",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9966447353363037
-    }
-  },
-  {
-    "text": "whats popping",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.8035967350006104
-    }
-  },
-  {
-    "text": "here you are",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "ask_functions",
-      "confidence": 0.8373744487762451
-    }
-  },
-  {
-    "text": "Exit",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "inform",
-      "confidence": 0.875958263874054
-    }
-  },
-  {
-    "text": "have a good continuation",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "unknown",
-      "confidence": 0.674342930316925
-    }
-  },
-  {
-    "text": "greetings",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.9971158504486084
-    }
-  },
-  {
-    "text": "Be careful",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "inform",
-      "confidence": 0.3715326488018036
-    }
-  },
-  {
-    "text": "let's finish the conversation",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9180466532707214
-    }
-  },
-  {
-    "text": "I greet you",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.9894734025001526
-    }
-  },
-  {
-    "text": "I am sorry but I cannot continue to speak",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.5248140692710876
-    }
-  },
-  {
-    "text": "I have used it in the past",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "unknown",
-      "confidence": 0.9901108145713806
-    }
-  },
-  {
-    "text": "I'm using it",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "unknown",
-      "confidence": 0.5614904165267944
-    }
-  },
-  {
-    "text": "jezz",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 1.0
+      "confidence": 0.9999256134033203
     }
   },
   {
@@ -868,23 +124,407 @@
     "intent": "affirm",
     "intent_prediction": {
       "name": "inform",
-      "confidence": 0.9998295307159424
+      "confidence": 0.9998645782470703
     }
   },
   {
-    "text": "yaah",
+    "text": "ys",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 0.6154030561447144
+    }
+  },
+  {
+    "text": "noo",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 0.9651314616203308
+    }
+  },
+  {
+    "text": "don't like that",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 0.960272490978241
+    }
+  },
+  {
+    "text": "I reject",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "deny",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.35206231474876404
+    }
+  },
+  {
+    "text": "it sux",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9938293099403381
+    }
+  },
+  {
+    "text": "never mind",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "ask_functions",
+      "confidence": 0.2943670451641083
+    }
+  },
+  {
+    "text": "negative",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.44324779510498047
+    }
+  },
+  {
+    "text": "don't feel like it",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 0.9934740662574768
+    }
+  },
+  {
+    "text": "don't like it",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 0.9899881482124329
+    }
+  },
+  {
+    "text": "come back",
+    "intent": "ask_functions",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9986849427223206
+    }
+  },
+  {
+    "text": "is the mall thronged",
+    "intent": "ask_count",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.9999960660934448
+    }
+  },
+  {
+    "text": "I'm searching granny who wear an orange maxi skirt and a yellow raincoat",
+    "intent": "ask_location",
+    "intent_prediction": {
+      "name": "ask_count",
+      "confidence": 0.9998680353164673
+    }
+  },
+  {
+    "text": "You should only find people in black pants",
+    "intent": "ask_location",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.9026386141777039
+    }
+  },
+  {
+    "text": "check for people with",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "ask_location",
+      "confidence": 0.5568830370903015
+    }
+  },
+  {
+    "text": "ok, cap",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9998830556869507
+    }
+  },
+  {
+    "text": "I'm thinking about those who don't wear a hat",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 0.9128144979476929
+    }
+  },
+  {
+    "text": "Just look who don't have a beret",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 0.9998601675033569
+    }
+  },
+  {
+    "text": "no bag",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9128577709197998
+    }
+  },
+  {
+    "text": "Pepper, with backpack",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 0.7067529559135437
+    }
+  },
+  {
+    "text": "Consider clients who have white blazer but not a cap",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "ask_location",
+      "confidence": 0.6189574599266052
+    }
+  },
+  {
+    "text": "mhhhh i don't remember, i think with a cap",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 0.9990177154541016
+    }
+  },
+  {
+    "text": "It's the same, but search who has a schoolbag",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "ask_location",
+      "confidence": 0.982664167881012
+    }
+  },
+  {
+    "text": "I haven't a particular preference, look for blue",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "I would all colour with the exception of yellow",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "ask_count",
+      "confidence": 0.9890641570091248
+    }
+  },
+  {
+    "text": "yes, he has a bag",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "al",
+    "intent": "unknown",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.8149815201759338
+    }
+  },
+  {
+    "text": "Al",
+    "intent": "unknown",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.8149815201759338
+    }
+  },
+  {
+    "text": "i have no clue",
+    "intent": "unknown",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9464880228042603
+    }
+  },
+  {
+    "text": "Either is fine",
+    "intent": "unknown",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9996616840362549
+    }
+  },
+  {
+    "text": "It's unimportant",
+    "intent": "unknown",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9996697902679443
+    }
+  },
+  {
+    "text": "good afternoon",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "ask_count",
+      "confidence": 0.6071357131004333
+    }
+  },
+  {
+    "text": "Bonjour",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 0.9898545145988464
+    }
+  },
+  {
+    "text": "bonjour",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 0.9898545145988464
+    }
+  },
+  {
+    "text": "yo",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.6583054065704346
+    }
+  },
+  {
+    "text": "regards",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 0.999016523361206
+    }
+  },
+  {
+    "text": "good night",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9225014448165894
+    }
+  },
+  {
+    "text": "goodnight",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9893395304679871
+    }
+  },
+  {
+    "text": "Exit",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.9951816201210022
+    }
+  },
+  {
+    "text": "we meet again dear!",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "Be careful",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.9966058731079102
+    }
+  },
+  {
+    "text": "we feel",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9599566459655762
+    }
+  },
+  {
+    "text": "I am sorry but I cannot continue to speak",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.5669723153114319
+    }
+  },
+  {
+    "text": "thank you good bye",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.8111180663108826
+    }
+  },
+  {
+    "text": "thanks a million times",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "ask_count",
+      "confidence": 0.69814532995224
+    }
+  },
+  {
+    "text": "oui",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 0.8893668055534363
+    }
+  },
+  {
+    "text": "uh-huh",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "ask_location",
+      "confidence": 0.4189869463443756
+    }
+  },
+  {
+    "text": "very much",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.4814375936985016
+    }
+  },
+  {
+    "text": "no doubt",
     "intent": "affirm",
     "intent_prediction": {
       "name": "deny",
-      "confidence": 0.9780082106590271
+      "confidence": 0.9999018907546997
     }
   },
   {
-    "text": "yeeees",
-    "intent": "affirm",
+    "text": "I don't think so",
+    "intent": "deny",
     "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.9986164569854736
+      "name": "unknown",
+      "confidence": 0.8581534624099731
     }
   },
   {
@@ -896,71 +536,71 @@
     }
   },
   {
-    "text": "not going well at all",
+    "text": "i don't think so",
     "intent": "deny",
     "intent_prediction": {
       "name": "unknown",
-      "confidence": 0.9995361566543579
+      "confidence": 0.8581534624099731
     }
   },
   {
-    "text": "anything els",
-    "intent": "ask_functions",
+    "text": "i guess it means",
+    "intent": "deny",
     "intent_prediction": {
-      "name": "unknown",
-      "confidence": 0.9885709881782532
+      "name": "affirm",
+      "confidence": 1.0
     }
   },
   {
-    "text": "come back",
-    "intent": "ask_functions",
+    "text": "I disagree",
+    "intent": "deny",
     "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.9477307796478271
+      "name": "affirm",
+      "confidence": 0.9988977909088135
     }
   },
   {
-    "text": "show me the menu",
+    "text": "are there any other options?",
     "intent": "ask_functions",
     "intent_prediction": {
       "name": "ask_count",
-      "confidence": 0.40675368905067444
+      "confidence": 0.9507253170013428
     }
   },
   {
-    "text": "The total of daughters in the mall with a purple coat and orange sweatpants?",
-    "intent": "ask_count",
+    "text": "more info",
+    "intent": "ask_functions",
     "intent_prediction": {
-      "name": "ask_location",
-      "confidence": 0.9999998807907104
+      "name": "thanks",
+      "confidence": 0.7816610336303711
     }
   },
   {
-    "text": "The total of daughters with orange sweatpants?",
-    "intent": "ask_count",
-    "intent_prediction": {
-      "name": "ask_location",
-      "confidence": 0.9999998807907104
-    }
-  },
-  {
-    "text": "check at mall this afternoon the presence of beret",
+    "text": "The Total of individuals which haven't yellow jeans and white coat?",
     "intent": "ask_count",
     "intent_prediction": {
       "name": "unknown",
-      "confidence": 0.7500284314155579
+      "confidence": 0.8057861924171448
     }
   },
   {
-    "text": "check at plaza area the presence of shoopers who aren't dressing a gray top and do not have an hat",
+    "text": "The quantity with pink sequin skirt and sleeveless shirt",
     "intent": "ask_count",
     "intent_prediction": {
       "name": "ask_location",
-      "confidence": 0.9743660688400269
+      "confidence": 0.9995731711387634
     }
   },
   {
-    "text": "is the mall thronged",
+    "text": "is the walmart full of clients",
+    "intent": "ask_count",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.9484208822250366
+    }
+  },
+  {
+    "text": "The total of girls who are wearing a purple skirt",
     "intent": "ask_count",
     "intent_prediction": {
       "name": "inform",
@@ -976,7 +616,7 @@
     }
   },
   {
-    "text": "How many people are currently wearing blue jeans and white T-shirts in the mall?",
+    "text": "can you say to me in what area of the mall there is someone that goes for a gray sweatpants this morning?",
     "intent": "ask_location",
     "intent_prediction": {
       "name": "ask_count",
@@ -984,11 +624,11 @@
     }
   },
   {
-    "text": "I'm looking for individuals in black dresses and red shoes right now in the mall?",
+    "text": "You should inform me about the location of shoppers in brown jackets and gray trousers at this moment",
     "intent": "ask_location",
     "intent_prediction": {
       "name": "ask_count",
-      "confidence": 0.9901480078697205
+      "confidence": 0.9998499155044556
     }
   },
   {
@@ -996,23 +636,7 @@
     "intent": "ask_location",
     "intent_prediction": {
       "name": "inform",
-      "confidence": 0.9999961853027344
-    }
-  },
-  {
-    "text": "Look for people in green pants",
-    "intent": "ask_location",
-    "intent_prediction": {
-      "name": "inform",
-      "confidence": 1.0
-    }
-  },
-  {
-    "text": "You should only find people in black pants",
-    "intent": "ask_location",
-    "intent_prediction": {
-      "name": "inform",
-      "confidence": 1.0
+      "confidence": 0.9998602867126465
     }
   },
   {
@@ -1020,23 +644,23 @@
     "intent": "ask_location",
     "intent_prediction": {
       "name": "inform",
-      "confidence": 0.9999990463256836
+      "confidence": 0.9999897480010986
     }
   },
   {
-    "text": "have you seen a guy",
+    "text": "I’m searching males",
     "intent": "ask_location",
     "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.8057966232299805
+      "name": "inform",
+      "confidence": 0.8239116072654724
     }
   },
   {
-    "text": "damsle",
+    "text": "I'm looking for white upper cloth",
     "intent": "inform",
     "intent_prediction": {
       "name": "ask_location",
-      "confidence": 0.9999997615814209
+      "confidence": 0.9993860721588135
     }
   },
   {
@@ -1044,39 +668,7 @@
     "intent": "inform",
     "intent_prediction": {
       "name": "unknown",
-      "confidence": 0.7587389349937439
-    }
-  },
-  {
-    "text": "I d like with",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.7175774574279785
-    }
-  },
-  {
-    "text": "I'd like without",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9989018440246582
-    }
-  },
-  {
-    "text": "not suitecase",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.9999727010726929
-    }
-  },
-  {
-    "text": "i like suitecase",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.5422115921974182
+      "confidence": 0.4110783636569977
     }
   },
   {
@@ -1088,43 +680,35 @@
     }
   },
   {
-    "text": "I haven't a particular preference, look for blue",
-    "intent": "inform",
+    "text": "at the moment I’m interested in general",
+    "intent": "unknown",
     "intent_prediction": {
-      "name": "unknown",
+      "name": "inform",
+      "confidence": 0.9555126428604126
+    }
+  },
+  {
+    "text": "in general",
+    "intent": "unknown",
+    "intent_prediction": {
+      "name": "inform",
       "confidence": 1.0
     }
   },
   {
-    "text": "with is good.",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "unknown",
-      "confidence": 0.5945355892181396
-    }
-  },
-  {
-    "text": "without is perfect.",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9983243346214294
-    }
-  },
-  {
-    "text": "yes, he has a bag",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9999922513961792
-    }
-  },
-  {
-    "text": "i have no clue",
+    "text": "In general",
     "intent": "unknown",
     "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.5656847953796387
+      "name": "inform",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "general",
+    "intent": "unknown",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.9962020516395569
     }
   },
   {
@@ -1132,31 +716,23 @@
     "intent": "unknown",
     "intent_prediction": {
       "name": "ask_functions",
-      "confidence": 0.9804282784461975
+      "confidence": 0.9916451573371887
     }
   },
   {
-    "text": "choose you",
+    "text": "Include both genders in the count",
+    "intent": "unknown",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.9999998807907104
+    }
+  },
+  {
+    "text": "It's an irrelevant detail for me",
     "intent": "unknown",
     "intent_prediction": {
       "name": "ask_functions",
-      "confidence": 0.6904250979423523
-    }
-  },
-  {
-    "text": "boh",
-    "intent": "unknown",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.7234504818916321
-    }
-  },
-  {
-    "text": "dunno",
-    "intent": "unknown",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9979650974273682
+      "confidence": 0.6692057847976685
     }
   },
   {
@@ -1168,15 +744,31 @@
     }
   },
   {
-    "text": "It's unimportant",
+    "text": "It's irrelevant to me",
     "intent": "unknown",
     "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9935339689254761
+      "name": "deny",
+      "confidence": 0.439858615398407
     }
   },
   {
-    "text": "i prefer with cap and without cap",
+    "text": "i want to know about clients wearing and not wearing a beret",
+    "intent": "unknown",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.9999505281448364
+    }
+  },
+  {
+    "text": "i'm interested in people who have a beret and don't have beret",
+    "intent": "unknown",
+    "intent_prediction": {
+      "name": "ask_count",
+      "confidence": 0.9504905939102173
+    }
+  },
+  {
+    "text": "with bag and without bag",
     "intent": "unknown",
     "intent_prediction": {
       "name": "inform",
@@ -1188,23 +780,391 @@
     "intent": "unknown",
     "intent_prediction": {
       "name": "inform",
-      "confidence": 0.9999864101409912
+      "confidence": 0.9999929666519165
     }
   },
   {
-    "text": "i prefer with rucksack and without rucksack",
-    "intent": "unknown",
+    "text": "moin",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9997377991676331
+    }
+  },
+  {
+    "text": "Good mourning",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 0.6970131993293762
+    }
+  },
+  {
+    "text": "good moring",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9479680061340332
+    }
+  },
+  {
+    "text": "jojojo",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "wasssup!",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9942917823791504
+    }
+  },
+  {
+    "text": "whats popping",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "ask_functions",
+      "confidence": 0.5561709403991699
+    }
+  },
+  {
+    "text": "yoo",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.70235276222229
+    }
+  },
+  {
+    "text": "here you are",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "ask_functions",
+      "confidence": 0.9575850963592529
+    }
+  },
+  {
+    "text": "good by",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.5245576500892639
+    }
+  },
+  {
+    "text": "cee you later",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9085630178451538
+    }
+  },
+  {
+    "text": "see you around",
+    "intent": "goodbye",
     "intent_prediction": {
       "name": "ask_location",
-      "confidence": 0.8625021576881409
+      "confidence": 0.5439649224281311
     }
   },
   {
-    "text": "i'm not interested",
+    "text": "adios",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9726507663726807
+    }
+  },
+  {
+    "text": "adios?",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.939594566822052
+    }
+  },
+  {
+    "text": "byee",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9998006224632263
+    }
+  },
+  {
+    "text": "greetings",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9953951239585876
+    }
+  },
+  {
+    "text": "I greet you",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9989939332008362
+    }
+  },
+  {
+    "text": "I must run away",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.9990947246551514
+    }
+  },
+  {
+    "text": "okay cool uh thank you",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.928318977355957
+    }
+  },
+  {
+    "text": "and thats all thank",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.392558217048645
+    }
+  },
+  {
+    "text": "not bad",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "ook",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9991697072982788
+    }
+  },
+  {
+    "text": "top",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.9999549388885498
+    }
+  },
+  {
+    "text": "i don't want to",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 0.9030146598815918
+    }
+  },
+  {
+    "text": "i dont want to accept",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 0.5750689506530762
+    }
+  },
+  {
+    "text": "anything els",
+    "intent": "ask_functions",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9496108889579773
+    }
+  },
+  {
+    "text": "show me the menu",
+    "intent": "ask_functions",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 0.9994966983795166
+    }
+  },
+  {
+    "text": "are there any gentlemen unwearing a green raincoat.",
+    "intent": "ask_count",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "check at plaza area the presence of shoopers who aren't dressing a gray top and do not have an hat",
+    "intent": "ask_count",
+    "intent_prediction": {
+      "name": "ask_location",
+      "confidence": 0.7992724180221558
+    }
+  },
+  {
+    "text": "can you say to me if there is someone that goes for a gray slacks in starbucks",
+    "intent": "ask_count",
+    "intent_prediction": {
+      "name": "ask_location",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "Can you see anyone wearing a red coat in the shopping precint?",
+    "intent": "ask_location",
+    "intent_prediction": {
+      "name": "ask_count",
+      "confidence": 0.9770773649215698
+    }
+  },
+  {
+    "text": "The location of clients with on yellow slacks and not trench coat",
+    "intent": "ask_location",
+    "intent_prediction": {
+      "name": "ask_count",
+      "confidence": 0.8114094138145447
+    }
+  },
+  {
+    "text": "How many people are currently wearing blue jeans and white T-shirts in the mall?",
+    "intent": "ask_location",
+    "intent_prediction": {
+      "name": "ask_count",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "include both men and women in the count",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "ask_count",
+      "confidence": 0.9999909400939941
+    }
+  },
+  {
+    "text": "focus on guys",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 0.7405783534049988
+    }
+  },
+  {
+    "text": "damsle",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "ask_location",
+      "confidence": 0.9999697208404541
+    }
+  },
+  {
+    "text": "the shopping center",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "ask_count",
+      "confidence": 0.5686239004135132
+    }
+  },
+  {
+    "text": "not suitecase",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9999943971633911
+    }
+  },
+  {
+    "text": "tell me about males with gray polo and brown pants",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "ask_location",
+      "confidence": 0.99998939037323
+    }
+  },
+  {
+    "text": "without is perfect.",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "unknown",
+      "confidence": 0.9984933137893677
+    }
+  },
+  {
+    "text": "Provide the total headcount, regardless of gender",
+    "intent": "unknown",
+    "intent_prediction": {
+      "name": "ask_count",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "don't matter",
     "intent": "unknown",
     "intent_prediction": {
       "name": "deny",
-      "confidence": 0.9841157793998718
+      "confidence": 0.8458395004272461
+    }
+  },
+  {
+    "text": "no preferencess",
+    "intent": "unknown",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9940962791442871
+    }
+  },
+  {
+    "text": "nothing",
+    "intent": "unknown",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.901683509349823
+    }
+  },
+  {
+    "text": "I have no idea.",
+    "intent": "unknown",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.5245290398597717
+    }
+  },
+  {
+    "text": "choose you",
+    "intent": "unknown",
+    "intent_prediction": {
+      "name": "ask_functions",
+      "confidence": 0.6764368414878845
+    }
+  },
+  {
+    "text": "boh",
+    "intent": "unknown",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.8345592021942139
+    }
+  },
+  {
+    "text": "dunno",
+    "intent": "unknown",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9992188215255737
+    }
+  },
+  {
+    "text": "I'm not going to give it to you",
+    "intent": "unknown",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6801677346229553
     }
   }
 ]

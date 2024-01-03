@@ -1,19 +1,62 @@
 {
-  "not": {
-    "precision": 0.9443254817987152,
-    "recall": 0.9671052631578947,
-    "f1-score": 0.9555796316359696,
-    "support": 456,
-    "confused_with": {}
-  },
-  "people": {
-    "precision": 0.9534883720930233,
-    "recall": 0.9534883720930233,
-    "f1-score": 0.9534883720930233,
-    "support": 172,
+  "female": {
+    "precision": 1.0,
+    "recall": 0.9618320610687023,
+    "f1-score": 0.9805447470817121,
+    "support": 131,
     "confused_with": {
       "male": 2
     }
+  },
+  "lower_body": {
+    "precision": 0.9640718562874252,
+    "recall": 0.9583333333333334,
+    "f1-score": 0.9611940298507463,
+    "support": 168,
+    "confused_with": {
+      "upper_body": 1
+    }
+  },
+  "upper_body": {
+    "precision": 0.9711538461538461,
+    "recall": 0.9528301886792453,
+    "f1-score": 0.9619047619047619,
+    "support": 212,
+    "confused_with": {
+      "lower_body": 1
+    }
+  },
+  "bag": {
+    "precision": 0.9770114942528736,
+    "recall": 0.9659090909090909,
+    "f1-score": 0.9714285714285714,
+    "support": 88,
+    "confused_with": {
+      "not": 1
+    }
+  },
+  "shop": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1,
+    "confused_with": {}
+  },
+  "mall": {
+    "precision": 0.9854014598540146,
+    "recall": 0.9574468085106383,
+    "f1-score": 0.971223021582734,
+    "support": 141,
+    "confused_with": {
+      "male": 1
+    }
+  },
+  "less": {
+    "precision": 0.9090909090909091,
+    "recall": 1.0,
+    "f1-score": 0.9523809523809523,
+    "support": 30,
+    "confused_with": {}
   },
   "hat": {
     "precision": 0.9897959183673469,
@@ -24,46 +67,37 @@
       "male": 1
     }
   },
-  "shop": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 1,
-    "confused_with": {}
-  },
-  "bag": {
-    "precision": 0.9885057471264368,
-    "recall": 0.9772727272727273,
-    "f1-score": 0.9828571428571428,
-    "support": 88,
-    "confused_with": {}
-  },
-  "female": {
-    "precision": 0.9923076923076923,
-    "recall": 0.9923076923076923,
-    "f1-score": 0.9923076923076923,
-    "support": 130,
-    "confused_with": {
-      "male": 1
-    }
-  },
-  "upper_body": {
-    "precision": 0.9099099099099099,
-    "recall": 0.957345971563981,
-    "f1-score": 0.933025404157044,
-    "support": 211,
-    "confused_with": {
-      "lower_body": 3
-    }
-  },
   "more": {
-    "precision": 0.8620689655172413,
+    "precision": 0.8928571428571429,
     "recall": 0.8620689655172413,
-    "f1-score": 0.8620689655172413,
+    "f1-score": 0.8771929824561403,
     "support": 29,
     "confused_with": {
-      "less": 1
+      "less": 2
     }
+  },
+  "people": {
+    "precision": 0.9588235294117647,
+    "recall": 0.9476744186046512,
+    "f1-score": 0.9532163742690059,
+    "support": 172,
+    "confused_with": {
+      "male": 2
+    }
+  },
+  "male": {
+    "precision": 0.9428571428571428,
+    "recall": 0.9924812030075187,
+    "f1-score": 0.967032967032967,
+    "support": 133,
+    "confused_with": {}
+  },
+  "not": {
+    "precision": 0.941544885177453,
+    "recall": 0.9740820734341252,
+    "f1-score": 0.9575371549893843,
+    "support": 463,
+    "confused_with": {}
   },
   "colour": {
     "precision": 0.0,
@@ -72,67 +106,23 @@
     "support": 1,
     "confused_with": {}
   },
-  "lower_body": {
-    "precision": 0.9448275862068966,
-    "recall": 0.8303030303030303,
-    "f1-score": 0.8838709677419354,
-    "support": 165,
-    "confused_with": {
-      "upper_body": 14
-    }
-  },
-  "male": {
-    "precision": 0.9402985074626866,
-    "recall": 0.9767441860465116,
-    "f1-score": 0.9581749049429658,
-    "support": 129,
-    "confused_with": {}
-  },
-  "less": {
-    "precision": 0.9259259259259259,
-    "recall": 0.8333333333333334,
-    "f1-score": 0.8771929824561403,
-    "support": 30,
-    "confused_with": {
-      "not": 2,
-      "more": 2
-    }
-  },
-  "mall": {
-    "precision": 0.9779411764705882,
-    "recall": 0.9432624113475178,
-    "f1-score": 0.96028880866426,
-    "support": 141,
-    "confused_with": {
-      "people": 1
-    }
-  },
-  "dude": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 1,
-    "confused_with": {
-      "male": 1
-    }
-  },
   "micro avg": {
-    "precision": 0.9496359223300971,
-    "recall": 0.9467634603750756,
-    "f1-score": 0.9481975159042715,
-    "support": 1653
+    "precision": 0.9605499103407054,
+    "recall": 0.9634292565947242,
+    "f1-score": 0.961987428913499,
+    "support": 1668
   },
   "macro avg": {
-    "precision": 0.7449568059418903,
-    "recall": 0.7337878523386382,
-    "f1-score": 0.7388304604269624,
-    "support": 1653
+    "precision": 0.8102006295623015,
+    "recall": 0.8117273940663482,
+    "f1-score": 0.8106482412754642,
+    "support": 1668
   },
   "weighted avg": {
-    "precision": 0.9488470993367539,
-    "recall": 0.9467634603750756,
-    "f1-score": 0.9472209743325926,
-    "support": 1653
+    "precision": 0.9599374183480264,
+    "recall": 0.9634292565947242,
+    "f1-score": 0.9614476278983909,
+    "support": 1668
   },
-  "accuracy": 0.9848651019960518
+  "accuracy": 0.9876691401134876
 }
