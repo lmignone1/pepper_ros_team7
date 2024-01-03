@@ -36,7 +36,7 @@ pipeline:
     use_lookup_tables: True                                                                                                                                                                                                                                                                                                                                 
   # - name: EntitySynonymMapper
   - name: ResponseSelector
-    constrain_similarities: true
+    constrain_similarities: True
     epochs: 100
 
 
