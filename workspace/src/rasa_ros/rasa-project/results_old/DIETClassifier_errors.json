@@ -1,0 +1,6800 @@
+[
+  {
+    "text": "you asked me a yes or no question, which i answered with yes",
+    "entities": [
+      {
+        "start": 22,
+        "end": 24,
+        "value": "no",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Nevermind",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 0,
+        "end": 9,
+        "confidence_entity": 0.437654972076416,
+        "value": "Nevermind",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "deny",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.6211183071136475,
+        "value": "deny",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "no sir",
+    "entities": [
+      {
+        "start": 0,
+        "end": 2,
+        "value": "no",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 0,
+        "end": 2,
+        "confidence_entity": 0.9951013922691345,
+        "value": "no",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 3,
+        "end": 6,
+        "confidence_entity": 0.4879573881626129,
+        "value": "sir",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "mmm no",
+    "entities": [
+      {
+        "start": 4,
+        "end": 6,
+        "value": "no",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.8744605183601379,
+        "value": "mmm",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 4,
+        "end": 6,
+        "confidence_entity": 0.9974846839904785,
+        "value": "no",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "hm that doesnt quite help me is there anything else you can do?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 8,
+        "end": 14,
+        "confidence_entity": 0.9771963357925415,
+        "value": "doesnt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 15,
+        "end": 20,
+        "confidence_entity": 0.447132408618927,
+        "value": "quite",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 60,
+        "end": 62,
+        "confidence_entity": 0.9946170449256897,
+        "value": "do",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "How many shoppers with red hat are there in walmart",
+    "entities": [
+      {
+        "start": 9,
+        "end": 17,
+        "value": "shoppers",
+        "entity": "people"
+      },
+      {
+        "start": 27,
+        "end": 30,
+        "value": "hat",
+        "entity": "hat"
+      },
+      {
+        "start": 44,
+        "end": 51,
+        "value": "walmart",
+        "entity": "shop"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 9,
+        "end": 17,
+        "confidence_entity": 0.9931621551513672,
+        "value": "shoppers",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 27,
+        "end": 30,
+        "confidence_entity": 0.9651259183883667,
+        "value": "hat",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 23,
+        "end": 26,
+        "value": "red",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "The number of sirs with a cap and a suitcase?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 18,
+        "value": "sirs",
+        "entity": "male"
+      },
+      {
+        "start": 26,
+        "end": 29,
+        "value": "cap",
+        "entity": "hat"
+      },
+      {
+        "start": 36,
+        "end": 44,
+        "value": "suitcase",
+        "entity": "bag"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 14,
+        "end": 18,
+        "confidence_entity": 0.4574335813522339,
+        "value": "sirs",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 26,
+        "end": 29,
+        "confidence_entity": 0.9990621209144592,
+        "value": "cap",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 36,
+        "end": 44,
+        "confidence_entity": 0.9968892931938171,
+        "value": "suitcase",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "how many boys  do not wear a green skirt and gray cap?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 13,
+        "value": "boys",
+        "entity": "male"
+      },
+      {
+        "start": 18,
+        "end": 21,
+        "value": "not",
+        "entity": "not"
+      },
+      {
+        "start": 35,
+        "end": 40,
+        "value": "skirt",
+        "entity": "lower_body"
+      },
+      {
+        "start": 50,
+        "end": 53,
+        "value": "cap",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 9,
+        "end": 13,
+        "confidence_entity": 0.9935818910598755,
+        "value": "boys",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 18,
+        "end": 21,
+        "confidence_entity": 0.9928072690963745,
+        "value": "not",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 35,
+        "end": 40,
+        "confidence_entity": 0.9294416904449463,
+        "value": "skirt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 50,
+        "end": 53,
+        "confidence_entity": 0.9989930987358093,
+        "value": "cap",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 29,
+        "end": 34,
+        "value": "green",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 45,
+        "end": 49,
+        "value": "gray",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Can you count the ladies that aren't wearing a gray jacket and brown trousers?",
+    "entities": [
+      {
+        "start": 18,
+        "end": 24,
+        "value": "ladies",
+        "entity": "female"
+      },
+      {
+        "start": 30,
+        "end": 36,
+        "value": "aren't",
+        "entity": "not"
+      },
+      {
+        "start": 52,
+        "end": 58,
+        "value": "jacket",
+        "entity": "upper_body"
+      },
+      {
+        "start": 69,
+        "end": 77,
+        "value": "trousers",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.9991675615310669,
+        "value": "ladies",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 33,
+        "end": 36,
+        "confidence_entity": 0.9956417083740234,
+        "value": "n't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 52,
+        "end": 58,
+        "confidence_entity": 0.989249587059021,
+        "value": "jacket",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 69,
+        "end": 77,
+        "confidence_entity": 0.9981279969215393,
+        "value": "trousers",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 47,
+        "end": 51,
+        "value": "gray",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 63,
+        "end": 68,
+        "value": "brown",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "The amount of buyers wearing anything other than an orange shirt.",
+    "entities": [
+      {
+        "start": 14,
+        "end": 20,
+        "value": "buyers",
+        "entity": "people"
+      },
+      {
+        "start": 38,
+        "end": 48,
+        "value": "other than",
+        "entity": "not"
+      },
+      {
+        "start": 59,
+        "end": 64,
+        "value": "shirt",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 14,
+        "end": 20,
+        "confidence_entity": 0.9986825585365295,
+        "value": "buyers",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 59,
+        "end": 64,
+        "confidence_entity": 0.9620944261550903,
+        "value": "shirt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 52,
+        "end": 58,
+        "value": "orange",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "The total of customers devoid of bonnet.",
+    "entities": [
+      {
+        "start": 13,
+        "end": 22,
+        "value": "customers",
+        "entity": "people"
+      },
+      {
+        "start": 23,
+        "end": 29,
+        "value": "devoid",
+        "entity": "not"
+      },
+      {
+        "start": 33,
+        "end": 39,
+        "value": "bonnet",
+        "entity": "hat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 13,
+        "end": 22,
+        "confidence_entity": 0.9993670582771301,
+        "value": "customers",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 33,
+        "end": 39,
+        "confidence_entity": 0.9926952123641968,
+        "value": "bonnet",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I'm curious about the headcount of individuals that wear brown pullover paired to a purple bottom inside the commercial center",
+    "entities": [
+      {
+        "start": 35,
+        "end": 46,
+        "value": "individuals",
+        "entity": "people"
+      },
+      {
+        "start": 63,
+        "end": 71,
+        "value": "pullover",
+        "entity": "upper_body"
+      },
+      {
+        "start": 91,
+        "end": 97,
+        "value": "bottom",
+        "entity": "lower_body"
+      },
+      {
+        "start": 109,
+        "end": 126,
+        "value": "commercial center",
+        "entity": "mall"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 35,
+        "end": 46,
+        "confidence_entity": 0.9998699426651001,
+        "value": "individuals",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 63,
+        "end": 71,
+        "confidence_entity": 0.9925158619880676,
+        "value": "pullover",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 91,
+        "end": 97,
+        "confidence_entity": 0.2412702590227127,
+        "value": "bottom",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 109,
+        "end": 126,
+        "confidence_entity": 0.9047033786773682,
+        "value": "commercial center",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 57,
+        "end": 62,
+        "value": "brown",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 84,
+        "end": 90,
+        "value": "purple",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "check at plaza area the presence of shoopers who aren't dressing a gray top and do not have an hat",
+    "entities": [
+      {
+        "start": 9,
+        "end": 19,
+        "value": "plaza area",
+        "entity": "mall"
+      },
+      {
+        "start": 36,
+        "end": 44,
+        "value": "shoopers",
+        "entity": "people"
+      },
+      {
+        "start": 49,
+        "end": 55,
+        "value": "aren't",
+        "entity": "not"
+      },
+      {
+        "start": 72,
+        "end": 75,
+        "value": "top",
+        "entity": "upper_body"
+      },
+      {
+        "start": 83,
+        "end": 86,
+        "value": "not",
+        "entity": "not"
+      },
+      {
+        "start": 95,
+        "end": 98,
+        "value": "hat",
+        "entity": "hat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "mall",
+        "start": 9,
+        "end": 14,
+        "confidence_entity": 0.6857712864875793,
+        "value": "plaza",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 36,
+        "end": 44,
+        "confidence_entity": 0.7656926512718201,
+        "value": "shoopers",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 52,
+        "end": 55,
+        "confidence_entity": 0.9974328875541687,
+        "value": "n't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 72,
+        "end": 75,
+        "confidence_entity": 0.4695863425731659,
+        "value": "top",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 80,
+        "end": 82,
+        "confidence_entity": 0.9978531002998352,
+        "value": "do",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 83,
+        "end": 86,
+        "confidence_entity": 0.9754603505134583,
+        "value": "not",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 95,
+        "end": 98,
+        "confidence_entity": 0.9819858074188232,
+        "value": "hat",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 67,
+        "end": 71,
+        "value": "gray",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I'm interested in the whole shoppers present in the shopping center",
+    "entities": [
+      {
+        "start": 52,
+        "end": 67,
+        "value": "shopping center",
+        "entity": "mall"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 28,
+        "end": 36,
+        "confidence_entity": 0.9969989061355591,
+        "value": "shoppers",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 52,
+        "end": 67,
+        "confidence_entity": 0.9707616567611694,
+        "value": "shopping center",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Where is my son? He hasn't a bag but has a black t-shirt with blue trousers.",
+    "entities": [
+      {
+        "start": 12,
+        "end": 15,
+        "value": "son",
+        "entity": "male"
+      },
+      {
+        "start": 20,
+        "end": 26,
+        "value": "hasn't",
+        "entity": "not"
+      },
+      {
+        "start": 29,
+        "end": 32,
+        "value": "bag",
+        "entity": "bag"
+      },
+      {
+        "start": 49,
+        "end": 56,
+        "value": "t-shirt",
+        "entity": "upper_body"
+      },
+      {
+        "start": 67,
+        "end": 75,
+        "value": "trousers",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 12,
+        "end": 15,
+        "confidence_entity": 0.9978439807891846,
+        "value": "son",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 20,
+        "end": 26,
+        "confidence_entity": 0.6772172451019287,
+        "value": "hasn't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 29,
+        "end": 32,
+        "confidence_entity": 0.9805667996406555,
+        "value": "bag",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 37,
+        "end": 40,
+        "confidence_entity": 0.6564794778823853,
+        "value": "has",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 49,
+        "end": 56,
+        "confidence_entity": 0.6214725375175476,
+        "value": "t-shirt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 67,
+        "end": 75,
+        "confidence_entity": 0.9995850920677185,
+        "value": "trousers",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 43,
+        "end": 48,
+        "value": "black",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 62,
+        "end": 66,
+        "value": "blue",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I belive that you know where I can find my uncle. he hasn't a suitecase and isn't wearing green jacket",
+    "entities": [
+      {
+        "start": 43,
+        "end": 48,
+        "value": "uncle",
+        "entity": "male"
+      },
+      {
+        "start": 53,
+        "end": 59,
+        "value": "hasn't",
+        "entity": "not"
+      },
+      {
+        "start": 62,
+        "end": 71,
+        "value": "suitecase",
+        "entity": "bag"
+      },
+      {
+        "start": 76,
+        "end": 81,
+        "value": "isn't",
+        "entity": "not"
+      },
+      {
+        "start": 96,
+        "end": 102,
+        "value": "jacket",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 43,
+        "end": 48,
+        "confidence_entity": 0.9987560510635376,
+        "value": "uncle",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 53,
+        "end": 59,
+        "confidence_entity": 0.833770215511322,
+        "value": "hasn't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 62,
+        "end": 71,
+        "confidence_entity": 0.995368242263794,
+        "value": "suitecase",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 78,
+        "end": 81,
+        "confidence_entity": 0.9973273277282715,
+        "value": "n't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 96,
+        "end": 102,
+        "confidence_entity": 0.9871454238891602,
+        "value": "jacket",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 90,
+        "end": 95,
+        "value": "green",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I'm looking for my cousin, a moment ago he was next to me and he had gray trousers but he didn't have his bag with him.",
+    "entities": [
+      {
+        "start": 19,
+        "end": 25,
+        "value": "cousin",
+        "entity": "male"
+      },
+      {
+        "start": 74,
+        "end": 82,
+        "value": "trousers",
+        "entity": "lower_body"
+      },
+      {
+        "start": 90,
+        "end": 96,
+        "value": "didn't",
+        "entity": "not"
+      },
+      {
+        "start": 106,
+        "end": 109,
+        "value": "bag",
+        "entity": "bag"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 19,
+        "end": 25,
+        "confidence_entity": 0.8948042988777161,
+        "value": "cousin",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 74,
+        "end": 82,
+        "confidence_entity": 0.9682323336601257,
+        "value": "trousers",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 90,
+        "end": 96,
+        "confidence_entity": 0.9903196096420288,
+        "value": "didn't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 97,
+        "end": 101,
+        "confidence_entity": 0.9883136749267578,
+        "value": "have",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 106,
+        "end": 109,
+        "confidence_entity": 0.9806755185127258,
+        "value": "bag",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 69,
+        "end": 73,
+        "value": "gray",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I want to find my mother she is wearing a green camisole and white flare jeans",
+    "entities": [
+      {
+        "start": 18,
+        "end": 24,
+        "value": "mother",
+        "entity": "female"
+      },
+      {
+        "start": 48,
+        "end": 56,
+        "value": "camisole",
+        "entity": "upper_body"
+      },
+      {
+        "start": 67,
+        "end": 78,
+        "value": "flare jeans",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.9982843995094299,
+        "value": "mother",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 48,
+        "end": 56,
+        "confidence_entity": 0.4230291545391083,
+        "value": "camisole",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 67,
+        "end": 72,
+        "confidence_entity": 0.19620554149150848,
+        "value": "flare",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 73,
+        "end": 78,
+        "confidence_entity": 0.9205994606018066,
+        "value": "jeans",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 42,
+        "end": 47,
+        "value": "green",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 61,
+        "end": 66,
+        "value": "white",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Where is my father with a white denim jacket and a white yoga pants",
+    "entities": [
+      {
+        "start": 12,
+        "end": 18,
+        "value": "father",
+        "entity": "male"
+      },
+      {
+        "start": 32,
+        "end": 44,
+        "value": "denim jacket",
+        "entity": "upper_body"
+      },
+      {
+        "start": 57,
+        "end": 67,
+        "value": "yoga pants",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 12,
+        "end": 18,
+        "confidence_entity": 0.9946938157081604,
+        "value": "father",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 32,
+        "end": 37,
+        "confidence_entity": 0.9326651692390442,
+        "value": "denim",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 38,
+        "end": 44,
+        "confidence_entity": 0.9752996563911438,
+        "value": "jacket",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 62,
+        "end": 67,
+        "confidence_entity": 0.9310511350631714,
+        "value": "pants",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 26,
+        "end": 31,
+        "value": "white",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 51,
+        "end": 56,
+        "value": "white",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "green jumper",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "upper_body",
+        "start": 6,
+        "end": 12,
+        "confidence_entity": 0.9821984171867371,
+        "value": "jumper",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 0,
+        "end": 5,
+        "value": "green",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Focus on orange overcoat and black hat",
+    "entities": [
+      {
+        "start": 16,
+        "end": 24,
+        "value": "overcoat",
+        "entity": "upper_body"
+      },
+      {
+        "start": 35,
+        "end": 38,
+        "value": "hat",
+        "entity": "hat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lower_body",
+        "start": 16,
+        "end": 24,
+        "confidence_entity": 0.8087949752807617,
+        "value": "overcoat",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 35,
+        "end": 38,
+        "confidence_entity": 0.9799593687057495,
+        "value": "hat",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 9,
+        "end": 15,
+        "value": "orange",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 29,
+        "end": 34,
+        "value": "black",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Actually i couldn't tell you, in my mind he has a black trucksack",
+    "entities": [
+      {
+        "start": 11,
+        "end": 19,
+        "value": "couldn't",
+        "entity": "not"
+      },
+      {
+        "start": 56,
+        "end": 65,
+        "value": "trucksack",
+        "entity": "bag"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 16,
+        "end": 19,
+        "confidence_entity": 0.9966829419136047,
+        "value": "n't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 44,
+        "end": 47,
+        "confidence_entity": 0.9600805640220642,
+        "value": "has",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 56,
+        "end": 65,
+        "confidence_entity": 0.737909734249115,
+        "value": "trucksack",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 50,
+        "end": 55,
+        "value": "black",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "excluding green",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "excluding",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "colour",
+        "start": 10,
+        "end": 15,
+        "value": "green",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "i want to know in men which have a schoolbag and don't have schoolbag",
+    "entities": [
+      {
+        "start": 18,
+        "end": 21,
+        "value": "men",
+        "entity": "male"
+      },
+      {
+        "start": 35,
+        "end": 44,
+        "value": "schoolbag",
+        "entity": "bag"
+      },
+      {
+        "start": 49,
+        "end": 54,
+        "value": "don't",
+        "entity": "not"
+      },
+      {
+        "start": 60,
+        "end": 69,
+        "value": "schoolbag",
+        "entity": "bag"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 18,
+        "end": 21,
+        "confidence_entity": 0.9972522854804993,
+        "value": "men",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 28,
+        "end": 32,
+        "confidence_entity": 0.6517361998558044,
+        "value": "have",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 35,
+        "end": 44,
+        "confidence_entity": 0.9980233907699585,
+        "value": "schoolbag",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 49,
+        "end": 54,
+        "confidence_entity": 0.9970190525054932,
+        "value": "don't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 55,
+        "end": 59,
+        "confidence_entity": 0.5755614042282104,
+        "value": "have",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 60,
+        "end": 69,
+        "confidence_entity": 0.9967800974845886,
+        "value": "schoolbag",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "hey dude",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 4,
+        "end": 8,
+        "confidence_entity": 0.996131420135498,
+        "value": "dude",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "hi friend",
+    "entities": [
+      {
+        "start": 3,
+        "end": 9,
+        "value": "friend",
+        "entity": "people"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "hi friends",
+    "entities": [
+      {
+        "start": 3,
+        "end": 10,
+        "value": "friends",
+        "entity": "people"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I'm gonna go bye",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 7,
+        "end": 9,
+        "confidence_entity": 0.6888653039932251,
+        "value": "na",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i don not like this",
+    "entities": [
+      {
+        "start": 6,
+        "end": 9,
+        "value": "not",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 2,
+        "end": 5,
+        "confidence_entity": 0.9528853297233582,
+        "value": "don",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 6,
+        "end": 9,
+        "confidence_entity": 0.9708905816078186,
+        "value": "not",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "no ma'am",
+    "entities": [
+      {
+        "start": 0,
+        "end": 2,
+        "value": "no",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 0,
+        "end": 2,
+        "confidence_entity": 0.9958212375640869,
+        "value": "no",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 3,
+        "end": 8,
+        "confidence_entity": 0.4908379018306732,
+        "value": "ma'am",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i don't know what i want",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 2,
+        "end": 7,
+        "confidence_entity": 0.9823680520057678,
+        "value": "don't",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Could you tell me the quantity of persons present in the shopping complex?",
+    "entities": [
+      {
+        "start": 34,
+        "end": 41,
+        "value": "persons",
+        "entity": "people"
+      },
+      {
+        "start": 57,
+        "end": 73,
+        "value": "shopping complex",
+        "entity": "mall"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 34,
+        "end": 41,
+        "confidence_entity": 0.9991249442100525,
+        "value": "persons",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 57,
+        "end": 65,
+        "confidence_entity": 0.9958449006080627,
+        "value": "shopping",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "How many ladies are there in the shopping arcade with a blue t-shirt and black pants?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 15,
+        "value": "ladies",
+        "entity": "female"
+      },
+      {
+        "start": 29,
+        "end": 48,
+        "value": "the shopping arcade",
+        "entity": "mall"
+      },
+      {
+        "start": 61,
+        "end": 68,
+        "value": "t-shirt",
+        "entity": "upper_body"
+      },
+      {
+        "start": 79,
+        "end": 84,
+        "value": "pants",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 9,
+        "end": 15,
+        "confidence_entity": 0.9978430271148682,
+        "value": "ladies",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 33,
+        "end": 48,
+        "confidence_entity": 0.5396729707717896,
+        "value": "shopping arcade",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 61,
+        "end": 68,
+        "confidence_entity": 0.6814265251159668,
+        "value": "t-shirt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 79,
+        "end": 84,
+        "confidence_entity": 0.9936290383338928,
+        "value": "pants",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 56,
+        "end": 60,
+        "value": "blue",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 73,
+        "end": 78,
+        "value": "black",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I'm curious about the quantity of guests that are spending lower than 7 minutes in the mall",
+    "entities": [
+      {
+        "start": 34,
+        "end": 40,
+        "value": "guests",
+        "entity": "people"
+      },
+      {
+        "start": 59,
+        "end": 64,
+        "value": "lower",
+        "entity": "less"
+      },
+      {
+        "start": 87,
+        "end": 91,
+        "value": "mall",
+        "entity": "mall"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 34,
+        "end": 40,
+        "confidence_entity": 0.9819056987762451,
+        "value": "guests",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 59,
+        "end": 64,
+        "confidence_entity": 0.9640998840332031,
+        "value": "lower",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 87,
+        "end": 91,
+        "confidence_entity": 0.9819982647895813,
+        "value": "mall",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What is the amount of public in the mall with a red jacket?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 28,
+        "value": "public",
+        "entity": "people"
+      },
+      {
+        "start": 36,
+        "end": 40,
+        "value": "mall",
+        "entity": "mall"
+      },
+      {
+        "start": 52,
+        "end": 58,
+        "value": "jacket",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "mall",
+        "start": 36,
+        "end": 40,
+        "confidence_entity": 0.9562907218933105,
+        "value": "mall",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 52,
+        "end": 58,
+        "confidence_entity": 0.9993096590042114,
+        "value": "jacket",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 48,
+        "end": 51,
+        "value": "red",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "How many are all the gentlemen with a blue T-shirt and white cargo pants in the mall?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 30,
+        "value": "gentlemen",
+        "entity": "male"
+      },
+      {
+        "start": 43,
+        "end": 50,
+        "value": "T-shirt",
+        "entity": "upper_body"
+      },
+      {
+        "start": 61,
+        "end": 72,
+        "value": "cargo pants",
+        "entity": "lower_body"
+      },
+      {
+        "start": 80,
+        "end": 84,
+        "value": "mall",
+        "entity": "mall"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 21,
+        "end": 30,
+        "confidence_entity": 0.6847000122070312,
+        "value": "gentlemen",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 43,
+        "end": 50,
+        "confidence_entity": 0.681784987449646,
+        "value": "T-shirt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 61,
+        "end": 72,
+        "confidence_entity": 0.5744455456733704,
+        "value": "cargo pants",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 80,
+        "end": 84,
+        "confidence_entity": 0.9722221493721008,
+        "value": "mall",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 38,
+        "end": 42,
+        "value": "blue",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 55,
+        "end": 60,
+        "value": "white",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "The number of males who wear a red tank top and red track pants in the shopping center?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 19,
+        "value": "males",
+        "entity": "male"
+      },
+      {
+        "start": 35,
+        "end": 43,
+        "value": "tank top",
+        "entity": "upper_body"
+      },
+      {
+        "start": 52,
+        "end": 63,
+        "value": "track pants",
+        "entity": "lower_body"
+      },
+      {
+        "start": 71,
+        "end": 86,
+        "value": "shopping center",
+        "entity": "mall"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 14,
+        "end": 19,
+        "confidence_entity": 0.992857813835144,
+        "value": "males",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 35,
+        "end": 39,
+        "confidence_entity": 0.1855882853269577,
+        "value": "tank",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 40,
+        "end": 43,
+        "confidence_entity": 0.6768574714660645,
+        "value": "top",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 58,
+        "end": 63,
+        "confidence_entity": 0.997753918170929,
+        "value": "pants",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 71,
+        "end": 86,
+        "confidence_entity": 0.9885432720184326,
+        "value": "shopping center",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 31,
+        "end": 34,
+        "value": "red",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 48,
+        "end": 51,
+        "value": "red",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "how many women at the bar over 55 minutes who doesn't wear a red skirt and a pink shirt?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 14,
+        "value": "women",
+        "entity": "female"
+      },
+      {
+        "start": 46,
+        "end": 53,
+        "value": "doesn't",
+        "entity": "not"
+      },
+      {
+        "start": 65,
+        "end": 70,
+        "value": "skirt",
+        "entity": "lower_body"
+      },
+      {
+        "start": 82,
+        "end": 87,
+        "value": "shirt",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 9,
+        "end": 14,
+        "confidence_entity": 0.9980702996253967,
+        "value": "women",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "more",
+        "start": 26,
+        "end": 30,
+        "confidence_entity": 0.9938191771507263,
+        "value": "over",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 46,
+        "end": 53,
+        "confidence_entity": 0.7951560616493225,
+        "value": "doesn't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 65,
+        "end": 70,
+        "confidence_entity": 0.9972556233406067,
+        "value": "skirt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 82,
+        "end": 87,
+        "confidence_entity": 0.995208203792572,
+        "value": "shirt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 61,
+        "end": 64,
+        "value": "red",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 77,
+        "end": 81,
+        "value": "pink",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I want to know how many guys are dressed in something other than black pants.",
+    "entities": [
+      {
+        "start": 24,
+        "end": 28,
+        "value": "guys",
+        "entity": "people"
+      },
+      {
+        "start": 54,
+        "end": 64,
+        "value": "other than",
+        "entity": "not"
+      },
+      {
+        "start": 71,
+        "end": 76,
+        "value": "pants",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 24,
+        "end": 28,
+        "confidence_entity": 0.9874237179756165,
+        "value": "guys",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 71,
+        "end": 76,
+        "confidence_entity": 0.9972416162490845,
+        "value": "pants",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 65,
+        "end": 70,
+        "value": "black",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "It would be nice if you told me how many men wearing a black suit have been for a time bigger than sixty seconds in walmart",
+    "entities": [
+      {
+        "start": 41,
+        "end": 44,
+        "value": "men",
+        "entity": "male"
+      },
+      {
+        "start": 61,
+        "end": 65,
+        "value": "suit",
+        "entity": "upper_body"
+      },
+      {
+        "start": 87,
+        "end": 93,
+        "value": "bigger",
+        "entity": "more"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 41,
+        "end": 44,
+        "confidence_entity": 0.9974326491355896,
+        "value": "men",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 61,
+        "end": 65,
+        "confidence_entity": 0.995349109172821,
+        "value": "suit",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "shop",
+        "start": 116,
+        "end": 123,
+        "value": "walmart",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 55,
+        "end": 60,
+        "value": "black",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I'm looking for my daddy, he has a black shirt and a backpack, have you seen him?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 24,
+        "value": "daddy",
+        "entity": "male"
+      },
+      {
+        "start": 41,
+        "end": 46,
+        "value": "shirt",
+        "entity": "upper_body"
+      },
+      {
+        "start": 53,
+        "end": 61,
+        "value": "backpack",
+        "entity": "bag"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 19,
+        "end": 24,
+        "confidence_entity": 0.573883593082428,
+        "value": "daddy",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 41,
+        "end": 46,
+        "confidence_entity": 0.9929185509681702,
+        "value": "shirt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 53,
+        "end": 61,
+        "confidence_entity": 0.9990671277046204,
+        "value": "backpack",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 35,
+        "end": 40,
+        "value": "black",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I lost my son, he is wearing a wool hat and has a schoolbag, can you help me look for him?",
+    "entities": [
+      {
+        "start": 10,
+        "end": 13,
+        "value": "son",
+        "entity": "male"
+      },
+      {
+        "start": 36,
+        "end": 39,
+        "value": "hat",
+        "entity": "hat"
+      },
+      {
+        "start": 50,
+        "end": 59,
+        "value": "schoolbag",
+        "entity": "bag"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 10,
+        "end": 13,
+        "confidence_entity": 0.9986580610275269,
+        "value": "son",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 31,
+        "end": 35,
+        "confidence_entity": 0.7499883770942688,
+        "value": "wool",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 36,
+        "end": 39,
+        "confidence_entity": 0.9839696884155273,
+        "value": "hat",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 50,
+        "end": 59,
+        "confidence_entity": 0.998050332069397,
+        "value": "schoolbag",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Do you see where are fellas who haven't on a green blazer and black palazzo pants?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 27,
+        "value": "fellas",
+        "entity": "male"
+      },
+      {
+        "start": 32,
+        "end": 39,
+        "value": "haven't",
+        "entity": "not"
+      },
+      {
+        "start": 51,
+        "end": 57,
+        "value": "blazer",
+        "entity": "upper_body"
+      },
+      {
+        "start": 68,
+        "end": 81,
+        "value": "palazzo pants",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 0,
+        "end": 2,
+        "confidence_entity": 0.570284903049469,
+        "value": "Do",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 17,
+        "end": 20,
+        "confidence_entity": 0.6684742569923401,
+        "value": "are",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "male",
+        "start": 21,
+        "end": 27,
+        "confidence_entity": 0.9910293817520142,
+        "value": "fellas",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 36,
+        "end": 39,
+        "confidence_entity": 0.9962596893310547,
+        "value": "n't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 51,
+        "end": 57,
+        "confidence_entity": 0.9857729077339172,
+        "value": "blazer",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 76,
+        "end": 81,
+        "confidence_entity": 0.995135486125946,
+        "value": "pants",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 45,
+        "end": 50,
+        "value": "green",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 62,
+        "end": 67,
+        "value": "black",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Help me to search my stepsister in a yellow bomber jacket and a gray mini skirt?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 31,
+        "value": "stepsister",
+        "entity": "female"
+      },
+      {
+        "start": 44,
+        "end": 57,
+        "value": "bomber jacket",
+        "entity": "upper_body"
+      },
+      {
+        "start": 69,
+        "end": 79,
+        "value": "mini skirt",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 21,
+        "end": 31,
+        "confidence_entity": 0.995137631893158,
+        "value": "stepsister",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 51,
+        "end": 57,
+        "confidence_entity": 0.9987529516220093,
+        "value": "jacket",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 74,
+        "end": 79,
+        "confidence_entity": 0.9921351671218872,
+        "value": "skirt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 37,
+        "end": 43,
+        "value": "yellow",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 64,
+        "end": 68,
+        "value": "gray",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I lost my stepmother with an orange bell skirt and a purple flannel shirt",
+    "entities": [
+      {
+        "start": 10,
+        "end": 20,
+        "value": "stepmother",
+        "entity": "female"
+      },
+      {
+        "start": 36,
+        "end": 46,
+        "value": "bell skirt",
+        "entity": "lower_body"
+      },
+      {
+        "start": 60,
+        "end": 73,
+        "value": "flannel shirt",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 10,
+        "end": 20,
+        "confidence_entity": 0.9847366213798523,
+        "value": "stepmother",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 41,
+        "end": 46,
+        "confidence_entity": 0.9358841776847839,
+        "value": "skirt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 60,
+        "end": 73,
+        "confidence_entity": 0.9231802821159363,
+        "value": "flannel shirt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 29,
+        "end": 35,
+        "value": "orange",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 53,
+        "end": 59,
+        "value": "purple",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I need to know the position in the store of my child he dresses a yellow pullover but he hasn't gray sneakers at this moment",
+    "entities": [
+      {
+        "start": 47,
+        "end": 52,
+        "value": "child",
+        "entity": "people"
+      },
+      {
+        "start": 73,
+        "end": 81,
+        "value": "pullover",
+        "entity": "upper_body"
+      },
+      {
+        "start": 89,
+        "end": 95,
+        "value": "hasn't",
+        "entity": "not"
+      },
+      {
+        "start": 101,
+        "end": 109,
+        "value": "sneakers",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 47,
+        "end": 52,
+        "confidence_entity": 0.9976741671562195,
+        "value": "child",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 56,
+        "end": 63,
+        "confidence_entity": 0.9926733374595642,
+        "value": "dresses",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 73,
+        "end": 81,
+        "confidence_entity": 0.9986420273780823,
+        "value": "pullover",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 89,
+        "end": 95,
+        "confidence_entity": 0.9306443929672241,
+        "value": "hasn't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 101,
+        "end": 109,
+        "confidence_entity": 0.7978352308273315,
+        "value": "sneakers",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 66,
+        "end": 72,
+        "value": "yellow",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 96,
+        "end": 100,
+        "value": "gray",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "looking for males with white upper clothes",
+    "entities": [
+      {
+        "start": 12,
+        "end": 17,
+        "value": "males",
+        "entity": "female"
+      },
+      {
+        "start": 29,
+        "end": 42,
+        "value": "upper clothes",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 12,
+        "end": 17,
+        "confidence_entity": 0.9939829707145691,
+        "value": "males",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 29,
+        "end": 42,
+        "confidence_entity": 0.9821816086769104,
+        "value": "upper clothes",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 23,
+        "end": 28,
+        "value": "white",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "blue shirt",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "upper_body",
+        "start": 5,
+        "end": 10,
+        "confidence_entity": 0.7609615325927734,
+        "value": "shirt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 0,
+        "end": 4,
+        "value": "blue",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I'm only focused on people who are wearing white coat",
+    "entities": [
+      {
+        "start": 49,
+        "end": 53,
+        "value": "coat",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 20,
+        "end": 26,
+        "confidence_entity": 0.9992201328277588,
+        "value": "people",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 49,
+        "end": 53,
+        "confidence_entity": 0.9894121289253235,
+        "value": "coat",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 43,
+        "end": 48,
+        "value": "white",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I’m interested in finding out about those who wear gray.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 26,
+        "end": 29,
+        "confidence_entity": 0.9106414914131165,
+        "value": "out",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 51,
+        "end": 55,
+        "value": "gray",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Only people with a cap",
+    "entities": [
+      {
+        "start": 19,
+        "end": 22,
+        "value": "cap",
+        "entity": "hat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 5,
+        "end": 11,
+        "confidence_entity": 0.9989309906959534,
+        "value": "people",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 19,
+        "end": 22,
+        "confidence_entity": 0.97630375623703,
+        "value": "cap",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Just look who don't have a beret",
+    "entities": [
+      {
+        "start": 27,
+        "end": 32,
+        "value": "beret",
+        "entity": "hat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 14,
+        "end": 19,
+        "confidence_entity": 0.9987931251525879,
+        "value": "don't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 27,
+        "end": 32,
+        "confidence_entity": 0.998903751373291,
+        "value": "beret",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "people with backpack",
+    "entities": [
+      {
+        "start": 12,
+        "end": 20,
+        "value": "backpack",
+        "entity": "bag"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.998339056968689,
+        "value": "people",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 12,
+        "end": 20,
+        "confidence_entity": 0.9833545088768005,
+        "value": "backpack",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "not suitecase",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "not",
+        "entity": "not"
+      },
+      {
+        "start": 4,
+        "end": 13,
+        "value": "suitecase",
+        "entity": "bag"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.9926987290382385,
+        "value": "not",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 4,
+        "end": 13,
+        "confidence_entity": 0.4529286026954651,
+        "value": "suitecase",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "interested in brown sleveless but not in bonnet",
+    "entities": [
+      {
+        "start": 20,
+        "end": 29,
+        "value": "sleveless",
+        "entity": "upper_body"
+      },
+      {
+        "start": 34,
+        "end": 37,
+        "value": "not",
+        "entity": "not"
+      },
+      {
+        "start": 41,
+        "end": 47,
+        "value": "bonnet",
+        "entity": "hat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 20,
+        "end": 29,
+        "confidence_entity": 0.5078637003898621,
+        "value": "sleveless",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 34,
+        "end": 37,
+        "confidence_entity": 0.9933555126190186,
+        "value": "not",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 41,
+        "end": 47,
+        "confidence_entity": 0.9913615584373474,
+        "value": "bonnet",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 14,
+        "end": 19,
+        "value": "brown",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "All except red",
+    "entities": [
+      {
+        "start": 4,
+        "end": 10,
+        "value": "except",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "colour",
+        "start": 11,
+        "end": 14,
+        "value": "red",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I want all colour barring purple",
+    "entities": [
+      {
+        "start": 18,
+        "end": 25,
+        "value": "barring",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "colour",
+        "start": 26,
+        "end": 32,
+        "value": "purple",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "take out orange, please.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "take out",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 5,
+        "end": 8,
+        "confidence_entity": 0.9130944609642029,
+        "value": "out",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 9,
+        "end": 15,
+        "value": "orange",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "i want all colour, apart from green",
+    "entities": [
+      {
+        "start": 19,
+        "end": 29,
+        "value": "apart from",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 25,
+        "end": 29,
+        "confidence_entity": 0.5019761919975281,
+        "value": "from",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 30,
+        "end": 35,
+        "value": "green",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "no, he hasn't a hat",
+    "entities": [
+      {
+        "start": 7,
+        "end": 13,
+        "value": "hasn't",
+        "entity": "not"
+      },
+      {
+        "start": 16,
+        "end": 19,
+        "value": "hat",
+        "entity": "hat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 0,
+        "end": 2,
+        "confidence_entity": 0.9971146583557129,
+        "value": "no",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 7,
+        "end": 13,
+        "confidence_entity": 0.9292170405387878,
+        "value": "hasn't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 16,
+        "end": 19,
+        "confidence_entity": 0.9939078092575073,
+        "value": "hat",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i have no clue",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 7,
+        "end": 9,
+        "confidence_entity": 0.8721617460250854,
+        "value": "no",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "no preferencess",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 0,
+        "end": 2,
+        "confidence_entity": 0.9874495267868042,
+        "value": "no",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 3,
+        "end": 15,
+        "confidence_entity": 0.2761782705783844,
+        "value": "preferencess",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i want to know in children whitch have a pack and don't have pack",
+    "entities": [
+      {
+        "start": 18,
+        "end": 26,
+        "value": "children",
+        "entity": "people"
+      },
+      {
+        "start": 41,
+        "end": 45,
+        "value": "pack",
+        "entity": "bag"
+      },
+      {
+        "start": 50,
+        "end": 55,
+        "value": "don't",
+        "entity": "not"
+      },
+      {
+        "start": 61,
+        "end": 65,
+        "value": "pack",
+        "entity": "bag"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 18,
+        "end": 26,
+        "confidence_entity": 0.9995352029800415,
+        "value": "children",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.40813565254211426,
+        "value": "whitch",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 41,
+        "end": 45,
+        "confidence_entity": 0.9932141304016113,
+        "value": "pack",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 50,
+        "end": 55,
+        "confidence_entity": 0.8638191223144531,
+        "value": "don't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 61,
+        "end": 65,
+        "confidence_entity": 0.9923393726348877,
+        "value": "pack",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "top",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "upper_body",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.6061577200889587,
+        "value": "top",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Would you like to give me the number of damsels inside the plaza who wear gray trousers and a brown jacket?",
+    "entities": [
+      {
+        "start": 40,
+        "end": 47,
+        "value": "damsels",
+        "entity": "female"
+      },
+      {
+        "start": 59,
+        "end": 64,
+        "value": "plaza",
+        "entity": "mall"
+      },
+      {
+        "start": 79,
+        "end": 87,
+        "value": "trousers",
+        "entity": "lower_body"
+      },
+      {
+        "start": 100,
+        "end": 106,
+        "value": "jacket",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 40,
+        "end": 47,
+        "confidence_entity": 0.128992959856987,
+        "value": "damsels",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 59,
+        "end": 64,
+        "confidence_entity": 0.49502384662628174,
+        "value": "plaza",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 79,
+        "end": 87,
+        "confidence_entity": 0.9785048961639404,
+        "value": "trousers",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 100,
+        "end": 106,
+        "confidence_entity": 0.9975000023841858,
+        "value": "jacket",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 74,
+        "end": 78,
+        "value": "gray",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 94,
+        "end": 99,
+        "value": "brown",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Count the number of men with gray jumper and not green pants that have spent a time superior to 20 minutes in the mall",
+    "entities": [
+      {
+        "start": 20,
+        "end": 23,
+        "value": "men",
+        "entity": "male"
+      },
+      {
+        "start": 34,
+        "end": 40,
+        "value": "jumper",
+        "entity": "upper_body"
+      },
+      {
+        "start": 45,
+        "end": 48,
+        "value": "not",
+        "entity": "not"
+      },
+      {
+        "start": 55,
+        "end": 60,
+        "value": "pants",
+        "entity": "lower_body"
+      },
+      {
+        "start": 84,
+        "end": 92,
+        "value": "superior",
+        "entity": "more"
+      },
+      {
+        "start": 114,
+        "end": 118,
+        "value": "mall",
+        "entity": "mall"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 20,
+        "end": 23,
+        "confidence_entity": 0.997622549533844,
+        "value": "men",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 34,
+        "end": 40,
+        "confidence_entity": 0.9984604120254517,
+        "value": "jumper",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 45,
+        "end": 48,
+        "confidence_entity": 0.9946151375770569,
+        "value": "not",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 55,
+        "end": 60,
+        "confidence_entity": 0.7848936319351196,
+        "value": "pants",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "less",
+        "start": 84,
+        "end": 92,
+        "confidence_entity": 0.6555768251419067,
+        "value": "superior",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 114,
+        "end": 118,
+        "confidence_entity": 0.9757103323936462,
+        "value": "mall",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 29,
+        "end": 33,
+        "value": "gray",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 49,
+        "end": 54,
+        "value": "green",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I’m curious about how many people are wearing pants that aren’t black.",
+    "entities": [
+      {
+        "start": 27,
+        "end": 33,
+        "value": "people",
+        "entity": "people"
+      },
+      {
+        "start": 46,
+        "end": 51,
+        "value": "pants",
+        "entity": "lower_body"
+      },
+      {
+        "start": 57,
+        "end": 63,
+        "value": "aren’t",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.9998268485069275,
+        "value": "people",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 34,
+        "end": 37,
+        "confidence_entity": 0.5039361715316772,
+        "value": "are",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 46,
+        "end": 51,
+        "confidence_entity": 0.874129593372345,
+        "value": "pants",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 57,
+        "end": 63,
+        "confidence_entity": 0.5385435223579407,
+        "value": "aren’t",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 64,
+        "end": 69,
+        "value": "black",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Wanna know how many females with a hat and a tote have invested in the mall over five minutes",
+    "entities": [
+      {
+        "start": 20,
+        "end": 27,
+        "value": "females",
+        "entity": "female"
+      },
+      {
+        "start": 35,
+        "end": 38,
+        "value": "hat",
+        "entity": "hat"
+      },
+      {
+        "start": 45,
+        "end": 49,
+        "value": "tote",
+        "entity": "bag"
+      },
+      {
+        "start": 71,
+        "end": 75,
+        "value": "mall",
+        "entity": "mall"
+      },
+      {
+        "start": 76,
+        "end": 80,
+        "value": "over",
+        "entity": "more"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 20,
+        "end": 27,
+        "confidence_entity": 0.9965797066688538,
+        "value": "females",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 35,
+        "end": 38,
+        "confidence_entity": 0.9814165830612183,
+        "value": "hat",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 45,
+        "end": 49,
+        "confidence_entity": 0.9993342757225037,
+        "value": "tote",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 71,
+        "end": 75,
+        "confidence_entity": 0.9429539442062378,
+        "value": "mall",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "give me if possible the number of individuals that are at starbucks and have an hobo bag",
+    "entities": [
+      {
+        "start": 34,
+        "end": 45,
+        "value": "individuals",
+        "entity": "people"
+      },
+      {
+        "start": 80,
+        "end": 88,
+        "value": "hobo bag",
+        "entity": "bag"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 34,
+        "end": 45,
+        "confidence_entity": 0.9998798370361328,
+        "value": "individuals",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "male",
+        "start": 80,
+        "end": 84,
+        "confidence_entity": 0.5724069476127625,
+        "value": "hobo",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 85,
+        "end": 88,
+        "confidence_entity": 0.999396800994873,
+        "value": "bag",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "shop",
+        "start": 58,
+        "end": 67,
+        "value": "starbucks",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "How many girls have been in the mall for over 5 minutes?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 14,
+        "value": "girls",
+        "entity": "female"
+      },
+      {
+        "start": 32,
+        "end": 36,
+        "value": "mall",
+        "entity": "mall"
+      },
+      {
+        "start": 41,
+        "end": 45,
+        "value": "over",
+        "entity": "more"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 9,
+        "end": 14,
+        "confidence_entity": 0.9960446357727051,
+        "value": "girls",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 32,
+        "end": 36,
+        "confidence_entity": 0.9672051668167114,
+        "value": "mall",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Where is my family with a blue cap and that aren't wearing pink leggins?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 18,
+        "value": "family",
+        "entity": "people"
+      },
+      {
+        "start": 31,
+        "end": 34,
+        "value": "cap",
+        "entity": "hat"
+      },
+      {
+        "start": 44,
+        "end": 50,
+        "value": "aren't",
+        "entity": "not"
+      },
+      {
+        "start": 64,
+        "end": 71,
+        "value": "leggins",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 12,
+        "end": 18,
+        "confidence_entity": 0.6194725036621094,
+        "value": "family",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 31,
+        "end": 34,
+        "confidence_entity": 0.9668593406677246,
+        "value": "cap",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 47,
+        "end": 50,
+        "confidence_entity": 0.998635470867157,
+        "value": "n't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 64,
+        "end": 71,
+        "confidence_entity": 0.9995520710945129,
+        "value": "leggins",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 26,
+        "end": 30,
+        "value": "blue",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 59,
+        "end": 63,
+        "value": "pink",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Where is mommy she's wearing a purple tailleur",
+    "entities": [
+      {
+        "start": 9,
+        "end": 14,
+        "value": "mommy",
+        "entity": "female"
+      },
+      {
+        "start": 38,
+        "end": 46,
+        "value": "tailleur",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 9,
+        "end": 14,
+        "confidence_entity": 0.9549902081489563,
+        "value": "mommy",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 38,
+        "end": 46,
+        "confidence_entity": 0.3855995833873749,
+        "value": "tailleur",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 31,
+        "end": 37,
+        "value": "purple",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Give me the position of my fiance he has a black [turtleneck]](upper_body) and a green bermuda shorts",
+    "entities": [
+      {
+        "start": 27,
+        "end": 33,
+        "value": "fiance",
+        "entity": "people"
+      },
+      {
+        "start": 87,
+        "end": 101,
+        "value": "bermuda shorts",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.992070734500885,
+        "value": "fiance",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 87,
+        "end": 94,
+        "confidence_entity": 0.9911907911300659,
+        "value": "bermuda",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 95,
+        "end": 101,
+        "confidence_entity": 0.8979304432868958,
+        "value": "shorts",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 43,
+        "end": 48,
+        "value": "black",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 81,
+        "end": 86,
+        "value": "green",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Can you say where is my stepdad with an orange tuxedo and yellow cropped jeans. I lost him.",
+    "entities": [
+      {
+        "start": 24,
+        "end": 31,
+        "value": "stepdad",
+        "entity": "male"
+      },
+      {
+        "start": 47,
+        "end": 53,
+        "value": "tuxedo",
+        "entity": "upper_body"
+      },
+      {
+        "start": 65,
+        "end": 78,
+        "value": "cropped jeans",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 24,
+        "end": 31,
+        "confidence_entity": 0.9733558893203735,
+        "value": "stepdad",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 47,
+        "end": 53,
+        "confidence_entity": 0.7965404391288757,
+        "value": "tuxedo",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 73,
+        "end": 78,
+        "confidence_entity": 0.9045335650444031,
+        "value": "jeans",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 40,
+        "end": 46,
+        "value": "orange",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 58,
+        "end": 64,
+        "value": "yellow",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I don't locate  my granny who dresses green shirt and blue shorts currently in the retail park?",
+    "entities": [
+      {
+        "start": 2,
+        "end": 7,
+        "value": "don't",
+        "entity": "not"
+      },
+      {
+        "start": 19,
+        "end": 25,
+        "value": "granny",
+        "entity": "female"
+      },
+      {
+        "start": 44,
+        "end": 49,
+        "value": "shirt",
+        "entity": "upper_body"
+      },
+      {
+        "start": 59,
+        "end": 65,
+        "value": "shorts",
+        "entity": "lower_body"
+      },
+      {
+        "start": 83,
+        "end": 94,
+        "value": "retail park",
+        "entity": "mall"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 2,
+        "end": 7,
+        "confidence_entity": 0.9861655235290527,
+        "value": "don't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "female",
+        "start": 19,
+        "end": 25,
+        "confidence_entity": 0.882537841796875,
+        "value": "granny",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 30,
+        "end": 37,
+        "confidence_entity": 0.5898146629333496,
+        "value": "dresses",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 44,
+        "end": 49,
+        "confidence_entity": 0.8955476880073547,
+        "value": "shirt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 59,
+        "end": 65,
+        "confidence_entity": 0.9651947617530823,
+        "value": "shorts",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 83,
+        "end": 94,
+        "confidence_entity": 0.7743464112281799,
+        "value": "retail park",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 38,
+        "end": 43,
+        "value": "green",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 54,
+        "end": 58,
+        "value": "blue",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I'm looking for individuals in black dresses and red shoes right now in the mall?",
+    "entities": [
+      {
+        "start": 16,
+        "end": 27,
+        "value": "individuals",
+        "entity": "people"
+      },
+      {
+        "start": 37,
+        "end": 44,
+        "value": "dresses",
+        "entity": "upper_body"
+      },
+      {
+        "start": 53,
+        "end": 58,
+        "value": "shoes",
+        "entity": "lower_body"
+      },
+      {
+        "start": 76,
+        "end": 80,
+        "value": "mall",
+        "entity": "mall"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 16,
+        "end": 27,
+        "confidence_entity": 0.9998156428337097,
+        "value": "individuals",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 53,
+        "end": 58,
+        "confidence_entity": 0.3958023190498352,
+        "value": "shoes",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 76,
+        "end": 80,
+        "confidence_entity": 0.9941442608833313,
+        "value": "mall",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 31,
+        "end": 36,
+        "value": "black",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 49,
+        "end": 52,
+        "value": "red",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Tell me where are the boys who have neither a (bag)(bag) nor a (hat)(hat) in the shopping center.",
+    "entities": [
+      {
+        "start": 22,
+        "end": 26,
+        "value": "boys",
+        "entity": "male"
+      },
+      {
+        "start": 36,
+        "end": 43,
+        "value": "neither",
+        "entity": "not"
+      },
+      {
+        "start": 57,
+        "end": 60,
+        "value": "nor",
+        "entity": "not"
+      },
+      {
+        "start": 81,
+        "end": 96,
+        "value": "shopping center",
+        "entity": "mall"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 22,
+        "end": 26,
+        "confidence_entity": 0.9977812170982361,
+        "value": "boys",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 36,
+        "end": 43,
+        "confidence_entity": 0.9983264803886414,
+        "value": "neither",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 47,
+        "end": 55,
+        "confidence_entity": 0.890326738357544,
+        "value": "bag)(bag",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 57,
+        "end": 60,
+        "confidence_entity": 0.9954437017440796,
+        "value": "nor",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 81,
+        "end": 96,
+        "confidence_entity": 0.9642149209976196,
+        "value": "shopping center",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Help me find my brother, i can t see him",
+    "entities": [
+      {
+        "start": 16,
+        "end": 23,
+        "value": "brother",
+        "entity": "male"
+      },
+      {
+        "start": 27,
+        "end": 32,
+        "value": "can t",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 16,
+        "end": 23,
+        "confidence_entity": 0.9992538094520569,
+        "value": "brother",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 31,
+        "end": 32,
+        "confidence_entity": 0.6520967483520508,
+        "value": "t",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I can't find my grandchild anymore he has blue lower clothes and black upper clothes",
+    "entities": [
+      {
+        "start": 16,
+        "end": 26,
+        "value": "grandchild",
+        "entity": "people"
+      },
+      {
+        "start": 47,
+        "end": 60,
+        "value": "lower clothes",
+        "entity": "lower_body"
+      },
+      {
+        "start": 71,
+        "end": 84,
+        "value": "upper clothes",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 2,
+        "end": 7,
+        "confidence_entity": 0.998755931854248,
+        "value": "can't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "people",
+        "start": 16,
+        "end": 26,
+        "confidence_entity": 0.9986383318901062,
+        "value": "grandchild",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "less",
+        "start": 47,
+        "end": 60,
+        "confidence_entity": 0.5759589076042175,
+        "value": "lower clothes",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 71,
+        "end": 84,
+        "confidence_entity": 0.9779893755912781,
+        "value": "upper clothes",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 42,
+        "end": 46,
+        "value": "blue",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 65,
+        "end": 70,
+        "value": "black",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "individuals",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "individuals",
+        "entity": "people"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "upper clothes blue",
+    "entities": [
+      {
+        "start": 0,
+        "end": 13,
+        "value": "upper clothes",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "upper_body",
+        "start": 6,
+        "end": 13,
+        "confidence_entity": 0.9403984546661377,
+        "value": "clothes",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 14,
+        "end": 18,
+        "value": "blue",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "The lower clothes have to be gray",
+    "entities": [
+      {
+        "start": 4,
+        "end": 17,
+        "value": "lower clothes",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "upper_body",
+        "start": 4,
+        "end": 17,
+        "confidence_entity": 0.63,
+        "value": "lower clothes",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 29,
+        "end": 33,
+        "value": "gray",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Consider black lower clothes",
+    "entities": [
+      {
+        "start": 15,
+        "end": 28,
+        "value": "lower clothes",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "upper_body",
+        "start": 15,
+        "end": 28,
+        "confidence_entity": 0.65,
+        "value": "lower clothes",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 9,
+        "end": 14,
+        "value": "black",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Sorry, in this moment i do [not]in (not) remember",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 36,
+        "end": 39,
+        "confidence_entity": 0.9928131699562073,
+        "value": "not",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i don't want either of those",
+    "entities": [
+      {
+        "start": 2,
+        "end": 7,
+        "value": "don't",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 2,
+        "end": 7,
+        "confidence_entity": 0.9993089437484741,
+        "value": "don't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 13,
+        "end": 19,
+        "confidence_entity": 0.9730468988418579,
+        "value": "either",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "hello friend",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 6,
+        "end": 12,
+        "confidence_entity": 0.9600508809089661,
+        "value": "friend",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "hello, my name is Salvo",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "upper_body",
+        "start": 18,
+        "end": 23,
+        "confidence_entity": 0.8685837984085083,
+        "value": "Salvo",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "hi Mister",
+    "entities": [
+      {
+        "start": 3,
+        "end": 9,
+        "value": "Mister",
+        "entity": "male"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "ok friend",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 3,
+        "end": 9,
+        "confidence_entity": 0.8682470321655273,
+        "value": "friend",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "n",
+    "entities": [
+      {
+        "start": 0,
+        "end": 1,
+        "value": "n",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "nop",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "nop",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "nono",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "nono",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What's the amount of women inside the retail hub with a white shirt?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 26,
+        "value": "women",
+        "entity": "female"
+      },
+      {
+        "start": 38,
+        "end": 48,
+        "value": "retail hub",
+        "entity": "mall"
+      },
+      {
+        "start": 56,
+        "end": 61,
+        "value": "white",
+        "entity": "colour"
+      },
+      {
+        "start": 62,
+        "end": 67,
+        "value": "shirt",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 21,
+        "end": 26,
+        "confidence_entity": 0.9985902905464172,
+        "value": "women",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 38,
+        "end": 48,
+        "confidence_entity": 0.8882191181182861,
+        "value": "retail hub",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 62,
+        "end": 67,
+        "confidence_entity": 0.9068626165390015,
+        "value": "shirt",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "How much was the count of females that have spent in the shopping village a quantity of time higher than 2 minutes?",
+    "entities": [
+      {
+        "start": 26,
+        "end": 33,
+        "value": "females",
+        "entity": "female"
+      },
+      {
+        "start": 57,
+        "end": 73,
+        "value": "shopping village",
+        "entity": "mall"
+      },
+      {
+        "start": 93,
+        "end": 99,
+        "value": "higher",
+        "entity": "more"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 26,
+        "end": 33,
+        "confidence_entity": 0.9991216063499451,
+        "value": "females",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 57,
+        "end": 65,
+        "confidence_entity": 0.9384341835975647,
+        "value": "shopping",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "less",
+        "start": 93,
+        "end": 99,
+        "confidence_entity": 0.5657536387443542,
+        "value": "higher",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "How many purchasers are there?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 19,
+        "value": "purchasers",
+        "entity": "people"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Share with me the quantity of vendee in the retail space wearing a orange pullover",
+    "entities": [
+      {
+        "start": 30,
+        "end": 36,
+        "value": "vendee",
+        "entity": "people"
+      },
+      {
+        "start": 44,
+        "end": 56,
+        "value": "retail space",
+        "entity": "mall"
+      },
+      {
+        "start": 74,
+        "end": 82,
+        "value": "pullover",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 30,
+        "end": 36,
+        "confidence_entity": 0.915708601474762,
+        "value": "vendee",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 44,
+        "end": 50,
+        "confidence_entity": 0.8510874509811401,
+        "value": "retail",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 74,
+        "end": 82,
+        "confidence_entity": 0.9983243346214294,
+        "value": "pullover",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tell me how many end users are wearing a cap and have spent a time in walmart that exceeds 25 minutes",
+    "entities": [
+      {
+        "start": 17,
+        "end": 26,
+        "value": "end users",
+        "entity": "people"
+      },
+      {
+        "start": 41,
+        "end": 44,
+        "value": "cap",
+        "entity": "hat"
+      },
+      {
+        "start": 83,
+        "end": 90,
+        "value": "exceeds",
+        "entity": "more"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 21,
+        "end": 26,
+        "confidence_entity": 0.996791660785675,
+        "value": "users",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 41,
+        "end": 44,
+        "confidence_entity": 0.9345970153808594,
+        "value": "cap",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "more",
+        "start": 83,
+        "end": 90,
+        "confidence_entity": 0.8025181293487549,
+        "value": "exceeds",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "shop",
+        "start": 70,
+        "end": 77,
+        "value": "walmart",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Give me the amount of damoiselles with a sun hat and a purse",
+    "entities": [
+      {
+        "start": 22,
+        "end": 33,
+        "value": "damoiselles",
+        "entity": "female"
+      },
+      {
+        "start": 41,
+        "end": 48,
+        "value": "sun hat",
+        "entity": "hat"
+      },
+      {
+        "start": 55,
+        "end": 60,
+        "value": "purse",
+        "entity": "bag"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 22,
+        "end": 33,
+        "confidence_entity": 0.9900276064872742,
+        "value": "damoiselles",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 45,
+        "end": 48,
+        "confidence_entity": 0.9987046718597412,
+        "value": "hat",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 55,
+        "end": 60,
+        "confidence_entity": 0.9950302839279175,
+        "value": "purse",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What is the number of people which don't wear red rucksack and black leggins?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 28,
+        "value": "people",
+        "entity": "people"
+      },
+      {
+        "start": 35,
+        "end": 40,
+        "value": "don't",
+        "entity": "not"
+      },
+      {
+        "start": 50,
+        "end": 58,
+        "value": "rucksack",
+        "entity": "bag"
+      },
+      {
+        "start": 69,
+        "end": 76,
+        "value": "leggins",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 22,
+        "end": 28,
+        "confidence_entity": 0.9996464252471924,
+        "value": "people",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 37,
+        "end": 40,
+        "confidence_entity": 0.8909285068511963,
+        "value": "n't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 50,
+        "end": 58,
+        "confidence_entity": 0.9989413619041443,
+        "value": "rucksack",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 69,
+        "end": 76,
+        "confidence_entity": 0.9996746778488159,
+        "value": "leggins",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "How many people can you see who are destitute of a hat?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 15,
+        "value": "people",
+        "entity": "people"
+      },
+      {
+        "start": 36,
+        "end": 45,
+        "value": "destitute",
+        "entity": "not"
+      },
+      {
+        "start": 51,
+        "end": 54,
+        "value": "hat",
+        "entity": "hat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 9,
+        "end": 15,
+        "confidence_entity": 0.9995697140693665,
+        "value": "people",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 51,
+        "end": 54,
+        "confidence_entity": 0.9970703125,
+        "value": "hat",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Is the shopping mall crowded?",
+    "entities": [
+      {
+        "start": 7,
+        "end": 20,
+        "value": "shopping mall",
+        "entity": "mall"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "mall",
+        "start": 7,
+        "end": 15,
+        "confidence_entity": 0.9484589099884033,
+        "value": "shopping",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 16,
+        "end": 20,
+        "confidence_entity": 0.8510370254516602,
+        "value": "mall",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.34948042035102844,
+        "value": "crowded",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "The quantity with pink sequin skirt and sleeveless shirt",
+    "entities": [
+      {
+        "start": 23,
+        "end": 35,
+        "value": "sequin skirt",
+        "entity": "lower_body"
+      },
+      {
+        "start": 40,
+        "end": 56,
+        "value": "sleeveless shirt",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "upper_body",
+        "start": 23,
+        "end": 29,
+        "confidence_entity": 0.6234420537948608,
+        "value": "sequin",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 30,
+        "end": 35,
+        "confidence_entity": 0.9578190445899963,
+        "value": "skirt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 40,
+        "end": 50,
+        "confidence_entity": 0.990576982498169,
+        "value": "sleeveless",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 51,
+        "end": 56,
+        "confidence_entity": 0.6031652688980103,
+        "value": "shirt",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Count the number of individuals wearing brown hoodies and blue chinos who have spent below tha 5 minutes in starbucks",
+    "entities": [
+      {
+        "start": 20,
+        "end": 31,
+        "value": "individuals",
+        "entity": "people"
+      },
+      {
+        "start": 46,
+        "end": 53,
+        "value": "hoodies",
+        "entity": "upper_body"
+      },
+      {
+        "start": 63,
+        "end": 69,
+        "value": "chinos",
+        "entity": "lower_body"
+      },
+      {
+        "start": 85,
+        "end": 90,
+        "value": "below",
+        "entity": "less"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 20,
+        "end": 31,
+        "confidence_entity": 0.9995110034942627,
+        "value": "individuals",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 46,
+        "end": 53,
+        "confidence_entity": 0.9984251260757446,
+        "value": "hoodies",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 63,
+        "end": 69,
+        "confidence_entity": 0.9992907047271729,
+        "value": "chinos",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 85,
+        "end": 90,
+        "confidence_entity": 0.20948663353919983,
+        "value": "below",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "shop",
+        "start": 108,
+        "end": 117,
+        "value": "starbucks",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "check for the number of blokes",
+    "entities": [
+      {
+        "start": 24,
+        "end": 30,
+        "value": "blokes",
+        "entity": "people"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 24,
+        "end": 30,
+        "confidence_entity": 0.9930351972579956,
+        "value": "blokes",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Where are my parents whose cap are black and whose [pants] are not orange?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 20,
+        "value": "parents",
+        "entity": "people"
+      },
+      {
+        "start": 27,
+        "end": 30,
+        "value": "cap",
+        "entity": "hat"
+      },
+      {
+        "start": 63,
+        "end": 66,
+        "value": "not",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 13,
+        "end": 20,
+        "confidence_entity": 0.9960591793060303,
+        "value": "parents",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 27,
+        "end": 30,
+        "confidence_entity": 0.9402384161949158,
+        "value": "cap",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 52,
+        "end": 57,
+        "confidence_entity": 0.9824606776237488,
+        "value": "pants",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 63,
+        "end": 66,
+        "confidence_entity": 0.9929490089416504,
+        "value": "not",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "where are my sisters and brothers who don't have a poke and do not wear a berret?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 20,
+        "value": "sisters",
+        "entity": "female"
+      },
+      {
+        "start": 25,
+        "end": 33,
+        "value": "brothers",
+        "entity": "male"
+      },
+      {
+        "start": 38,
+        "end": 43,
+        "value": "don't",
+        "entity": "not"
+      },
+      {
+        "start": 51,
+        "end": 55,
+        "value": "poke",
+        "entity": "bag"
+      },
+      {
+        "start": 63,
+        "end": 66,
+        "value": "not",
+        "entity": "not"
+      },
+      {
+        "start": 74,
+        "end": 80,
+        "value": "berret",
+        "entity": "hat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 6,
+        "end": 9,
+        "confidence_entity": 0.6754958033561707,
+        "value": "are",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "female",
+        "start": 13,
+        "end": 20,
+        "confidence_entity": 0.9834796190261841,
+        "value": "sisters",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "male",
+        "start": 25,
+        "end": 33,
+        "confidence_entity": 0.9535573720932007,
+        "value": "brothers",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 38,
+        "end": 43,
+        "confidence_entity": 0.9863228797912598,
+        "value": "don't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 60,
+        "end": 62,
+        "confidence_entity": 0.985983669757843,
+        "value": "do",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 63,
+        "end": 66,
+        "confidence_entity": 0.95318603515625,
+        "value": "not",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 74,
+        "end": 80,
+        "confidence_entity": 0.9874671101570129,
+        "value": "berret",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I can't see where my mum went, she has a purple crop top and a bourse with her, where can I find her?",
+    "entities": [
+      {
+        "start": 2,
+        "end": 7,
+        "value": "can't",
+        "entity": "not"
+      },
+      {
+        "start": 21,
+        "end": 24,
+        "value": "mum",
+        "entity": "female"
+      },
+      {
+        "start": 48,
+        "end": 56,
+        "value": "crop top",
+        "entity": "upper_body"
+      },
+      {
+        "start": 63,
+        "end": 69,
+        "value": "bourse",
+        "entity": "bag"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 2,
+        "end": 7,
+        "confidence_entity": 0.7158350944519043,
+        "value": "can't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "female",
+        "start": 21,
+        "end": 24,
+        "confidence_entity": 0.9949828386306763,
+        "value": "mum",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 35,
+        "end": 38,
+        "confidence_entity": 0.6422368884086609,
+        "value": "has",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 53,
+        "end": 56,
+        "confidence_entity": 0.903783917427063,
+        "value": "top",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Have you seen where are the customers that are using a green uniform",
+    "entities": [
+      {
+        "start": 28,
+        "end": 37,
+        "value": "customers",
+        "entity": "people"
+      },
+      {
+        "start": 61,
+        "end": 68,
+        "value": "uniform",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 28,
+        "end": 37,
+        "confidence_entity": 0.998837411403656,
+        "value": "customers",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "see if you find in a specifi area someone hasn't a beanie",
+    "entities": [
+      {
+        "start": 34,
+        "end": 41,
+        "value": "someone",
+        "entity": "people"
+      },
+      {
+        "start": 42,
+        "end": 48,
+        "value": "hasn't",
+        "entity": "not"
+      },
+      {
+        "start": 51,
+        "end": 57,
+        "value": "beanie",
+        "entity": "hat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "mall",
+        "start": 29,
+        "end": 33,
+        "confidence_entity": 0.8395209908485413,
+        "value": "area",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "people",
+        "start": 34,
+        "end": 41,
+        "confidence_entity": 0.9985643029212952,
+        "value": "someone",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 42,
+        "end": 48,
+        "confidence_entity": 0.7295137643814087,
+        "value": "hasn't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 51,
+        "end": 57,
+        "confidence_entity": 0.9945317506790161,
+        "value": "beanie",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "male",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "male",
+        "entity": "male"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.6052539348602295,
+        "value": "male",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "gentle",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "gentle",
+        "entity": "male"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Only look at the male",
+    "entities": [
+      {
+        "start": 17,
+        "end": 21,
+        "value": "male",
+        "entity": "male"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 17,
+        "end": 21,
+        "confidence_entity": 0.46567681431770325,
+        "value": "male",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I only want to know about [people] dressed in blue",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.9917606115341187,
+        "value": "people",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Surely with [hat]",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "hat",
+        "start": 13,
+        "end": 16,
+        "confidence_entity": 0.9988548755645752,
+        "value": "hat",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I don t know, i prefer red",
+    "entities": [
+      {
+        "start": 2,
+        "end": 7,
+        "value": "don t",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 2,
+        "end": 5,
+        "confidence_entity": 0.9690617918968201,
+        "value": "don",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 6,
+        "end": 7,
+        "confidence_entity": 0.4972977340221405,
+        "value": "t",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I haven t a particular preference, look for blue",
+    "entities": [
+      {
+        "start": 2,
+        "end": 9,
+        "value": "haven t",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "upper_body",
+        "start": 8,
+        "end": 9,
+        "confidence_entity": 0.7885293364524841,
+        "value": "t",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "remove blue",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "remove",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Consider all possibilities save for the white.",
+    "entities": [
+      {
+        "start": 27,
+        "end": 35,
+        "value": "save for",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "i favors every color tone aside pink",
+    "entities": [
+      {
+        "start": 26,
+        "end": 31,
+        "value": "aside",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "unless gray",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "unless",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I'm not thinking about a particoular color.",
+    "entities": [
+      {
+        "start": 4,
+        "end": 7,
+        "value": "not",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 4,
+        "end": 7,
+        "confidence_entity": 0.9900867342948914,
+        "value": "not",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 25,
+        "end": 36,
+        "confidence_entity": 0.8274226784706116,
+        "value": "particoular",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "don't know",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.9988415837287903,
+        "value": "don't",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "don't have a favourite one",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "don't",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.998840868473053,
+        "value": "don't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 6,
+        "end": 10,
+        "confidence_entity": 0.5367939472198486,
+        "value": "have",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Hi man",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 3,
+        "end": 6,
+        "confidence_entity": 0.998022198677063,
+        "value": "man",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "hello sweet boy",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 12,
+        "end": 15,
+        "confidence_entity": 0.999110758304596,
+        "value": "boy",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "we see after friend",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 13,
+        "end": 19,
+        "confidence_entity": 0.734036386013031,
+        "value": "friend",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "let's end here",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 6,
+        "end": 9,
+        "confidence_entity": 0.6337840557098389,
+        "value": "end",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I am sorry but I cannot continue to speak",
+    "entities": [
+      {
+        "start": 17,
+        "end": 23,
+        "value": "cannot",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 20,
+        "end": 23,
+        "confidence_entity": 0.9997519850730896,
+        "value": "not",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Plus a less",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "less",
+        "start": 7,
+        "end": 11,
+        "confidence_entity": 0.6972240805625916,
+        "value": "less",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "nooo",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.9965593218803406,
+        "value": "nooo",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "na",
+    "entities": [
+      {
+        "start": 0,
+        "end": 2,
+        "value": "na",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "nehi",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "nehi",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "nö",
+    "entities": [
+      {
+        "start": 0,
+        "end": 2,
+        "value": "nö",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What was the number of men who have been in the mall for a time inferior to 27 minutes?",
+    "entities": [
+      {
+        "start": 23,
+        "end": 26,
+        "value": "men",
+        "entity": "male"
+      },
+      {
+        "start": 48,
+        "end": 52,
+        "value": "mall",
+        "entity": "mall"
+      },
+      {
+        "start": 64,
+        "end": 72,
+        "value": "inferior",
+        "entity": "less"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 23,
+        "end": 26,
+        "confidence_entity": 0.9974796175956726,
+        "value": "men",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 48,
+        "end": 52,
+        "confidence_entity": 0.9599013924598694,
+        "value": "mall",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "How many lasses are wearing a purple parka?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 15,
+        "value": "lasses",
+        "entity": "female"
+      },
+      {
+        "start": 37,
+        "end": 42,
+        "value": "parka",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "mall",
+        "start": 37,
+        "end": 42,
+        "confidence_entity": 0.8981544375419617,
+        "value": "parka",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 30,
+        "end": 36,
+        "value": "purple",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "The amount of madames with a pink blouse and a black skirt in the mall?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 21,
+        "value": "madames",
+        "entity": "female"
+      },
+      {
+        "start": 34,
+        "end": 40,
+        "value": "blouse",
+        "entity": "upper_body"
+      },
+      {
+        "start": 53,
+        "end": 58,
+        "value": "skirt",
+        "entity": "lower_body"
+      },
+      {
+        "start": 66,
+        "end": 70,
+        "value": "mall",
+        "entity": "mall"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 14,
+        "end": 21,
+        "confidence_entity": 0.5912610292434692,
+        "value": "madames",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 34,
+        "end": 40,
+        "confidence_entity": 0.9865533709526062,
+        "value": "blouse",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 53,
+        "end": 58,
+        "confidence_entity": 0.8688182830810547,
+        "value": "skirt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 66,
+        "end": 70,
+        "confidence_entity": 0.9930341243743896,
+        "value": "mall",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 29,
+        "end": 33,
+        "value": "pink",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 47,
+        "end": 52,
+        "value": "black",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "The amount of acquirer with purple trousers?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 22,
+        "value": "acquirer",
+        "entity": "people"
+      },
+      {
+        "start": 35,
+        "end": 43,
+        "value": "trousers",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lower_body",
+        "start": 35,
+        "end": 43,
+        "confidence_entity": 0.9977501034736633,
+        "value": "trousers",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 28,
+        "end": 34,
+        "value": "purple",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Are there any kids in red shirts and green shorts spending minus than 7 minutes in the retail hub?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 18,
+        "value": "kids",
+        "entity": "people"
+      },
+      {
+        "start": 26,
+        "end": 32,
+        "value": "shirts",
+        "entity": "upper_body"
+      },
+      {
+        "start": 43,
+        "end": 49,
+        "value": "shorts",
+        "entity": "lower_body"
+      },
+      {
+        "start": 59,
+        "end": 64,
+        "value": "minus",
+        "entity": "less"
+      },
+      {
+        "start": 87,
+        "end": 97,
+        "value": "retail hub",
+        "entity": "mall"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 14,
+        "end": 18,
+        "confidence_entity": 0.9978891015052795,
+        "value": "kids",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 26,
+        "end": 32,
+        "confidence_entity": 0.9796679615974426,
+        "value": "shirts",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 43,
+        "end": 49,
+        "confidence_entity": 0.9798952341079712,
+        "value": "shorts",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 59,
+        "end": 64,
+        "confidence_entity": 0.23727759718894958,
+        "value": "minus",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 87,
+        "end": 97,
+        "confidence_entity": 0.9313281774520874,
+        "value": "retail hub",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 22,
+        "end": 25,
+        "value": "red",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 37,
+        "end": 42,
+        "value": "green",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Let me to know how many boys have not a purple short pant and have surpassed sixty minutes in starbucks",
+    "entities": [
+      {
+        "start": 24,
+        "end": 28,
+        "value": "boys",
+        "entity": "male"
+      },
+      {
+        "start": 34,
+        "end": 37,
+        "value": "not",
+        "entity": "not"
+      },
+      {
+        "start": 47,
+        "end": 57,
+        "value": "short pant",
+        "entity": "lower_body"
+      },
+      {
+        "start": 67,
+        "end": 76,
+        "value": "surpassed",
+        "entity": "more"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 24,
+        "end": 28,
+        "confidence_entity": 0.9929572343826294,
+        "value": "boys",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 34,
+        "end": 37,
+        "confidence_entity": 0.9998133778572083,
+        "value": "not",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 47,
+        "end": 52,
+        "confidence_entity": 0.23901259899139404,
+        "value": "short",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 53,
+        "end": 57,
+        "confidence_entity": 0.9135006666183472,
+        "value": "pant",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "more",
+        "start": 67,
+        "end": 76,
+        "confidence_entity": 0.6908885836601257,
+        "value": "surpassed",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "shop",
+        "start": 94,
+        "end": 103,
+        "value": "starbucks",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 40,
+        "end": 46,
+        "value": "purple",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I need to know the number of people who wear a brown sombrero and have spent their time in the mall smaller than 2 seconds.",
+    "entities": [
+      {
+        "start": 29,
+        "end": 35,
+        "value": "people",
+        "entity": "people"
+      },
+      {
+        "start": 53,
+        "end": 61,
+        "value": "sombrero",
+        "entity": "hat"
+      },
+      {
+        "start": 95,
+        "end": 99,
+        "value": "mall",
+        "entity": "mall"
+      },
+      {
+        "start": 100,
+        "end": 107,
+        "value": "smaller",
+        "entity": "less"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 29,
+        "end": 35,
+        "confidence_entity": 0.9995400905609131,
+        "value": "people",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 53,
+        "end": 61,
+        "confidence_entity": 0.5905954241752625,
+        "value": "sombrero",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 95,
+        "end": 99,
+        "confidence_entity": 0.9964094758033752,
+        "value": "mall",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "more",
+        "start": 100,
+        "end": 107,
+        "confidence_entity": 0.40417933464050293,
+        "value": "smaller",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 47,
+        "end": 52,
+        "value": "brown",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Tell me the amount of fellows you can see",
+    "entities": [
+      {
+        "start": 22,
+        "end": 29,
+        "value": "fellows",
+        "entity": "people"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How many gentlemen are there?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 18,
+        "value": "gentlemen",
+        "entity": "people"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 9,
+        "end": 18,
+        "confidence_entity": 0.9961422085762024,
+        "value": "gentlemen",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Where are persons that donnes a black blazer paired with green trousers?",
+    "entities": [
+      {
+        "start": 10,
+        "end": 17,
+        "value": "persons",
+        "entity": "people"
+      },
+      {
+        "start": 38,
+        "end": 44,
+        "value": "blazer",
+        "entity": "upper_body"
+      },
+      {
+        "start": 63,
+        "end": 71,
+        "value": "trousers",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 10,
+        "end": 17,
+        "confidence_entity": 0.9992778897285461,
+        "value": "persons",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 23,
+        "end": 29,
+        "confidence_entity": 0.9891462326049805,
+        "value": "donnes",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 38,
+        "end": 44,
+        "confidence_entity": 0.9857644438743591,
+        "value": "blazer",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 63,
+        "end": 71,
+        "confidence_entity": 0.997012734413147,
+        "value": "trousers",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 32,
+        "end": 37,
+        "value": "black",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 57,
+        "end": 62,
+        "value": "green",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Tell me where are individuals that choose to wear a classic white jeans and a blue shirt in the mall now?",
+    "entities": [
+      {
+        "start": 18,
+        "end": 29,
+        "value": "individuals",
+        "entity": "people"
+      },
+      {
+        "start": 66,
+        "end": 71,
+        "value": "jeans",
+        "entity": "lower_body"
+      },
+      {
+        "start": 83,
+        "end": 88,
+        "value": "shirt",
+        "entity": "upper_body"
+      },
+      {
+        "start": 96,
+        "end": 100,
+        "value": "mall",
+        "entity": "mall"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 18,
+        "end": 29,
+        "confidence_entity": 0.9996274709701538,
+        "value": "individuals",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 52,
+        "end": 59,
+        "confidence_entity": 0.4505195915699005,
+        "value": "classic",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 66,
+        "end": 71,
+        "confidence_entity": 0.9942939877510071,
+        "value": "jeans",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 83,
+        "end": 88,
+        "confidence_entity": 0.9832636713981628,
+        "value": "shirt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 96,
+        "end": 100,
+        "confidence_entity": 0.9936301112174988,
+        "value": "mall",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 60,
+        "end": 65,
+        "value": "white",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 78,
+        "end": 82,
+        "value": "blue",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Can you see anyone wearing a red coat in the shopping precint?",
+    "entities": [
+      {
+        "start": 33,
+        "end": 37,
+        "value": "coat",
+        "entity": "upper_body"
+      },
+      {
+        "start": 45,
+        "end": 61,
+        "value": "shopping precint",
+        "entity": "mall"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 12,
+        "end": 18,
+        "confidence_entity": 0.9200003147125244,
+        "value": "anyone",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 33,
+        "end": 37,
+        "confidence_entity": 0.9987315535545349,
+        "value": "coat",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mall",
+        "start": 45,
+        "end": 53,
+        "confidence_entity": 0.9784026145935059,
+        "value": "shopping",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 29,
+        "end": 32,
+        "value": "red",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Find for me my girlfriend who has on a green windbreaker and blue tights",
+    "entities": [
+      {
+        "start": 15,
+        "end": 25,
+        "value": "girlfriend",
+        "entity": "female"
+      },
+      {
+        "start": 45,
+        "end": 56,
+        "value": "windbreaker",
+        "entity": "upper_body"
+      },
+      {
+        "start": 66,
+        "end": 72,
+        "value": "tights",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 15,
+        "end": 25,
+        "confidence_entity": 0.9989019632339478,
+        "value": "girlfriend",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 39,
+        "end": 44,
+        "value": "green",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 61,
+        "end": 65,
+        "value": "blue",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Tell me in which place can you see my fiancee who has on blue capri pants and a green poncho",
+    "entities": [
+      {
+        "start": 38,
+        "end": 45,
+        "value": "fiancee",
+        "entity": "people"
+      },
+      {
+        "start": 62,
+        "end": 73,
+        "value": "capri pants",
+        "entity": "lower_body"
+      },
+      {
+        "start": 86,
+        "end": 92,
+        "value": "poncho",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 38,
+        "end": 45,
+        "confidence_entity": 0.9573513269424438,
+        "value": "fiancee",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 62,
+        "end": 67,
+        "confidence_entity": 0.6021295189857483,
+        "value": "capri",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 68,
+        "end": 73,
+        "confidence_entity": 0.6326335668563843,
+        "value": "pants",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 86,
+        "end": 92,
+        "confidence_entity": 0.9990988969802856,
+        "value": "poncho",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 57,
+        "end": 61,
+        "value": "blue",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 80,
+        "end": 85,
+        "value": "green",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "The location of clients with on yellow slacks and not trench coat",
+    "entities": [
+      {
+        "start": 16,
+        "end": 23,
+        "value": "clients",
+        "entity": "people"
+      },
+      {
+        "start": 39,
+        "end": 45,
+        "value": "slacks",
+        "entity": "lower_body"
+      },
+      {
+        "start": 50,
+        "end": 53,
+        "value": "not",
+        "entity": "not"
+      },
+      {
+        "start": 54,
+        "end": 65,
+        "value": "trench coat",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 16,
+        "end": 23,
+        "confidence_entity": 0.9989066123962402,
+        "value": "clients",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 39,
+        "end": 45,
+        "confidence_entity": 0.9863371253013611,
+        "value": "slacks",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 50,
+        "end": 53,
+        "confidence_entity": 0.9997519850730896,
+        "value": "not",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 61,
+        "end": 65,
+        "confidence_entity": 0.9946470856666565,
+        "value": "coat",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 32,
+        "end": 38,
+        "value": "yellow",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Have you seen damsles who are unwearing a yellow sports jersey and a purple pencil skirt?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 21,
+        "value": "damsles",
+        "entity": "female"
+      },
+      {
+        "start": 30,
+        "end": 39,
+        "value": "unwearing",
+        "entity": "not"
+      },
+      {
+        "start": 49,
+        "end": 62,
+        "value": "sports jersey",
+        "entity": "upper_body"
+      },
+      {
+        "start": 76,
+        "end": 88,
+        "value": "pencil skirt",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "upper_body",
+        "start": 14,
+        "end": 21,
+        "confidence_entity": 0.6814867258071899,
+        "value": "damsles",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 30,
+        "end": 39,
+        "confidence_entity": 0.9902230501174927,
+        "value": "unwearing",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 56,
+        "end": 62,
+        "confidence_entity": 0.6845172643661499,
+        "value": "jersey",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 83,
+        "end": 88,
+        "confidence_entity": 0.7029497027397156,
+        "value": "skirt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 42,
+        "end": 48,
+        "value": "yellow",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 69,
+        "end": 75,
+        "value": "purple",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Tell me in which area of the mall can I find women wearing pink paperbag waist pants and brown flannel overshirt",
+    "entities": [
+      {
+        "start": 29,
+        "end": 33,
+        "value": "mall",
+        "entity": "mall"
+      },
+      {
+        "start": 45,
+        "end": 50,
+        "value": "women",
+        "entity": "female"
+      },
+      {
+        "start": 64,
+        "end": 84,
+        "value": "paperbag waist pants",
+        "entity": "lower_body"
+      },
+      {
+        "start": 95,
+        "end": 112,
+        "value": "flannel overshirt",
+        "entity": "upper_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "mall",
+        "start": 29,
+        "end": 33,
+        "confidence_entity": 0.9965355396270752,
+        "value": "mall",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "female",
+        "start": 45,
+        "end": 50,
+        "confidence_entity": 0.9990216493606567,
+        "value": "women",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 73,
+        "end": 78,
+        "confidence_entity": 0.5936995148658752,
+        "value": "waist",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 79,
+        "end": 84,
+        "confidence_entity": 0.8153957724571228,
+        "value": "pants",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 95,
+        "end": 102,
+        "confidence_entity": 0.7058835029602051,
+        "value": "flannel",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 103,
+        "end": 112,
+        "confidence_entity": 0.2822471261024475,
+        "value": "overshirt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 59,
+        "end": 63,
+        "value": "pink",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 89,
+        "end": 94,
+        "value": "brown",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Can you find my father wearing a red tailored blazer and gray pants. I can't see him.",
+    "entities": [
+      {
+        "start": 16,
+        "end": 22,
+        "value": "father",
+        "entity": "male"
+      },
+      {
+        "start": 37,
+        "end": 52,
+        "value": "tailored blazer",
+        "entity": "upper_body"
+      },
+      {
+        "start": 62,
+        "end": 67,
+        "value": "pants",
+        "entity": "lower_body"
+      },
+      {
+        "start": 71,
+        "end": 76,
+        "value": "can't",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "male",
+        "start": 16,
+        "end": 22,
+        "confidence_entity": 0.9954375624656677,
+        "value": "father",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 46,
+        "end": 52,
+        "confidence_entity": 0.9983641505241394,
+        "value": "blazer",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lower_body",
+        "start": 62,
+        "end": 67,
+        "confidence_entity": 0.9648409485816956,
+        "value": "pants",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 71,
+        "end": 76,
+        "confidence_entity": 0.9906005859375,
+        "value": "can't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 33,
+        "end": 36,
+        "value": "red",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "colour",
+        "start": 57,
+        "end": 61,
+        "value": "gray",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Do you see my mother with black pantallons?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 20,
+        "value": "mother",
+        "entity": "female"
+      },
+      {
+        "start": 32,
+        "end": 42,
+        "value": "pantallons",
+        "entity": "lower_body"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "female",
+        "start": 14,
+        "end": 20,
+        "confidence_entity": 0.9983464479446411,
+        "value": "mother",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 26,
+        "end": 31,
+        "value": "black",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Only [clients] who haven't a bag",
+    "entities": [
+      {
+        "start": 19,
+        "end": 26,
+        "value": "haven't",
+        "entity": "not"
+      },
+      {
+        "start": 29,
+        "end": 32,
+        "value": "bag",
+        "entity": "bag"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 6,
+        "end": 13,
+        "confidence_entity": 0.693413257598877,
+        "value": "clients",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 23,
+        "end": 26,
+        "confidence_entity": 0.9912823438644409,
+        "value": "n't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "bag",
+        "start": 29,
+        "end": 32,
+        "confidence_entity": 0.9753289222717285,
+        "value": "bag",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i haven't any idea, but i like green",
+    "entities": [
+      {
+        "start": 2,
+        "end": 9,
+        "value": "haven't",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 6,
+        "end": 9,
+        "confidence_entity": 0.9966937303543091,
+        "value": "n't",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "colour",
+        "start": 31,
+        "end": 36,
+        "value": "green",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "leave out black",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "leave out",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "colour",
+        "start": 10,
+        "end": 15,
+        "value": "black",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "i haven't a preference",
+    "entities": [
+      {
+        "start": 2,
+        "end": 9,
+        "value": "haven't",
+        "entity": "not"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 6,
+        "end": 9,
+        "confidence_entity": 0.9702335000038147,
+        "value": "n't",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "no color",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 0,
+        "end": 2,
+        "confidence_entity": 0.5573278069496155,
+        "value": "no",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i'm interested in people who have a beret and don't have beret",
+    "entities": [
+      {
+        "start": 18,
+        "end": 24,
+        "value": "people",
+        "entity": "people"
+      },
+      {
+        "start": 36,
+        "end": 41,
+        "value": "beret",
+        "entity": "hat"
+      },
+      {
+        "start": 46,
+        "end": 51,
+        "value": "don't",
+        "entity": "not"
+      },
+      {
+        "start": 57,
+        "end": 62,
+        "value": "beret",
+        "entity": "hat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "people",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.9994970560073853,
+        "value": "people",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 36,
+        "end": 41,
+        "confidence_entity": 0.9958025813102722,
+        "value": "beret",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "not",
+        "start": 46,
+        "end": 48,
+        "confidence_entity": 0.5859973430633545,
+        "value": "do",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "hat",
+        "start": 57,
+        "end": 62,
+        "confidence_entity": 0.9969583749771118,
+        "value": "beret",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i prefer with racksuck and without racksuck",
+    "entities": [
+      {
+        "start": 14,
+        "end": 22,
+        "value": "racksuck",
+        "entity": "bag"
+      },
+      {
+        "start": 27,
+        "end": 34,
+        "value": "without",
+        "entity": "not"
+      },
+      {
+        "start": 35,
+        "end": 43,
+        "value": "racksuck",
+        "entity": "bag"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "not",
+        "start": 27,
+        "end": 34,
+        "confidence_entity": 0.9993176460266113,
+        "value": "without",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "upper_body",
+        "start": 35,
+        "end": 43,
+        "confidence_entity": 0.707862138748169,
+        "value": "racksuck",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]
