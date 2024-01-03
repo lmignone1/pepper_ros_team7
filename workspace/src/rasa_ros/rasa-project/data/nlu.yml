@@ -1036,13 +1036,13 @@ nlu:
     - Where is my [father](male) with a white [denim jacket](upper_body) and a white [yoga pants](lower_body)
     - The location of [clients](people) with on yellow [slacks](lower_body) and [not](not) [trench coat](upper_body)
     - Help me to search my [stepsister](female) in a yellow [bomber jacket](upper_body) and a gray [mini skirt](lower_body)?
-    - I'm searching [girls](female) who wear an orange [maxi skirt](lower body) and a yellow [raincoat](upper_body)
+    - I'm searching [girls](female) who wear an orange [maxi skirt](lower_body) and a yellow [raincoat](upper_body)
     - Give me information about the place where are [dudes](male) wearing a white [smoking](upper_body)?
     - Have you seen [damsles](female) who are [unwearing](not) a yellow [sports jersey](upper_body) and a purple [pencil skirt](lower_body)?
     - I lost my [stepmother](female) with an orange [bell skirt](lower_body) and a purple [flannel shirt](upper_body)
     - Can you say where is my [stepdad](male) with an orange [tuxedo](upper_body) and yellow [cropped jeans](lower_body). I lost him.
     - I want to know where I can find [customers](people) who do [not](not) have an orange [poncho](upper_body) and purple [hiking shorts](lower_body)
-    - Tell me in which area of the [mall](mall) can I find [women](female) wearing pink [paperbag waist pants](lower body) and brown [flannel overshirt](upper_body)
+    - Tell me in which area of the [mall](mall) can I find [women](female) wearing pink [paperbag waist pants](lower_body) and brown [flannel overshirt](upper_body)
     - Can you find my [father](male) wearing a red [tailored blazer](upper_body) and gray [pants](lower_body). I [can't](not) see him. 
     - Please. help me to find [shoppers](people) who are in purple [dresses](upper_body) and brown [leggings](lower_body) presently in the [commercial plaza](mall)?
     - I [don't](not) locate  my [granny](female) who dresses green [shirt](upper_body) and blue [shorts](lower_body) currently in the [retail park](mall)?
@@ -1088,7 +1088,7 @@ nlu:
     - I’m searching [males](male)
     - I lost my [grandma](female) she was wearing green [upper clothes](upper_body)
     - I can't find my [grandchild](people) anymore he has blue [lower clothes](lower_body) and black [upper clothes](upper_body)
-    - Looking for my [aunt](female) she is dressed with a [cap](hat), a nice [bag](bag), white [upper clothes](upper clothes)
+    - Looking for my [aunt](female) she is dressed with a [cap](hat), a nice [bag](bag), white [upper clothes](upper_body)
     - where is my [son](male) who are [neither](not) wearing a [hat](hat) [nor](not) carrying a [schoolbag](bag) are in the [mall](mall).
     - have you seen a [guy](male)
     - have you seen ed?
@@ -1145,7 +1145,7 @@ nlu:
     - track [males](male) and [females](female)
     - [individuals](people)
     - [gentlemen](male) specifically
-    - interested in [women](females)
+    - interested in [women](female)
     - interested in [girls](female) and in [boys](male)
     - interested in [customers](people) 
     - just [boys](male)
