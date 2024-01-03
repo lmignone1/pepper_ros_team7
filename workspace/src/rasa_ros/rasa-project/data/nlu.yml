@@ -577,8 +577,8 @@ nlu:
     - [no](not)
     - [n](not)
     - never
-    - nooo
-    - noo
+    - [nooo](not)
+    - [noo](not)
     - I [don't](not) think so
     - [don't](not) like that
     - [no](not) way
@@ -721,7 +721,7 @@ nlu:
     - help?
     - hep me
     - hi. Sara what do you do?
-    - hm that doesnt quite help me is there anything else you can do?
+    - hm that [doesnt](not) quite help me is there anything else you can do?
     - how can i use you
     - how can you help me
     - how can you help me?
@@ -730,7 +730,7 @@ nlu:
     - how u can help me
     - how you help me
     - i asked you if you can do anything else
-    - i don't know what i want
+    - i [don't](not) know what i want
     - i need help
     - more info
     - now what?
@@ -817,9 +817,17 @@ nlu:
 
 - intent: ask_count
   examples: |
+    - how many [boys](male) have been in starbucks for a period of time [shorter](less) than 5 minutes
+    - How Many [girls](female) were at Starbucks for a duration [less](less) than 5 minutes?
+    - Provide the count of [Men](male) present in Starbucks for a time [under](less) 5 minutes.
+    - What's the total of [patrons](people) who had a stay of [less](less) than 5 minutes in Starbucks?
+    - how many [customers](people) with red [hat](hat) and a blue [blazer](upper_body) has spent 
     - What is the current number of [people](people) in the [shopping mall](mall)?
     - How many [shoppers](people) with red [hat](hat) are there in [walmart](shop)
     - How many [individuals](people) can be found in the [mall](mall) at this moment?
+    - Give me the total of [menfolk](male) who have stayed in the [mall](mall) for a time [below](less) than 5 minutes
+    - How many [madames](female) with a white [skirt](lower_body) have been in walmart for a time [lower](less) than 20 minutes
+    - Count the [people](people) who have stayed in the [commercial center](mall) with a blue [bag](bag) for [under](less) than 30 minutes
     - Could you tell me the quantity of [persons](people) present in the [shopping complex](mall)?
     - How numerous are the [shoppers](people) in the [shopping plaza](mall)?
     - What's the total number of [clients](people) inside the [commercial center](mall)?
@@ -865,7 +873,7 @@ nlu:
     - The number of [males](male) who wear a red [tank top](upper_body) and red [track pants](lower_body) in the [shopping center](mall)?
     - how many [women](female) at the bar over 55 minutes who [doesn't](not) wear a red [skirt](lower_body) and a pink [shirt](upper_body)?
     - how many [kids](people) [don't](not) wear yellow [jeans](lower_body) and white [coat](upper_body)?
-    - how many [boys](male)  do [not](not) wear a green [skirt](lower_body) and gray [cap](upper_body)?
+    - how many [boys](male)  do [not](not) wear a green [skirt](lower_body) and gray [cap](hat)?
     - What is the number of [people](people) which [don't](not) wear red [rucksack](bag) and black [leggins](lower_body)?
     - Are there [people](people) that [aren't](not) wearing a white [cap](hat) and [don't](not) have black [shorts](lower_body)?
     - Count the number of [men](male) with gray [jumper](upper_body) and [not](not) green [pants](lower_body) that have spent a time [superior](more) to 20 minutes in the [mall](mall)
@@ -895,6 +903,8 @@ nlu:
     - Are you able to tell me how many [clients](people) are in the [mall](mall)
     - Please check how many [people](people) in a blue [vest](upper_body) are in the [mall](mall).
     - I need to know how many [dudes](male) were in the [market](mall).
+    - I want to know how many [dudes](male) have passed [less](less) than 20 minutes in walmart
+    - What's the amount of [girls](female) with yellow [jacket](upper_body) who have been in sturbacks for [less](less) than 20 minutes?
     - Visualize the number of [customers](people) at [shopping center](mall) who have spent here a period [lesser](less) than 30 minutes
     - How many [clients](people) with red [cargos](lower_body) and a blue [polo shirt](upper_body)?
     - Inform me about the total of [customers] with black [wide-leg pants](lower_body) and a [beret](hat)
@@ -953,7 +963,15 @@ nlu:
     - How many [men](male) are there in walmart with black [upper clothes](upper_body)?
     - What's the amount of [people](people) wearing blue [lower clothes](lower_body) and with a blue [jacket](upper_body)
     - how many [people](people) who are [neither](not) wearing a [beanie](hat) [nor](not) carrying a [purse](bag) are in the [mall](mall).
-
+    - what is the number of [customers] who have spent a period of time [longer](more) than 30 minutes in walmart
+    - how many [girls](female) have spent a period of time [larger](more) than 300 seconds in starbucks?
+    - what is the amount of [people](people) who have been in the [mall](mall) for [more](more) than one hour and a half
+    - Count the number of [shoppers](people) who dressed a purple [cardigan](upper_body) and spent a period of time [shorter](less) than 3 minutes inside the [mall](mall)
+    - let's explore the amount of [shoppers](people) who dress purple [chinos](lower_body) and have occupied the [shopping hub](mall) for a time [smaller](less) than 4 minutes
+    - Can you count the number of [individuals](people) in black [dresses](upper_body) and red [shoes](lower_body) who have passed [minus](less) than 13 minutes in the [mall](mall)?
+    - Tell me if there is a large number of [people](people) with a purple [pullover](upper_body) that passed a time frame [inferior](less) to 6 minutes in walmart.
+    - Can you count the [women](female) in the [store](mall) that have been here [lower](less) than 10 minutes?
+    - Total of [people](people) with an orange [tuxedo](upper_body) and yellow [cropped jeans](lower_body) spending [minus](less) than 40 seconds in the [retail park](mall)
 
 - intent: ask_location
   examples: |
@@ -1323,7 +1341,7 @@ nlu:
     - Consider black [lower clothes](lower_body)
     - The colour I want to look for shoud be red
     - I think the colour should be white
-    - red, without a doubt
+    - red, [without](not) a doubt
     - all the [mall](mall)
     - the [mall](mall)
     - [mall](mall)
@@ -1407,7 +1425,7 @@ nlu:
     - Tell me about who has a [hat](hat)
     - Only people with a [cap](hat)
     - I'm thinking about those who [don't](not) wear a [hat](hat)
-    - Just look who don't have a [beret](hat)
+    - Just look who [don't](not) have a [beret](hat)
     - Consider only [people] who are [not](not) wearing a [bonnet](hat)
     - Give me info about [men](male) [without](not) a [hat](hat)
     - with [bag](bag)
@@ -1454,7 +1472,7 @@ nlu:
     - i [haven't](not) any idea, but i like green
     - mhhhh i [dont](not) remember, i think with a [cap](hat)
     - Actually i [couldn't](not) tell you, in my mind he has a black [trucksack](bag)  
-    - i have no clue, but i say you red
+    - i have [no](not) clue, but i say you red
     - [cap](hat) in general
     - I m [not](not) very sure, I'd like purple
     - It's the same, but search who has a [schoolbag](bag)
@@ -1477,7 +1495,7 @@ nlu:
     - [without](not) is perfect.
     - ok with
     - yes, he has a [bag](bag)
-    - no, he [hasn't](not) a [hat](hat)
+    - [no](not), he [hasn't](not) a [hat](hat)
     - actually, he does [not](not) have a [cap](hat)
     
     
@@ -1499,9 +1517,9 @@ nlu:
     - both is okay for me
     - both
     - Both
-    - no preference for me
-    - i have no clue
-    - no preference
+    - [no](not) preference for me
+    - i have [no](not) clue
+    - [no](not) preference
     - I [don't](not) have a particular preference
     - general
     - whatever you want
@@ -1523,18 +1541,18 @@ nlu:
     - i [don't](not) have a preference
     - i have [not](not) a preference
     - i [haven't](not) a preference
-    - no colour in particular
+    - [no](not) colour in particular
     - all the colour are the same
-    - no preferencess
-    - no, every colour is good
-    - no preference for upper colour
+    - [no](not) preferencess
+    - [no](not), every colour is good
+    - [no](not) preference for upper colour
     - i like all the colours 
     - all the colours are good for me
     - every colour
-    - no colour 
-    - no color 
+    - [no](not) colour 
+    - [no](not) color 
     - Each colour
-    - no preference for the colour
+    - [no](not) preference for the colour
     - I [don't](not) need a particular colour
     - nothing in particular
     - nothing
@@ -1546,7 +1564,7 @@ nlu:
     - all the colors are good 
     - all colours are equal for me
     - looking for all colours
-    - no preference for the colour
+    - [no](not) preference for the colour
     - I want all colours
     - I [don’t](not) have a preference for any particular colour.
     - I [don’t](not) have a colour preference.
@@ -1566,10 +1584,10 @@ nlu:
     - I have [no](not) idea.
     - I'm [not](not) thinking about a particoular color.
     - both are the same
-    - no preference for the place
+    - [no](not) preference for the place
     - i'm [not](not) thinking about a particular place
-    - no preference for location
-    - don't know
+    - [no](not) preference for location
+    - [don't](not) know
     - choose you
     - both with and [without](not)
     - boh
@@ -1615,150 +1633,4 @@ nlu:
     - anything of them
     - I [don't](not) care about the presence of [bag](bag)
     - I [don't](not) care about the presence of [hat](hat)
-
-
-
-
-
-
-  #  - Please tell me how many [babies](people) you can see in the [store](mall) [now](now).
-  #  
-  #     - I would like to know how many of the [people](people) in the [shopping plaza](mall) are wearing a white [blazer](upper_body) and a red [rucksack](bag).
-  #     - I want to know the number of [ladies](female) with blue [jeans](lower_body).
-  #     - Tell me if there is a large number of [people](people) with a purple [pullover](upper_body).
-  #     - Can you see numerous [lads](male) in the [shopping market](mall) [currently](now)?
-  #     - Are there a lot [buyers](people) in the [shopping galleria](mall)?
-  #     - I would like you to tell me how many [shoppers](people) you see wearing a [headgear](hat) [in this moment](now) inside the [shopping storehouse](mall).
-  #     - Give me the amount of [individuals](people) that are in the [shopping store](mall).
-  #     - Please, inform me about the quantity of [customers](people) in the [store](mall).
-  #     - Do you see a large amount of [purchasers](people) in the [shopping market](mall) [at the moment](now)?
-  #     - The number of [men](male) in gray [blazer](upper_body) who can be identified in the [shopping plaza](mall).
-  #     - The amount of [ladies](female) with a blue [dress](upper_body) in the [shopping center](mall).
-  #     
-  #     - How many [persons](people) donned a black [blazer](upper_body) paired with green [trousers](lower_body) two hours ago?
-  #     - Tell me [individuals](people) that choose to wear a classic white [jeans](lower_body) and a blue [shirt](upper_body) in the [mall](mall) now(now)?
-  #     - can you say to me if there is [someone](people) that goes for a gray [sweatpants](lower_body) this morning?   
-  #     
-  #     - Count the number of [shoppers](people) who dressed a purple [cardigan](upper_body) this evening
-  #     
-  #     
-  # - The following lines contain user queries about the presence of certain clothing items or colors in the mall, as well as requests for the number of people wearing specific items or colors.
-  # - They also include queries about the presence of certain accessories, such as hats and bags.
-  # - How many [folks](people) that wear red [leggins](lower_body) are in the [mall](mall)?
-  # - The number of [males](male) who wear a red [tank top] and red [track pants](lower_body) in the [shopping center](mall)?
-  # - How many [clients](people) with red [cargos](lower_body) and a blue [polo shirt](upper_body)?
-  # 
-  # 
-  # 
-  # - You should tell me the total of women with a green [waistcoat](upper_body)
-  # - The quantity of [boys](male) that are wearing a blue [vest](upper_body)?
-  # - Count for me all the [girls](female) who have on a green [windbreaker](upper_body) and blue [tights](lower_body)
-  # - Count the total of [people](people) who have on blue [capri pants](lower_body) and a green [poncho](upper_body)
-  # - The count of [fellas](male) who have on a green [blazer](upper_body) and black [palazzo pants](lower_body)
-  # - How many with a black [turtleneck]](upper_body) and a green [bermuda shorts](lower_body)?
-  # - How many wearing a green [camisole](upper_body) and white [flare jeans](lower_body)
-  # - The number of [individuals](people) with a white [denim jacket](upper_body) and a white [yoga pants](lower_body)
-  # - the amount of [clients](people) with on yellow [slacks](lower_body) and orange [trench coat](upper_body)
-  # - How many wearing a yellow [bomber jacket](upper_body) and a [beige] [mini skirt](lower_body)?
-  # - How many [girls](female) who wear an orange [maxi skirt](lower body) and a yellow [raincoat](upper_body)
-  # - How many [dudes](male) wearing a white [smoking](upper_body)?
-  # - The number of [damsles](female) with a yellow [sports jersey](upper_body) and a purple [pencil skirt](lower_body)?
-  # - The amount of [people](people) with an orange [bell skirt](lower_body) and a purple [flannel shirt](upper_body)?
-  # - Total of [people](people) with an orange [tuxedo](upper_body) and yellow [cropped jeans](lower_body)
-  # - Amount of [customers](people) with an orange [poncho](upper_body) and purple [hiking shorts](lower_body)
-  # - NUmber of [women](female) in [ROI2](shop) wearing pink [Paperbag waist pants](lower body) and brown [flannel overshirt](upper_body)
-  # - How many [clients](people) were 5 hours ago wearing a pink [tailored blazer](upper_body) and gray [bell bottoms](lower_body)
-  # - The quantity with pink [sequin skirt](lower_body) and [beige] [sleeveless shirt](upper_body)
-  # - How many [folks](people) are wearing red [jackets](upper_body) and blue [jeans](lower_body) in the [mall](mall)?
-  # - Can you count the number of [individuals](people) in pink [sweaters](upper_body) and brown [pants](lower_body)?
-  # - Are there [shoppers](people) in pink [dresses](upper_body) and purple [shirts](upper_body) inside the [shopping center](mall)?
-  # - Do you see [people](people) with purple [shorts](lower body) and gray [tops](upper_body) [currently](now) in the [retail park](mall)?
-  # - How many [shoppers](people) are in orange [dresses](upper_body) and brown [leggings](lower_body) [presently](now) in the [commercial plaza](mall)?
-  # - Count the number of [individuals](people) wearing brown [hoodies](upper_body) and [beige] [chinos](lower_body) at this hour.
-  # - Are there any [kids](people) in red [shirts](upper_body) and green [shorts](lower_body) three hours ago in the [retail hub](mall)?
-  # - How many [women](female) are in blue [tops](upper_body) and white [jeans](lower_body) in the [mall](mall) [at the moment](now)?
-  # - Count the number of [individuals](people) wearing orange [chinos](lower_body) and gray [hoodies](upper_body) at this hour.
-  # - How many [shoppers](people) are in purple [dresses](upper_body) and brown [leggings](lower_body) [presently](now) in the [commercial plaza](mall)?
-  # - Do you see [people](people) with green [shirts](upper_body) and blue [shorts](lower_body) [currently](now) in the [retail park](mall)?
-  # - How many [people](people) are [currently](now) wearing blue [jeans](lower_body) and white [T-shirts](upper_body) in the [mall](mall)?
-  # - Can you count the number of [individuals](people) in black [dresses](upper_body) and red [shoes](lower_body) [right now](now) in the [mall](mall)?      
-  # - Are there [shoppers](people) in brown [jackets](upper_body) and gray [trousers](lower_body) [at this moment](now) inside the [shopping center](mall)? 
-  # - How many [people](people) are [currently](now) wearing [navy blue] [coats](upper_body) and brown [boots](lower_body)    
-  # - Can you count the number of [individuals](people) in white [shirts](upper_body) and blue [jeans](lower_body) [right now](now)?       
-  # - Are there [shoppers](people) in pink [dresses](upper_body) and gray [sneakers](lower_body) [at this moment](now) inside 
-  # - Do you see [people](people) with black [hoodies](upper_body) and green [cargo pants](lower_body) [currently](now)                     
-  # - How many [people](people) are there in the [shopping center](mall)?
-  # - How many [people](people) are there in the [shopping center](mall)?
-  # - I want to know how many [children](people) are in the [shopping center](mall) [in this moment](now).
-  # - Is the [shopping mall](mall) crowded?
-  # - Are there many [girls](female) in the [shopping mall](mall)?
-  # - Can you count the [women](female) in the [store](mall)?
-  # - Can you tell me how many [people](people) are in the [shopping center](mall)?
-  # - Tell me the number of [boys](male) in the [shopping center](mall).
-  # - How many [people](people) have a red [shirt](upper_body)?
-  # - Are there a lot of [men](male) in the [mall](mall) with a white [jumper](upper_body)?
-  # - Are you able to tell me how many [clients](people) are in the [mall](mall) [right now](now)?
-  # - Do you see many [people](people) with black [pantallons](lower_body) in the [mall](mall)?
-  # - Please check how many [people](people) in a blue [vest](upper_body) are in the [mall](mall).
-  # - I need to know how many [dudes](people) were in the [market](mall).
-  # - Please tell me how many [babies](people) you can see in the [store](mall) [now](now).
-  # - I need to know the number of [people](people) who wear a brown [bonnet](hat).
-  # - I would like to know how many of the [people](people) in the [shopping plaza](mall) are wearing a white [blazer](upper_body) and a red [rucksack](bag).
-  # - I want to know the number of [ladies](female) with blue [jeans](lower_body).
-  # - Tell me if there is a large number of [people](people) with a purple [pullover](upper_body).
-  # - Can you see numerous [lads](male) in the [shopping market](mall) [currently](now)?
-  # - Are there a lot [buyers](people) in the [shopping galleria](mall)?
-  # - I would like you to tell me how many [shoppers](people) you see wearing a [headgear](hat) [in this moment](now) inside the [shopping storehouse](mall).
-  # - Give me the amount of [individuals](people) that are in the [shopping store](mall).
-  # - Please, inform me about the quantity of [customers](people) in the [store](mall).
-  # - Do you see a large amount of [purchasers](people) in the [shopping market](mall) [at the moment](now)?
-  # - The number of [men](male) in gray [blazer](upper_body) who can be identified in the [shopping plaza](mall).
-  # - The amount of [ladies](female) with a blue [dress](upper_body) in the [shopping center](mall).
-  # - You should tell me how many [kids](people) with a [schoolbag](bag) you are able to identify in the [mall](mall).        
-  # - How many [persons](people) donned a black [blazer](upper_body) paired with green [trousers](lower_body) two hours ago?
-  # - Tell me [individuals](people) that choose to wear a classic white [jeans](lower_body) and a blue [shirt](upper_body) in the [mall](mall) now(now)?
-  # - can you say to me if there is [someone](people) that goes for a gray [sweatpants](lower_body) this morning?   
-  # - let's explore if [someone](people) is dressing with gray khaki [chinos](lower_body)
-  # - Count the number of [shoppers](people) who dressed a purple [cardigan](upper_body) this evening
-  # - Visualize the number of [customers](people) at [shopping center](mall)
-  # - I'm curious about the headcount of [mall attendees](people) that wear orange [polo shirt](upper_body) paired to a formal [pants](lower_body) which colour is pink 
-  # 
-  # - Number of who put oneself today a [backpack](bag) at the [shopping center](mall) today morning
-  # - 
-  # 
-  # - 
-  # - let's explore the number of [girls](female) that have brown [skirt](lower_body) and [sunhat](hat) at the [mall](mall)
-  # - Do you see [people](people) with green [hoodies](upper_body) and green [short pants](lower_body) [currently](now)   
-  # - How many [persons](people) donned a red [blazer](upper_body) paired with orange [trousers](lower_body) at [mall](mall)
-  # - Tell me if [someone](people) that chooses to wear a classic blue [shirt](upper_body) and a yellow [jeans](lower_body) is at the [mall](mall) now(now)?
-  # 
-  # - let's explore the amount of [shoppers](people) who are dressing with purple [chinos](lower_body)
-  # - Visualize the number of [shoppers](people) at [shopping center](mall) in this evening
-  # 
-  # - see if [someone](people) has a [purse](bag) [in this moment](now) [there](mall)
-  # - Number of who put oneself today a [backpack](bag) 
-  # 
-  # - i'd like to know if there were [guys](male) at [retail](mall) yesterday 
-  # - 
-  # - 
-    
-
-
-  
-  
-
-
-
-
-
-
-# tracksuit
-# work overalls
-# smoking
-# dress
-# suit
-# tailleur
-# uniform
-
-# considerare anche il plurale
 
