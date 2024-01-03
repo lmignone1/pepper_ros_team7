@@ -1,5 +1,6 @@
 import string
 from numpy import argmin
+import logging
 
 
 NOT_REMOVE_PUNCTUATION = ("""'""", '-')
@@ -51,7 +52,7 @@ def minimum_distance(msg : list, entities : list, entity : str, mode = 'not_colo
     distances = list()
 
     entity = entity.split()[0]
-    print("entity", entity)
+    logging.debug("entity", entity)
 
     for i, en in enumerate(msg):    # se ci sono 2 enitita uguali (ad esempio compare 2 volte t-shirt), in questo modo viene preso sempre l ultima entita
         if en == entity:
@@ -61,14 +62,14 @@ def minimum_distance(msg : list, entities : list, entity : str, mode = 'not_colo
         
         for col in entities:
             col_index = msg.index(col)
-            print("colour ",col)
-            print("col_index: ", col_index)
+            logging.debug("colour %s",col)
+            logging.debug("col_index: %s", col_index)
             d = entity_index - col_index
-            print("d ", d)
+            logging.debug("d: %s", d)
             distances.append((d, col)) if d >= 0 else None
-            print("distance", distances)
+            logging.debug("distance: %s", distances)
             msg[col_index] = ''
-        print("distances", distances)
+        logging.debug("distances: %s", distances)
 
         try:
             min_distance_index = argmin([tup[0] for tup in distances])

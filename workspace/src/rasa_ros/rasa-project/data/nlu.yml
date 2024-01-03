@@ -831,14 +831,14 @@ nlu:
     - Could you tell me the quantity of [buyers](people) who have been in the [retail park](mall) for [less](less) than 30 minutes
     - What's the amount of [women](female) inside the [retail hub](mall) with a [white](colour) [shirt](upper_body)?
     - How many [ladies](female) are there in [the shopping arcade](mall) with a blue [t-shirt](upper_body) and black [pants](lower_body)?
-    - What is the number of [males](male) in the [retail mall](mall) with a [hat](hat)?
+    - What is the number of [males](male) with a [hat](hat) who have spent a time [minor](less) than 5 minutes in the [retail mall](mall)?
     - How much was the count of [females](female) that have spent in the [shopping village](mall) a quantity of time [higher](more) than 2 minutes?
     - Can you tell me the number of [folks](people) in the [mall](mall) right now?
     - Could you tell me how many [visitors](people) wearing a yellow [sweater](upper_body) are in the [mall](mall)?
     - Would you like to give me the number of [damsels](female) inside the [plaza](mall) who wear gray [trousers](lower_body) and a brown [jacket](upper_body)?
     - How many [lads](male) are there?
     - How many [purchasers](people) are there?
-    - What's the number of [fellas](male) with a black [hoodie](upper_body)?
+    - What's the number of [fellas](male) with a black [hoodie](upper_body) who have passed a period of time [shorter](less) than 10 minutes in walmart?
     - I'm curious about the quantity of [guests](people) that are spending [lower](less) than 7 minutes in the [mall](mall)
     - What was the number of [men](male) who have been in the [mall](mall) for a time [inferior](less) to 27 minutes?
     - How many are the [patrons](people) in the [mall](mall)?
@@ -846,7 +846,7 @@ nlu:
     - Share with me the quantity of [vendee](people) in the [retail space](mall) wearing a orange [pullover](upper_body)
     - Tell me how many [end users](people) are wearing a [cap](hat) and have spent a time in walmart that [exceeds](more) 25 minutes
     - How many [lasses](female) are wearing a purple [parka](upper_body)?
-    - What is the number of [guys](people) with green [shorts](lower_body)?
+    - What is the number of [guys](people) with green [shorts](lower_body) who are spending [minus](less) than 15 minutes in the [mall](mall)?
     - Disclose to me the total of [maidens](female) in the [shopping center](mall) with black [chinos](lower_body)
     - Please, inform me about the total number of [misses](female) with a white [cardigan](upper_body) and a [bermuda](lower_body)
     - What is the amount of [public](people) in the [mall](mall) with a red [jacket](upper_body)?
@@ -854,12 +854,12 @@ nlu:
     - The total of [daughters](female) in the [mall](mall) with a purple [coat](upper_body) and orange [sweatpants](lower_body)?
     - How many are all the [gentlemen](male) with a blue [T-shirt](upper_body) and white [cargo pants](lower_body) in the [mall](mall)?
     - The amount of [sons](male) with a [schoolbag](bag)?
-    - The number of [dudes](male) with blue [jeans](lower_body)
+    - The number of [dudes](male) with blue [jeans](lower_body) who have been in the [shopping center](mall) for a time [inferior](less) to 30 minutes
     - Give me the amount of [damoiselles](female) with a [sun hat](hat) and a [purse](bag)
     - I wanna know the number of [adults](people) who have an [handbag](bag)
     - The number of [sirs](male) with a [cap](hat) and a [suitcase](bag)?
-    - The amount of [acquirer](people) with purple [trousers](lower_body)?
-    - The amount of [boys](male) with brown [shorts](lower_body)
+    - The amount of [acquirer](people) with purple [trousers](lower_body) that are in the [commercial plaza](mall) for a time [exceeding](more) 2 hours?
+    - The amount of [boys](male) with brown [shorts](lower_body) passing a time frame [larger](more) than 13 minutes inside walmart 
     - How many [people](people) wearing a red [coat](upper_body)?
     - How many [folks](people) that wear red [leggins](lower_body) are in the [mall](mall)?
     - The number of [males](male) who wear a red [tank top](upper_body) and red [track pants](lower_body) in the [shopping center](mall)?
@@ -884,7 +884,7 @@ nlu:
     - The amount of [buyers](people) wearing anything [other than](not) an orange [shirt](upper_body).
     - are there [shoppers](people) who are [free from](not) any kind of blue [jacket](upper_body)?
     - are there any [gentlemen](male) [unwearing](not) a green [raincoat](upper_body).
-    - The total of [customers](people) [devoid](not) of [bonnet](hat).
+    - The total of [customers](people) [devoid](not) of [bonnet](hat) staying in the [mall](mall) for [more](more) than 3 minutes.
     - Tell me how many [clients](people) are [missing](not) yellow [vest](upper_body).
     - Can you tell me the number of [people](people) who are [neither](not) wearing a [cap](hat) [nor](not) carrying a [suitecase](bag).
     - Is the [shopping mall](mall) crowded?
@@ -895,16 +895,16 @@ nlu:
     - Are you able to tell me how many [clients](people) are in the [mall](mall)
     - Please check how many [people](people) in a blue [vest](upper_body) are in the [mall](mall).
     - I need to know how many [dudes](male) were in the [market](mall).
-    - Visualize the number of [customers](people) at [shopping center](mall)
+    - Visualize the number of [customers](people) at [shopping center](mall) who have spent here a period [lesser](less) than 30 minutes
     - How many [clients](people) with red [cargos](lower_body) and a blue [polo shirt](upper_body)?
     - Inform me about the total of [customers] with black [wide-leg pants](lower_body) and a [beret](hat)
     - Wanna know how many [females](female) with a [hat](hat) and a [tote](bag) are in the [mall](mall)
     - It would be nice if you told me how many [men](male) wearing a black [suit](upper_body) are here
     - You should tell me the total of [women](female) with a green [waistcoat](upper_body)
-    - The quantity of [boys](male) that are wearing a blue [vest](upper_body)?
+    - The quantity of [boys](male) that are wearing a blue [vest](upper_body) and occupying the [shopping hub](mall) for a time [larger](more) than 8 minutes?
     - The quantity with pink [sequin skirt](lower_body) and [sleeveless shirt](upper_body)
     - How many [folks](people) are wearing red [jackets](upper_body) and blue [jeans](lower_body) in the [mall](mall)?
-    - Can you count the number of [individuals](people) in pink [sweaters](upper_body) and brown [pants](lower_body)?
+    - Can you count the number of [individuals](people) in pink [sweaters](upper_body) and brown [pants](lower_body) who have been in the mall [minus](less) than 35 seconds?
     - Are there [shoppers](people) in pink [dresses](upper_body) inside the [shopping center](mall) that have spent [more](more) than 23 minutes here?
     - How many [shoppers](people) are in orange [dresses](upper_body) and brown [leggings](lower_body) in walmart?
     - Count the number of [individuals](people) wearing brown [hoodies](upper_body) and blue [chinos](lower_body) who have spent [below](less) tha 5 minutes in starbucks
@@ -927,23 +927,23 @@ nlu:
     - I need to know the number of [people](people) who wear a brown [sombrero](hat) and have spent their time in the [mall](mall) [smaller](less) than 2 seconds.
     - It would be nice if you told me how many [men](male) wearing a black [suit](upper_body) have been for a time [bigger](more) than sixty seconds in walmart
     - Count the [people](people) present
-    - check for the number of [blokes](people)
-    - You should count for me the [individuals](people)
+    - check for the number of [blokes](people) who have been in walmart for a time [greater](more) than 12 minutes.
+    - You should count for me the [individuals](people) that are passing a time [beyond](more) 7 minutes in Starbucks
     - Please, get a headcount of the [clients](people)
     - Tell me the amount of [fellows](people) you can see
     - I want the total number of [ladies](female) there
     - I'm interested in the whole shoppers present in the [shopping center](mall)
     - How many [gentlemen](people) are there?
     - Are there a lot of [people](people) here?
-    - Give me the number of [males](male)
+    - Give me the number of [males](male) who are in starbucks for a time [superior](more) to 10 minutes
     - You need the count the [females](female) for me?
-    - in this moment, can you tell me the number of [males](male)?
+    - in this moment, can you tell me the number of [males](male) passing [over](more) than a quarter of an hour inside the [retail mall](mall)?
     - How many [girls](female) have been in the [mall](mall) for [over](more) 5 minutes?
     - Tell me the amount of [individuals](people) who spent [over](more) than 20 seconds in starbucks
     - What's the number of [men](male) who have passed [over](more) than 10 minutes in walmart?
-    - count [males](male) and [ladies](female)
-    - count only the [damsles](female)
-    - Count just the [ladies](female), please
+    - count [males](male) and [ladies](female) who are spending time [above](more) 50 seconds in the [mall](mall)
+    - count only the [damsles](female) who stayed a time [higher](more) than 20 minutes in [shopping mall](mall)
+    - Count just the [ladies](female) passing [above](more) 19 minutes in walmart, please
     - focus on counting [women](female)
     - how many [females](female) have been in walmart for [more](more) than a quarter of an hour
     - how many [boys](male) have spent [less](less) than a quarter of an hour in the [mall](mall)
