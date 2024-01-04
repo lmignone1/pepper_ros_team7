@@ -34,16 +34,13 @@ class Handler:
     
     def _show_url(self, msg):
         if msg.data == 1:
-            print('Passaggio alla schermata di engagement')
             url = "http://" + self._ip + ":5000/engagement"
         else:
-            print('Passaggio alla schermata di index')
             url = "http://" + self._ip + ":5000/static/index"
 
         self.load_url(url)
 
     def _show_dialogue(self, msg):
-        print('Passaggio alla schermata di dialogo')
         url = "http://" + self._ip + ":5000/dialogue?text=" + msg.data
         self.load_url(url)
 
