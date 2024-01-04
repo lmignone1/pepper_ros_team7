@@ -967,7 +967,7 @@ nlu:
     - check at [plaza area](mall) the presence of [shoopers](people) who [aren't](not) dressing a gray [top](upper_body) and do [not](not) have an [hat](hat)
     - What is the total number of [customers](people) with blue [upper clothes](upper_body) and pink [lower clothes](lower_body)
     - How many [men](male) are there in walmart with black [upper clothes](upper_body)?
-    - I want to know how many [guys](people) are dressed in something [other than](not) black [pants](lower_body).
+    - I want to know how many [guys](people) are dressed in something [other than](not) green [lower clothes](lower_body).
     - What's the amount of [people](people) wearing blue [lower clothes](lower_body) and with a blue [jacket](upper_body)
     - how many [fellows](people) who are [neither](not) wearing a [beanie](hat) [nor](not) carrying a [purse](bag) are in the [mall](mall).
     - what is the number of [customers](people) who have spent a period of time [longer](more) than 30 minutes in walmart
@@ -1035,7 +1035,7 @@ nlu:
     - You should tell me if you can see my [daddy](male), he's a [boy](male) with a black [backpack](bag) and a gray [polo](upper_body).
     - I want to know if you are able to see my [daughter](female) in a purple [dress](upper_body) into the [shopping center](mall).
     - I would like information on where my [son](male) with a green [jumper](upper_body) is located in the shop. 
-    - where is my [son](male) dressed in something [other than](not) black [pants](lower_body).   
+    - where is my [dude](male) dressed in something [other than](not) brown [trousers](lower_body).   
     - Where are [persons](people) that donnes a black [blazer](upper_body) paired with green [trousers](lower_body)?
     - Tell me where are [individuals](people) that choose to wear a classic white [jeans](lower_body) and a blue [shirt](upper_body) in the [mall](mall) now?
     - can you say to me in what area of the [mall](mall) there is [someone](people) that goes for a gray [sweatpants](lower_body) this morning?
@@ -1072,7 +1072,7 @@ nlu:
     - Have you seen [damsles](female) who are [unwearing](not) a yellow [sports jersey](upper_body) and a purple [pencil skirt](lower_body)?
     - I lost my [stepmother](female) with an orange [bell skirt](lower_body) and a purple [flannel shirt](upper_body)
     - I would to know where my [dad](male) with a red [sweater](upper_body) is located in the shop.
-    - where is my [son](male) dressed in something [other than](not) black [pants](lower_body). 
+    - where is my [father](male) dressed in something [other than](not) black [pants](lower_body). 
     - Can you say where is my [stepdad](male) with an orange [tuxedo](upper_body) and yellow [cropped jeans](lower_body). I lost him.
     - I want to know where I can find [customers](people) who do [not](not) have an orange [poncho](upper_body) and purple [shorts](lower_body)
     - Tell me in which area of the [mall](mall) can I find [women](female) wearing pink [pants](lower_body) and brown [flannel overshirt](upper_body)
