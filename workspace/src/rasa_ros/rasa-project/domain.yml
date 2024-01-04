@@ -212,7 +212,6 @@ actions:
 - action_location_answer
 - action_ask_confirmation_count
 - action_ask_confirmation_location
-- action_reset_slot
 
 
 
