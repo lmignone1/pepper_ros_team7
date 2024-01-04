@@ -195,7 +195,7 @@ class ValidateCustomSlotMappings(ValidationAction):
         logging.debug('latest_mall_entities:\t %s', mall_entities)
         logging.debug('latest_shop_entities:\t %s', shop_entities)
 
-        if(intent == "ask_count" or intent == "ask_location"):
+        if intent == "ask_count":
             if(len(shop_entities) == 1 and len(mall_entities) == 0):
                 return {"place": shop_entities[0].lower()}
             elif(len(shop_entities) == 0 and len(mall_entities) == 1):
@@ -281,6 +281,7 @@ class ValidateCustomSlotMappings(ValidationAction):
             try:
                 duration_dict = [x for x in tracker.latest_message["entities"] if x["entity"] == "duration"][0]
                 duration_seconds = duration_dict["additional_info"]["normalized"]["value"]
+                print("duration_seconds è di tipo: ", type(duration_seconds))
                 return {"duration": duration_seconds} 
             except IndexError:
                 return {"duration": None}
