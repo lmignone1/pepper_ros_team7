@@ -82,13 +82,13 @@ nlu:
     - hello
     - hello pepper
     - hello everybody
-    - hello friend
+    - hello [friend](people)
     - hello hi
     - hello is anybody there
     - hello it is me again
     - hello robot
     - hello sweatheart
-    - hello sweet boy
+    - hello sweet [boy](male)
     - hello there
     - hello world
     - hello, my name is Salvo
@@ -250,7 +250,7 @@ nlu:
     - A good day to you
     - see you soon
     - See you soon
-    - we see after friend
+    - we see after [friend](people)
     - we feel
     - See you next time
     - see you tomorrow
@@ -724,7 +724,7 @@ nlu:
     - how you help me
     - i asked you if you can do anything else
     - i need help
-    - more info
+    - [more](more) info
     - now what?
     - options
     - show me the menu
@@ -869,8 +869,8 @@ nlu:
     - how many [lasses](female) at the bar over 55 minutes who [doesn't](not) wear a red [skirt](lower_body) and a pink [shirt](upper_body)?
     - how many [kids](people) [don't](not) wear yellow [jeans](lower_body) and white [coat](upper_body)?
     - how many [boys](male)  do [not](not) wear a green [skirt](lower_body) and gray [cap](hat)?
-    - What is the number of [people](people) which [don't](not) wear red [rucksack](bag) and black [leggins](lower_body)?
-    - Are there [people](people) that [aren't](not) wearing a white [cap](hat) and [don't](not) have black [shorts](lower_body)?
+    - What is the number of [purchasers](people) which [don't](not) wear red [rucksack](bag) and black [leggins](lower_body)?
+    - Are there [purchasers](people) that [aren't](not) wearing a white [cap](hat) and [don't](not) have black [shorts](lower_body)?
     - Count the number of [sirs](male) with gray [jumper](upper_body) and [not](not) green [pants](lower_body) that have spent a time [superior](more) to 20 minutes in the [mall](mall)
     - Can you count the [ladies](female) that [aren't](not) wearing a gray [jacket](upper_body) and brown [trousers](lower_body)?
     - The number of [woman](female) with green [hat](hat) but [not](not) yellow [skirt](lower_body)
@@ -934,9 +934,9 @@ nlu:
     - can you say to me if there is [someone](people) that goes for a gray [slacks](lower_body) in starbucks 
     - is the walmart full of [clients](people)
     - is the [mall](mall) thronged
-    - I need to know the number of [people](people) who wear a brown [sombrero](hat) and have spent their time in the [mall](mall) [smaller](less) than 2 seconds.
+    - I need to know the number of [purchasers](people) who wear a brown [sombrero](hat) and have spent their time in the [mall](mall) [smaller](less) than 2 seconds.
     - It would be nice if you told me how many [men](male) wearing a black [suit](upper_body) have been for a time [bigger](more) than sixty seconds in walmart
-    - Count the [people](people) present
+    - Count the [purchasers](people) present
     - The total of [girls](female) who are wearing a purple [skirt](lower_body)
     - check for the number of [blokes](people) who have been in walmart for a time [greater](more) than 12 minutes.
     - You should count for me the [individuals](people) that are passing a time [beyond](more) 7 minutes in Starbucks
@@ -1082,7 +1082,7 @@ nlu:
     - How many [people](people) are currently wearing blue [jeans](lower_body) and white [T-shirts](upper_body) in the [mall](mall)?
     - I'm looking for [individuals](people) in black [dresses](upper_body) and red [shoes](lower_body) right now in the [mall](mall)?      
     - You should inform me about the location of [shoppers](people) in brown [jackets](upper_body) and gray [trousers](lower_body) at this moment 
-    - I'd like to know where are [people](people) [unwearing](not) a [cap](hat) and [without](not) [rucksack](bag)    
+    - I'd like to know where are [purchasers](people) [unwearing](not) a [cap](hat) and [without](not) [rucksack](bag)    
     - I [don't](not) think I can see my [son](male), he [hasn't](not) a white [jumper](upper_body) and blue [jeans](lower_body)?       
     - I need to know the position in the store of my [child](people) he is wearing a yellow [pullover](upper_body) but he [hasn't](not) gray [sneakers](lower_body) at this moment
     - Help me look for my [grandad](male) [without](not) black [hoodies](upper_body) and green cargo [pants](lower_body)                     
@@ -1116,10 +1116,10 @@ nlu:
     - looking for [males](female) with white [upper clothes](upper_body)
     - I'm searching [males](male) with white [shorts](lower_body)
     - I'm looking for [males](male) with black [pants](lower_body)
-    - Look for [people](people) in green [pants](lower_body) 
-    - You should only find [people](people) in black [pants](lower_body)
+    - Look for [purchasers](people) in green [pants](lower_body) 
+    - You should only find [purchasers](people) in black [pants](lower_body)
     - where is my [son](male) dressed in something [other than](not) yellow [jacket](upper_body). 
-    - I'm looking for [people](people) who have a [bag](bag)
+    - I'm looking for [purchasers](people) who have a [bag](bag)
     - You should find [people](people) who are wearing black [trousers](lower_body) and yellow [sweater](upper_body)
     - Find who has white [shirt](upper_body) and [hasn't](not) black [pants](lower_body)
     - I’m searching [males](male)
@@ -1260,16 +1260,16 @@ nlu:
     - looking for red
     - looking for gray
     - looking for black
-    - i'm looking for blue upper cloth
-    - I'm looking for white upper cloth
+    - i'm looking for blue [upper cloth](upper_body)
+    - I'm looking for white [upper cloth](upper_body)
     - looking for black [shirt](upper_body)
-    - interested in white upper cloth
-    - interested in black upper cloth
-    - im interested in white upper cloth
-    - blue shirt
-    - green jumper
-    - green upper body
-    - red upper body
+    - interested in white [upper cloth](upper_body)
+    - interested in black [upper cloth](upper_body)
+    - im interested in white [upper cloth](upper_body)
+    - blue [shirt](upper_body)
+    - green [jumper](upper_body)
+    - green [upper body](upper_body)
+    - red [upper body](upper_body)
     - white upper
     - colour blue
     - colour purple
@@ -1454,10 +1454,10 @@ nlu:
     - i want know [women](female) are wearing the [cap](hat)
     - i want to know about [children](people) with [beret](hat)
     - Tell me about who has a [hat](hat)
-    - Only people with a [cap](hat)
+    - Only [people](people) with a [cap](hat)
     - I'm thinking about those who [don't](not) wear a [hat](hat)
     - Just look who [don't](not) have a [beret](hat)
-    - Consider only [people] who are [not](not) wearing a [bonnet](hat)
+    - Consider only [people](people) who are [not](not) wearing a [bonnet](hat)
     - Give me info about [men](male) [without](not) a [hat](hat)
     - with [bag](bag)
     - [without](not) [rucksack](bag)
@@ -1485,7 +1485,7 @@ nlu:
     - Focus on [people](people) who carry a [bag](bag) with them
     - I think with [pack](bag)
     - Just consider [ladies](female) [without](not) a [purse](bag)
-    - Only [clients] who [haven't](not) a [trucksack](bag)
+    - Only [clients](people) who [haven't](not) a [trucksack](bag)
     - looking for red [sleveless](upper_body) and green [shorts](lower_body)
     - tell me about [males](male) with gray [polo](upper_body) and brown [pants](lower_body)
     - I want pink [shirt](upper_body) and black [skirt](lower_body)
