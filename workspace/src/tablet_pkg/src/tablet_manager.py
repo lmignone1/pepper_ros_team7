@@ -12,10 +12,9 @@ class Handler:
     '''
     def __init__(self):
         rospy.init_node('tablet_node')
+
         rospy.wait_for_service("load_url")
         self.tablet_service = rospy.ServiceProxy("load_url", LoadUrl)
-        rospy.Subscriber('tablet_template', Int16, self._show_url)
-        rospy.Subscriber('voice_txt', String,  self._show_dialogue)
         self._ip = socket.gethostbyname(socket.gethostname())
 
     '''
@@ -28,15 +27,18 @@ class Handler:
         rospy.loginfo(resp.ack)
     
     def start(self):
+        rospy.Subscriber('tablet_template', Int16, self._show_url)
+        rospy.Subscriber('voice_txt', String,  self._show_dialogue)
+
         url = "http://" + self._ip + ":5000/static/index"
         self.load_url(url)
         rospy.spin()
     
     def _show_url(self, msg):
         if msg.data == 1:
-            url = "http://" + self._ip + ":5000/engagement"
+            url = "http://" + self._ip + ":5000/engagement"  # si attiva quando il servizio tts pubblica 1 in seguito alla frase 'Hello folks'
         else:
-            url = "http://" + self._ip + ":5000/static/index"
+            url = "http://" + self._ip + ":5000/static/index"   # si attiva quando il servizio dialogue_server pubblica 0 in seguito al comando '/restart'
 
         self.load_url(url)
 

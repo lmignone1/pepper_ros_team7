@@ -94,12 +94,13 @@ class Speaking():
                 if (end - start).to_sec() < time_last_utterance:                  # se il tempo impiegaato dai servizi è minore del tempo che pepper dovrebbe impiegare per pronunciare la frase 
                     rospy.sleep(time_last_utterance - (end - start).to_sec())   # attendi il tempo restante necessario a pepper per pronunciare la frase
                                                                                 # altrimenti procedi perche il tempo atteso è stato superiore o uguale al tempo di pronuncia
-                
+            
+            self._turn_off_mic()  
             print('restart bot')
             restart_req = self._make_request('/restart', DialogueRequest())
             resp = self.dialogue_service(restart_req)
             print('BOT: ', resp.answer)
-            self._turn_off_mic()
+            
 
 
 

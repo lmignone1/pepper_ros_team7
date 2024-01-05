@@ -28,7 +28,6 @@ class Text2SpeechNode:
         try:
             self.tts.say(msg.speech)
             if msg.speech == 'Hello folks':
-                print('Sto pubblicando su show engagement')
                 self._pub.publish(1)
         except:
             self.session.reconnect()

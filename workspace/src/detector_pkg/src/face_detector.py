@@ -15,9 +15,7 @@ class Detector():
     def __init__(self):
         # inizializzazione nodo ROS
         rospy.init_node('face_detector')
-        rospy.Subscriber("/in_rgb", Image, self._rcv_image)
-        # rospy.Subscriber("image_raw", Image, rcv_image)
-        self._pub = rospy.Publisher('detection', Int16, queue_size=1)
+        self._pub = None
         
         # creazione path per rete neurale
         path = os.path.dirname(__file__)
@@ -87,6 +85,8 @@ class Detector():
             print('Image conversion failed')
     
     def start(self):
+        rospy.Subscriber("/in_rgb", Image, self._rcv_image)
+        self._pub = rospy.Publisher('detection', Int16, queue_size=1)
         
         while not rospy.is_shutdown():
             res = sum(i for i in self._deque)
