@@ -7,7 +7,7 @@ from ros_audio_pkg.srv import TurnOn, TurnOnResponse, TurnOff, TurnOffResponse
 from pepper_nodes.srv import Text2Speech, Text2SpeechRequest, Text2SpeechResponse
 
 
-class Speaking():
+class DialogueInterface():
 
     def __init__(self) -> None:
         # inizializzazione del nodo
@@ -18,68 +18,34 @@ class Speaking():
         rospy.wait_for_service('dialogue_server')
         self.dialogue_service = rospy.ServiceProxy('dialogue_server', Dialogue)
 
-        rospy.wait_for_service('/tts')
-        self.tts_service = rospy.ServiceProxy('tts', Text2Speech)
-
-        rospy.wait_for_service('turn_on_mic')
-        self._turn_on_mic = rospy.ServiceProxy('turn_on_mic', TurnOn)
-
-        rospy.wait_for_service('turn_off_mic')
-        self._turn_off_mic = rospy.ServiceProxy('turn_off_mic', TurnOff)
-
-
-    def _make_request(self, text, request_obj):
-        if isinstance(request_obj, DialogueRequest):
-            request_obj.input_text = text
-            return request_obj
-        
-        if isinstance(request_obj, Text2SpeechRequest):
-            request_obj.speech = text
-            return request_obj
-        
-
-        
+        self._pub_tablet = rospy.Publisher('tablet_template', Int16, queue_size=1)
 
 
     def start(self):
         while not rospy.is_shutdown():
         
             rospy.wait_for_message('detection', Int16)
-
-            engagement_utterance = 'Hello folks'
-            engagement = self._make_request(engagement_utterance, Text2SpeechRequest())
-
-            print('Engagement')
-            start = rospy.Time.now()
-            self.tts_service(engagement)
-            end = rospy.Time.now()
             
-            time_last_utterance = len(engagement_utterance.split()) * 0.25      # rappresenta un approssimazione del tempo impiegato da pepper per pronunciare l ultima frase fornita
-            
-            if (end - start).to_sec() < time_last_utterance:
-                rospy.sleep(time_last_utterance - (end - start).to_sec())
+            self._pub_tablet.publish(1)
+            engagement = DialogueRequest()
+            engagement.input_text = 'Hello'
+            self.dialogue_service(engagement)
+
+            print("Engagement")
 
             while True:
                 
                 try:
-                    self._turn_on_mic()
                     user_txt = rospy.wait_for_message('voice_txt', String, timeout=TIMEOUT_VOICE) # lunghezza ultima frase fatta pronunciare a Pepper + costante 
-                    self._turn_off_mic()
                 except rospy.ROSException:
                     break
                 
                 try:
-                    start = rospy.Time.now()
                     print("[IN]:", user_txt)
-                    user_req = self._make_request(user_txt.data.lower(), DialogueRequest())
-                    
+                    user_req = DialogueRequest()
+                    user_req.input_text = user_txt.data.lower()                    
                     bot_answer = self.dialogue_service(user_req)
-                    
                     print("[OUT]:", bot_answer.answer)
-
-                    bot_answer = self._make_request(bot_answer.answer, Text2SpeechRequest())
-                    time_last_utterance = len(bot_answer.speech.split()) * 0.25                     # pepper impiega 100 parole/minuto (100 : 25s = #parole : X s)
-                    self.tts_service(bot_answer)
                 except rospy.ServiceException as e:
                     print("Service call failed: %s"%e)
                     break
@@ -87,20 +53,14 @@ class Speaking():
                 try:
                     rospy.wait_for_message('detection', Int16, timeout=TIMEOUT_DETECTOR) 
                 except rospy.ROSException:
-                    break
-
-                end = rospy.Time.now()
-
-                if (end - start).to_sec() < time_last_utterance:                  # se il tempo impiegaato dai servizi è minore del tempo che pepper dovrebbe impiegare per pronunciare la frase 
-                    rospy.sleep(time_last_utterance - (end - start).to_sec())   # attendi il tempo restante necessario a pepper per pronunciare la frase
-                                                                                # altrimenti procedi perche il tempo atteso è stato superiore o uguale al tempo di pronuncia
+                    break                                                         # altrimenti procedi perche il tempo atteso è stato superiore o uguale al tempo di pronuncia
             
-            self._turn_off_mic()  
             print('restart bot')
-            restart_req = self._make_request('/restart', DialogueRequest())
-            resp = self.dialogue_service(restart_req)
-            print('BOT: ', resp.answer)
-            
+            self._pub_tablet.publish(0)
+            restart_req = DialogueRequest()
+            restart_req.input_text = '/restart'
+            self.dialogue_service(restart_req)
+           
 
 
 
@@ -109,7 +69,7 @@ if __name__ == '__main__':
     TIMEOUT_DETECTOR = 5
 
     try: 
-        speaking = Speaking()
+        speaking = DialogueInterface()
         speaking.start()
     except rospy.ROSInterruptException:
         pass

@@ -18,7 +18,6 @@ class Text2SpeechNode:
         self.port = port
         self.session = Session(ip, port)
         self.tts = self.session.get_service("ALTextToSpeech")
-        self._pub = None
      
     '''
     Rececives a Text2Speech message and call the ALTextToSpeech service.
@@ -27,8 +26,6 @@ class Text2SpeechNode:
     def say(self, msg):
         try:
             self.tts.say(msg.speech)
-            if msg.speech == 'Hello folks':
-                self._pub.publish(1)
         except:
             self.session.reconnect()
             self.tts = self.session.get_service("ALTextToSpeech")
@@ -41,7 +38,6 @@ class Text2SpeechNode:
     def start(self):
         rospy.init_node("text2speech_node")
         rospy.Service('tts', Text2Speech, self.say)
-        self._pub = rospy.Publisher('tablet_template', Int16, queue_size=1)
         rospy.spin()
 
 if __name__ == "__main__":
