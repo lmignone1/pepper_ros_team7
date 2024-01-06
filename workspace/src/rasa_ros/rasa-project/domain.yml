@@ -144,13 +144,13 @@ responses:
   - text: "It was a plaisure to help you"
   
   utter_location_other_details:
-  - text: "I'm here to help you finding who you are looking for, but before you need to give me some other details by answering a few questions\nupperColour:{upperColour}\nlowerColour:{lowerColour}\nkindOfPeople:{kindOfPeople}\nhat:{hatSlot}\nbag:{bagSlot}\nplace:{place}\nduration:{duration}\ncomparative:{compareSlot}\nnot_upper:{not_upperSlot}\nnot_lower:{not_lowerSlot}"
+  - text: "I'm here to help you finding who you are looking for, but before you need to give me some other details by answering a few questions"
 
-  utter_count_answer:
-  - text: "\nupperColour:{upperColour}\nlowerColour:{lowerColour}\nkindOfPeople:{kindOfPeople}\nhat:{hatSlot}\nbag:{bagSlot}\nplace:{place}\nduration:{duration}\ncomparative:{compareSlot}\nnot_upper:{not_upperSlot}\nnot_lower:{not_lowerSlot}"
+  # utter_count_answer:
+  # - text: "\nupperColour:{upperColour}\nlowerColour:{lowerColour}\nkindOfPeople:{kindOfPeople}\nhat:{hatSlot}\nbag:{bagSlot}\nplace:{place}\nduration:{duration}\ncomparative:{compareSlot}\nnot_upper:{not_upperSlot}\nnot_lower:{not_lowerSlot}"
 
-  utter_location_answer:
-  - text: "\nupperColour:{upperColour}\nlowerColour:{lowerColour}\nkindOfPeople:{kindOfPeople}\nhat:{hatSlot}\nbag:{bagSlot}\nplace:{place}\nduration:{duration}\ncomparative:{compareSlot}\nnot_upper:{not_upperSlot}\nnot_lower:{not_lowerSlot}"
+  # utter_location_answer:
+  # - text: "\nupperColour:{upperColour}\nlowerColour:{lowerColour}\nkindOfPeople:{kindOfPeople}\nhat:{hatSlot}\nbag:{bagSlot}\nplace:{place}\nduration:{duration}\ncomparative:{compareSlot}\nnot_upper:{not_upperSlot}\nnot_lower:{not_lowerSlot}"
   
   utter_ask_count_form_kindOfPeople:
   - text: "Are you interested in males, females or people in general?"
@@ -219,15 +219,3 @@ actions:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-
-
-# Vuoi che ti restituisca direttamente il risultato del conteggio oppure vuoi che ti faccia delle domande per acquisire ulteriori dettagli sulle persone da contare?
-# D
-
-# Do you want me to g
-
-# Do you want the count result or do you want me to ask you some questions to get further details?
-
-# Do you want the count result or any questions for additional details?
-
-# dou you want to add further details by answering some questions ?
