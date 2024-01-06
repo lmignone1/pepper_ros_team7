@@ -18,10 +18,10 @@ class DialogueInterface():
         rospy.wait_for_service('dialogue_server')
         self.dialogue_service = rospy.ServiceProxy('dialogue_server', Dialogue)
 
-        self._pub_tablet = rospy.Publisher('tablet_template', Int16, queue_size=1)
-
 
     def start(self):
+        self._pub_tablet = rospy.Publisher('tablet_template', Int16, queue_size=1)
+        
         while not rospy.is_shutdown():
         
             rospy.wait_for_message('detection', Int16)
