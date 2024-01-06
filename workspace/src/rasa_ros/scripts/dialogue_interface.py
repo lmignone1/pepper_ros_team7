@@ -69,7 +69,7 @@ if __name__ == '__main__':
     TIMEOUT_DETECTOR = 5
 
     try: 
-        speaking = DialogueInterface()
-        speaking.start()
+        node = DialogueInterface()
+        node.start()
     except rospy.ROSInterruptException:
         pass

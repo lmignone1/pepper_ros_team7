@@ -11,7 +11,7 @@ class Handler:
     The constructor creates the service proxy object, which is able to display the desired URL on the tablet.
     '''
     def __init__(self):
-        rospy.init_node('tablet_node')
+        rospy.init_node('tablet_manager_node')
 
         rospy.wait_for_service("load_url")
         self.tablet_service = rospy.ServiceProxy("load_url", LoadUrl)
