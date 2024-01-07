@@ -44,7 +44,8 @@ class Detector():
         #crop = False
         # flag which indicates whether image will be cropped after resize or not
         # If crop is false, direct resize without cropping and preserving aspect ratio is performed
-        blob = cv2.dnn.blobFromImage(frame, 1.0, (300, 300), [104, 117, 123], True, False)
+        blob = cv2.dnn.blobFromImage(frame, 1.0, (300, 300), [104, 117, 123], True, False) # 300,300 is the size of the image, 1.0 is the scale factor,
+        # [104, 117, 123] is the mean subtraction, True is the swapRB, False is the crop. The values of such parameters depend on the adopeted network
         self._faceNet.setInput(blob)
         detections = self._faceNet.forward()
 
@@ -52,9 +53,9 @@ class Detector():
         
         bboxes = []
             
-        for i in range(detections.shape[2]):
+        for i in range(detections.shape[2]): # iterate over the detected faces
             confidence = detections[0, 0, i, 2]  
-            if confidence > conf_threshold and detections[0, 0, i, 5]<1 and detections[0, 0, i, 6]<1:
+            if confidence > conf_threshold and detections[0, 0, i, 5]<1 and detections[0, 0, i, 6]<1: # if the confidence is higher than the threshold and the coordinates are valid
                 x1 = int(detections[0, 0, i, 3] * width)
                 y1 = int(detections[0, 0, i, 4] * height)
                 x2 = int(detections[0, 0, i, 5] * width)
