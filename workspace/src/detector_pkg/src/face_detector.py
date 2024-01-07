@@ -36,7 +36,7 @@ class Detector():
       
 
 
-    def _getFaceBox(self, frame, conf_threshold=0.8):
+    def _getFaceBox(self, frame, conf_threshold=0.7):
         height = frame.shape[0]
         width = frame.shape[1]
         #swapRB =True
@@ -59,8 +59,10 @@ class Detector():
                 y1 = int(detections[0, 0, i, 4] * height)
                 x2 = int(detections[0, 0, i, 5] * width)
                 y2 = int(detections[0, 0, i, 6] * height)
+                text = "{:.2f}%".format(confidence * 100)
                 bboxes.append([x1, y1, x2, y2])
                 cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), int(round(height/300)), 8)
+                cv2.putText(frame, text, (x1, y1), cv2.LINE_AA, 0.45, (0, 0, 255), 2)
                 print(f"Rectangle drawn at coordinates: Top Left ({x1}, {y1}), Bottom Right ({x2}, {y2})")
                 cv2.imshow("Demo", frame)
                 cv2.waitKey(1)
