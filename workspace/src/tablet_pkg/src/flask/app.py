@@ -14,7 +14,7 @@ def index():
     return render_template('index.html', data = 'index.png') 
 
 
-@app.route('/engagement',  methods=['GET']) # url for the engagement page when pepper says 'Hello Folks'
+@app.route('/engagement',  methods=['GET']) # url for the engagement page when pepper engages the user
 def engagement():
     return render_template('engagement.html')
 
