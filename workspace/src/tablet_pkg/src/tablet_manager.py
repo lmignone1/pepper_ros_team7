@@ -16,6 +16,7 @@ class Handler:
         rospy.wait_for_service("load_url")
         self.tablet_service = rospy.ServiceProxy("load_url", LoadUrl)
         self._ip = socket.gethostbyname(socket.gethostname())
+        self._port = 5000
 
     '''
     This method calls the tablet service and sends it the URL of the web page to be displayed.
@@ -29,21 +30,21 @@ class Handler:
     def start(self):
         rospy.Subscriber('tablet_template', Int16, self._show_url)
         rospy.Subscriber('voice_txt', String,  self._show_dialogue)
-
-        url = "http://" + self._ip + ":5000/static/index"
+        
+        url = f'http://{self._ip}:{self._port}/static/index'
         self.load_url(url)
         rospy.spin()
     
     def _show_url(self, msg):
         if msg.data == 1:
-            url = "http://" + self._ip + ":5000/engagement"  # si attiva quando il servizio tts pubblica 1 in seguito alla frase 'Hello folks'
+            url = f'http://{self._ip}:{self._port}/engagement'  # si attiva quando il servizio tts pubblica 1 in seguito alla frase 'Hello folks'
         else:
-            url = "http://" + self._ip + ":5000/static/index"   # si attiva quando il servizio dialogue_server pubblica 0 in seguito al comando '/restart'
+            url = f'http://{self._ip}:{self._port}/static/index'    # si attiva quando il servizio dialogue_server pubblica 0 in seguito al comando '/restart'
 
         self.load_url(url)
 
     def _show_dialogue(self, msg):
-        url = "http://" + self._ip + ":5000/dialogue?text=" + msg.data
+        url = f'http://{self._ip}:{self._port}/dialogue?text={msg.data}'
         self.load_url(url)
 
 if __name__ == "__main__":

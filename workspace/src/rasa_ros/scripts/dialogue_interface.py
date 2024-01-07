@@ -11,8 +11,8 @@ class DialogueInterface():
 
     def __init__(self) -> None:
         # inizializzazione del nodo
-        rospy.init_node('pepper_speaking_node')
-        print('Node speaking pepper started')
+        rospy.init_node('dialogue_interface')
+        print('Node dialogue interface started')
         
         # inizializzazione dei servizi
         rospy.wait_for_service('dialogue_server')
