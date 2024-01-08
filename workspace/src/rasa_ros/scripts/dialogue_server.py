@@ -36,8 +36,8 @@ class DialogueServer():
             start = rospy.Time.now()
             self._turn_off_mic() 
 
-        text = req.input_text   
-        
+        text = req.input_text  
+  
         message = {
             "sender": 'bot',
             "message": text
@@ -51,19 +51,21 @@ class DialogueServer():
             response.answer += i['text'] + ' ' if 'text' in i else ''
 
         if self._pepper:
-            tts_req = Text2SpeechRequest()
-            tts_req.speech = response.answer
-            self.tts_service(tts_req)
+            if(text != "/restart"):
+                tts_req = Text2SpeechRequest()
+                tts_req.speech = response.answer
+                self.tts_service(tts_req)
 
-            time_last_utterance = len(response.answer.split()) * 0.25                     # pepper impiega 100 parole/minuto (100 : 25s = #parole : X s)
-            end = rospy.Time.now()
+                time_last_utterance = len(response.answer.split()) * 0.25                     # pepper impiega 100 parole/minuto (100 : 25s = #parole : X s)
+                end = rospy.Time.now()
 
-            if (end - start).to_sec() < time_last_utterance:                  # se il tempo impiegato dai servizi è minore del tempo che pepper dovrebbe impiegare per pronunciare la frase 
-                    rospy.sleep(time_last_utterance - (end - start).to_sec())   # attendi il tempo restante necessario a pepper per pronunciare la frase
+                if (end - start).to_sec() < time_last_utterance:                  # se il tempo impiegato dai servizi è minore del tempo che pepper dovrebbe impiegare per pronunciare la frase 
+                        rospy.sleep(time_last_utterance - (end - start).to_sec())   # attendi il tempo restante necessario a pepper per pronunciare la frase
             
-            self._turn_on_mic() if req.input_text != '/restart' else None
+                self._turn_on_mic()
 
         return response
+
 
     def start(self):
         rospy.Service('dialogue_server', Dialogue, self.handle_service)
