@@ -56,6 +56,9 @@
         document.addEventListener("DOMContentLoaded", function() {
             var outputElement = document.getElementById("output");
             var text = "{{ data }}"; // Inserisci il testo desiderato qui
+            var tempElement = document.createElement("div");    // gestisce i caratteri speciali
+            tempElement.innerHTML = text;
+            text = tempElement.textContent || tempElement.innerText;
             var delay = 20; // Imposta la velocità di scrittura in millisecondi (valore inferiore = più veloce)
 
             function typeWriter(index) {

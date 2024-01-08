@@ -22,8 +22,9 @@ class DialogueInterface():
     def start(self):
         self._pub_tablet = rospy.Publisher('tablet_template', Int16, queue_size=1)
         
+      
         while not rospy.is_shutdown():
-        
+            print('Waiting for detection')
             rospy.wait_for_message('detection', Int16)
             
             self._pub_tablet.publish(1)
@@ -59,7 +60,8 @@ class DialogueInterface():
             self._pub_tablet.publish(0)
             restart_req = DialogueRequest()
             restart_req.input_text = '/restart'
-            self.dialogue_service(restart_req)
+            resp = self.dialogue_service(restart_req)
+            print(resp.answer)
            
 
 
