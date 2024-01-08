@@ -9,7 +9,7 @@ import speech_recognition as sr
 
 class Voice():
 
-    def __init__(self, dynamic_energy_threshold=False, energy_threshold=150, pause_threshold=1.0):
+    def __init__(self, dynamic_energy_threshold=False, energy_threshold=100, pause_threshold=1.0):
         # inizializzazione nodo ROS
         rospy.init_node('voice_detection_node', anonymous=False)
         
@@ -68,7 +68,7 @@ class Voice():
 
     def start(self):
         self.m = self._create_mic()
-        self._calibration()
+        #self._calibration()
 
         rospy.Service('turn_on_mic', TurnOn, self._turn_on)
         rospy.Service('turn_off_mic', TurnOff, self._turn_off)
