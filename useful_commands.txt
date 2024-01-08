@@ -14,3 +14,14 @@ PER LANCIARE PEPPER
 roslaunch pepper_nodes pepper_bringup.launch nao_ip:=10.0.1.230
 
 rosservice call /tts "speech: ...."
+
+
+
+mettersi in workspace e in ogni shell fare sd poi lanciare uno dei seguenti comandi:
+
+roslaunch pepper_nodes pepper_bringup.launch
+roslaunch ros_audio_pkg speech_recognition.launch
+python3 src/examples/src/flask/app.py
+rosrun examples tablet_TEST.py
+rosrun examples face_detector.py
+roslaunch rasa_ros dialogue.xml

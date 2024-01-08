@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="tablet_pkg" name="flask_server" type="start_flask_server.sh"/>
+  <node pkg="tablet_pkg" type="tablet_manager.py" name="tablet_manager_node" output="screen"/>
+</launch>
