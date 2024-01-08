@@ -24,6 +24,7 @@ class DialogueInterface():
         
       
         while not rospy.is_shutdown():
+            
             print('Waiting for detection')
             rospy.wait_for_message('detection', Int16)
             
