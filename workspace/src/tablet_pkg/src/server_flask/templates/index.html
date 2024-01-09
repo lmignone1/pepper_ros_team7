@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0; /* Rimuovi i margini */
+            overflow: hidden; /* Impedisce lo scrolling */
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #3498db;
+        }
+
+        img {
+            width: 100vw; /* Imposta la larghezza dell'immagine al 100% della larghezza della viewport */
+            height: 100vh; /* Imposta l'altezza dell'immagine al 100% dell'altezza della viewport */
+            object-fit: cover; /* Copri l'intera area del contenitore mantenendo le proporzioni */
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ data }}" alt="">
+</body>
+</html>

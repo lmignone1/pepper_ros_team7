@@ -33,50 +33,42 @@ class DialogueServer():
 
     def handle_service(self, req):
         
+        text = req.input_text
+        
         if self._pepper:
             start = rospy.Time.now()
-            self._turn_off_mic() 
-
-            print("Microfono spento con successo")
-            
-        text = req.input_text  
-  
+            self._turn_off_mic()
+        
         message = {
-            "sender": 'bot',
-            "message": text
-        }
-       
+        "sender": 'bot',
+        "message": text
+                    }
+        
         r = requests.post(self.get_answer_url, json=message)
-        
-        print('risposta ricevuta dal servizio web di RASA')
-        
         response = DialogueResponse()
-        response.answer = ""
-        for i in r.json():
-            response.answer += i['text'] + ' ' if 'text' in i else ''
-        
-        print('response created')
-        
-        if self._pepper:
-            if(text != "/restart"):
-                # print("La risposta è diversa da /restart")
+
+        if(text == "/restart"):
+            response.answer = "restarting"
+        else:
+            response.answer = ""
+            
+            for i in r.json():
+                response.answer += i['text'] + ' ' if 'text' in i else ''
+            
+            if self._pepper:
                 tts_req = Text2SpeechRequest()
                 tts_req.speech = response.answer
                 self.tts_service(tts_req)
-                time_last_utterance = len(response.answer.split()) * 0.25                     # pepper impiega 100 parole/minuto (100 : 25s = #parole : X s)
+
+                time_last_utterance = len(response.answer.split()) * 0.25   
                 end = rospy.Time.now()
-                if (end - start).to_sec() < time_last_utterance:   
-                        print('tempo di attesa: ', time_last_utterance - (end - start).to_sec())               # se il tempo impiegato dai servizi è minore del tempo che pepper dovrebbe impiegare per pronunciare la frase 
-                        rospy.sleep(time_last_utterance - (end - start).to_sec())   # attendi il tempo restante necessario a pepper per pronunciare la frase
-            
+
+                if (end - start).to_sec() < time_last_utterance:
+                    rospy.sleep(time_last_utterance - (end - start).to_sec())
+
                 self._turn_on_mic()
-                print("Microfono riacceso con successo")
-            else:
-                response.answer = "ACK"
-                
-
+        
         return response
-
 
     def start(self):
         rospy.Service('dialogue_server', Dialogue, self.handle_service)
