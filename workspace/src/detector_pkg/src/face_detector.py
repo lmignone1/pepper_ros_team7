@@ -31,7 +31,7 @@ class Detector():
             self._deque.append(0) 
         
         self._bridge = CvBridge()
-        print("inizializzazione completata")
+        print("Face detector started")
         
       
 
