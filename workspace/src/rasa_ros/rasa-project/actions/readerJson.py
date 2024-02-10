@@ -154,11 +154,6 @@ class ReaderJson():
             
             t_constraints['roi1_persistence_time'] = constraints['duration'][0]
             t_constraints['roi1_passages'] = None
-
-            # for shop in shop_dict.values():
-            #     json_dict[shop + '_persistence_time'] = constraints['duration'][0]
-            #     json_dict[shop + '_passages'] = None
-            
             comparative = self._comparative_translation(constraints['duration'][1])
             mall = True
 

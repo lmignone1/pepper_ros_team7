@@ -964,32 +964,14 @@ class ActionLocation(Action):
             number_of_people, people = db.search_on_database(constraints)
             
             if number_of_people == 0:
+
                 utterance = "I have not found anyone that matches your localization request"
+                
             elif number_of_people == 1:
+
                 utterance = "I have found one person that matches your localization request. Such person "
-                
                 person = people[0]
-
                 utterance = print_person(person, utterance)
-
-                # if person['roi1_passages'] == 1:
-                #     word = "time"
-                # else:
-                #     word = "times"
-                
-                # if person['roi2_passages'] == 1:
-                #     word2 = "time"
-                # else:
-                #     word2 = "times"
-
-                # if person['roi1_persistence_time'] > 0 and person['roi2_persistence_time'] > 0:
-                #     utterance += f"has passed through {SHOP_DICT['roi1']} {person['roi1_passages']} " +word + f" and has spent a total of {person['roi1_persistence_time']} seconds there, "
-                #     utterance += f"and has passed through {SHOP_DICT['roi2']} {person['roi2_passages']} " +word2 + f" and has spent a total of {person['roi2_persistence_time']} seconds there."
-                # else:
-                #     if person['roi1_persistence_time'] > 0:
-                #         utterance += f"has passed through {SHOP_DICT['roi1']} {person['roi1_passages']} " +word + f" and has spent a total of {person['roi1_persistence_time']} seconds there."
-                #     elif person['roi2_persistence_time'] > 0:
-                #         utterance += f"has passed through {SHOP_DICT['roi2']} {person['roi2_passages']} " +word2 + f" and has spent a total of {person['roi2_persistence_time']} seconds there."
 
             else:
                 
@@ -998,28 +980,7 @@ class ActionLocation(Action):
                 p = inflect.engine()
                 for i, person in enumerate(people):
                     utterance += f"The {p.number_to_words(p.ordinal(i+1))} person "
-
                     utterance = print_person(person, utterance)
-                    
-                    # if person['roi1_passages'] == 1:
-                    #     word = "time"
-                    # else:
-                    #     word = "times"
-                    
-                    # if person['roi2_passages'] == 1:
-                    #     word2 = "time"
-                    # else:
-                    #     word2 = "times"
-                    
-                    # if person['roi1_persistence_time'] > 0 and person['roi2_persistence_time'] > 0:
-                    #     utterance += f"has passed through {SHOP_DICT['roi1']} {person['roi1_passages']} " +word + f" and has spent a total of {person['roi1_persistence_time']} seconds there, "
-                    #     utterance += f"and has passed through {SHOP_DICT['roi2']} {person['roi2_passages']} " +word2 + f" and has spent a total of {person['roi2_persistence_time']} seconds there."
-                    # else:
-                    #     if person['roi1_persistence_time'] > 0:
-                    #         utterance += f"has passed through {SHOP_DICT['roi1']} {person['roi1_passages']} " +word + f" and has spent a total of {person['roi1_persistence_time']} seconds there."
-                    #     elif person['roi2_persistence_time'] > 0:
-                    #         utterance += f"has passed through {SHOP_DICT['roi2']} {person['roi2_passages']} " +word2 + f" and has spent a total of {person['roi2_persistence_time']} seconds there."
-
                     utterance += "\n"
             
             dispatcher.utter_message(text = utterance)
